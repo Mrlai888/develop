@@ -30,11 +30,18 @@ gulp.task('minCss', function() {
 
 //合并压缩js
 gulp.task('minJs', function() {
-    return gulp.src(['./js/*.js', '!./js/jquery*.js'])
+    return gulp.src(['./js/*.js', '!./js/jquery*.js', '!./js/swiper*.js'])
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js'))
         .pipe(auto.reload())
+})
+
+//把jquery swiper 添加到dist
+
+gulp.task('add', function() {
+    return gulp.src(['./js/jquery*.js', './js/swiper*.js'])
+        .pipe(gulp.dest('./dist/js'))
 })
 
 // 压缩html
