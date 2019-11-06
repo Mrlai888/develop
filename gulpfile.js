@@ -15,7 +15,7 @@ const rename = require('gulp-rename')
     //自动加载
 const auto = require('gulp-connect')
     // es6转es5
-    // const babel = require('gulp-babel')
+const babel = require('gulp-babel')
 
 
 
@@ -55,11 +55,11 @@ gulp.task('minImages', function() {
 });
 
 // es6转es5
-// gulp.task('es62es5', function() { //es6 to es5
-//     return gulp.src('./js/class.js')
-//         .pipe(babel({ presets: ['@babel/preset-env'] }))
-//         .pipe(gulp.dest('./dist/js'))
-// });
+gulp.task('es62es5', function() { //es6 to es5
+    return gulp.src('./js/class.js')
+        .pipe(babel({ presets: ['@babel/preset-env'] }))
+        .pipe(gulp.dest('./dist/js'))
+});
 
 
 
