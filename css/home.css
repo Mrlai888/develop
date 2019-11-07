@@ -12,3 +12,8 @@
   margin: 0 auto;
   background: pink;
 }
+
+.y_banner {
+  min-height: 580px;
+  background: 0;
+}
