@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="ajax.js"></script>
+    <script>
+        ajax({
+            url: 'comm.php',
+            data: 'module=index',
+            type: 'get',
+            succeed: function (data) {
+                console.log(data);
+                var json = JSON.parse(data);
+                for (var i = 0, len = json.length; i < len; i++) {
+                    document.querySelector('body').innerHTML +=
+                    `<h1>id(数据库的标记 不用渲染)：${json[i].id}</h1>
+                    <h1>module（数据库的分类 不用渲染）：${json[i].module}</h1>
+                    <img src="${json[i].pic}">
+                    用户头像：<img src="${json[i].user_info}">
+                    <h1>商品名字：${json[i].username}</h1>
+                    <h1>帖子内容：${json[i].introduce}</h1>
+                    <h1>帖子主题：${json[i].type}</h1>
+                    <br>
+                    <br>`
+                }
+            },
+            failed: function (err) {
+                console.log(err);
+            }
+        })
+    </script>
+</body>
+
+</html>
