@@ -21,7 +21,7 @@ const babel = require('gulp-babel')
 
 //合并压缩css
 gulp.task('minCss', function() {
-    return gulp.src(['./css/*.css', '!./css/swiper*.css'])
+    return gulp.src(['./css/*.css', '!./css/swiper*.css', '!./css/iconfont.css'])
         .pipe(concat('main.css'))
         .pipe(minifyCss())
         .pipe(gulp.dest('./dist/css'))
@@ -38,9 +38,9 @@ gulp.task('minJs', function() {
 })
 
 
-//把swiper.min.css 添加到dist
+//把swiper.min.css iconfont添加到dist
 gulp.task('addCss', function() {
-    return gulp.src(['./css/swiper*.css'])
+    return gulp.src(['./css/swiper*.css', './css/iconfont.css'])
         .pipe(gulp.dest('./dist/css'))
 })
 
