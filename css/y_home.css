@@ -1,0 +1,21 @@
+.y_header {
+    height: 110px;
+    background: #ffffff;
+}
+
+.y_header .y_container {
+    height: 110px;
+    background: #ffffff;
+}
+
+.y_header .y_inner {
+    width: 1240px;
+    height: 110px;
+    margin: 0 auto;
+    background: pink;
+}
+
+.y_banner {
+    min-height: 580px;
+    background: 0;
+}
