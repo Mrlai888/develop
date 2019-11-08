@@ -20,7 +20,7 @@
             el: '.swiper-scrollbar',
         },
     });
-
+    return mySwiper
 })()
 
 
