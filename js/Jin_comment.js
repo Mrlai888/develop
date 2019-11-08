@@ -8,6 +8,8 @@
 
     var Jin_hide_inner = document.querySelector('.Jin_hide_inner');
 
+
+
     $('.phone_nav li').mouseover(function () {
         $('#car').css('color', '#000');
         $('.user').css('color', '#000');
@@ -288,9 +290,9 @@
             $('.Jin_hide_content').css('display', 'none');
             $('.header_inner').css('backgroundColor', '');
             $('.Jin_hide_content_ding').css('display', 'none');
-            $('.user').css('color','#fff');
-            $('#car').css('color','#fff');
-            $(this).siblings().children().css('color', '#fff');
+            $('.user').css('color', '#333');
+            $('#car').css('color', '#333');
+            $(this).siblings().children().css('color', '#333');
         }
     }
     $('.phone_nav li:eq(8)').mouseover(function () {
@@ -305,10 +307,17 @@
         $('.header_inner').css('backgroundColor', '');
         $('.phone_nav li a').css('color', 'white');
         $('.Jin_hide_content_ding').css('display', 'none');
-        $('.user').css('color','#fff');
-        $('#car').css('color','#fff');
+        $('.user').css('color', '#fff');
+        $('#car').css('color', '#fff');
 
     });
+
+    //修改----梅恬
+    $('.mt-image').mouseover(function () {
+        $('.Jin_hide_content').css('display', 'none');
+        $('.Jin_hide_content_ding').css('display', 'none');
+    })
+
 
     //手机用户隐藏显示
     $('.user').mouseover(function () {
@@ -316,15 +325,21 @@
         $('.Jin_hide_content').css('display', 'none');
         $('.Jin_hide_content_ding').css('display', 'none');
         $('.header_inner').css('backgroundColor', '');
-        $('.phone_nav li a').css('color', 'white');
+        $('.phone_nav li a').css('color', '#333');
         $('.Jin_car_hide').css('display', 'none')
-        $('.user').css('color','#fff');
-        $('#car').css('color','#fff');
+        $('.user').css('color', '#333');
+        $('#car').css('color', '#333');
     });
     $('#Jin_lunbo').mouseover(function () {
         $('.Jin_User_hide').css('display', 'none');
         $('.Jin_car_hide').css('display', 'none')
     });
+
+    //修改--梅恬
+    $('.mt-image').mouseenter(function () {
+        $('.Jin_User_hide').css('display', 'none');
+        $('.Jin_car_hide').css('display', 'none')
+    })
 
     // 购物车隐藏
     $('#car').mouseover(function () {
@@ -332,18 +347,20 @@
         $('.Jin_car_hide').slideDown();
     });
 
+
+
     // 底部
     $('.xiaochengxu').mouseover(function () {
-        $(this).children().css('display','block');
+        $(this).children().css('display', 'block');
     })
     $('.xiaochengxu').mouseout(function () {
-        $(this).children().css('display','none');
+        $(this).children().css('display', 'none');
     })
     $('.weixin').mouseover(function () {
-        $(this).children().css('display','block');
+        $(this).children().css('display', 'block');
     })
     $('.weixin').mouseout(function () {
-        $(this).children().css('display','none');
+        $(this).children().css('display', 'none');
     })
 
 

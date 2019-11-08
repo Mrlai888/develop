@@ -12,18 +12,6 @@ body {
   box-sizing: border-box;
 }
 
-/*公共头部*/
-.mt-nav {
-  width: 100%;
-  height: 80px;
-  background: #fff;
-}
-.mt-nav .nav-con {
-  margin: 0 auto;
-  width: 1240px;
-  text-align: center;
-}
-
 /*banner图*/
 .mt-image {
   height: 450px;
@@ -181,6 +169,9 @@ body {
   color: #ffffff;
   font-size: 16px;
 }
+.mt-wrapper .con .good-list .gl-item:hover {
+  box-shadow: 1px 5px 10px  #c9c9c9;
+}
 .mt-wrapper .con .good-list .gl-item:hover .item-slide {
   opacity: 1;
   visibility: inherit;
@@ -240,6 +231,9 @@ body {
   width: 230px;
   min-height: 230px;
 }
+.mt-wrapper .con .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .rs-item-wrap img:hover {
+  transform: scale(1.1);
+}
 .mt-wrapper .con .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .mod-desc {
   margin-top: 36px;
   text-align: center;
@@ -288,14 +282,4 @@ body {
 }
 .mt-wrapper .con .recommend .mod-control .flex-control-nav li .flex-active {
   background-color: #a1a1a1;
-}
-
-/*公共底部模块*/
-.mt-footer {
-  width: 100%;
-  height: 246px;
-  background: #ffffff;
-}
-.mt-footer h1 {
-  text-align: center;
 }
