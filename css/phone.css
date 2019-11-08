@@ -15,7 +15,6 @@ body {
 /*banner图*/
 .mt-image {
   height: 450px;
-  background-image: url("../images/phone/p-banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;

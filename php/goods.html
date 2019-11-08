@@ -17,7 +17,7 @@
             data: 'module=banner',
             type: 'get',
             succeed: function (data) {
-                console.log(data);
+                // console.log(data);
                 var json = JSON.parse(data);
                 for (var i = 0, len = json.length; i < len; i++) {
                     document.querySelector('body').innerHTML +=
