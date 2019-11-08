@@ -1,16 +1,10 @@
 .y_header {
-  height: 110px;
+  height: 82px;
   background: #ffffff;
 }
 .y_header .y_container {
-  height: 110px;
+  height: 82px;
   background: #ffffff;
-}
-.y_header .y_inner {
-  width: 1240px;
-  height: 110px;
-  margin: 0 auto;
-  background: pink;
 }
 
 .y_banner {
@@ -406,4 +400,22 @@
 }
 .y_boutique .boutique_inner .meizu4 .func {
   background: url("../images/y_jinling.png") no-repeat 0 -55px;
+}
+
+#car {
+  color: black;
+}
+
+#Jin_header .top_content {
+  width: 1240px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.phone_nav li a {
+  display: block;
+  padding: 31px 20px 30px;
+  line-height: 21px;
+  font-size: 14px;
+  color: black;
 }
