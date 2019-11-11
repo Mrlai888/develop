@@ -3,7 +3,7 @@
     梅恬
 */
 body {
-  font-family: "PingFang SC","\5FAE\8F6F\96C5\9ED1","Microsoft Yahei",Arial,Helvetica,sans-serif,"\5B8B\4F53";
+  font-family: "PingFang SC", "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", Arial, Helvetica, sans-serif, "\5B8B\4F53";
   font-size: 14px;
 }
 
@@ -96,6 +96,14 @@ body {
   overflow: hidden;
   text-align: center;
 }
+.mt-wrapperCar .container .preview .preview-thumb .current::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 3px solid #999;
+}
 .mt-wrapperCar .container .preview .preview-action {
   padding: 10px 56px 0;
 }
@@ -114,19 +122,309 @@ body {
   font-size: 12px;
   padding-top: 25px;
 }
-.mt-wrapperCar .container .property .property-hd {
+.mt-wrapperCar .container .property .vm-metatit {
+  line-height: 18px;
+  width: 65px;
+  float: left;
+  padding-left: 10px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+.mt-wrapperCar .container .property .s-space {
+  padding: 0 6px;
+}
+.mt-wrapperCar .container .property-hd {
   position: relative;
   padding-top: 30px;
   margin-bottom: 12px;
 }
-.mt-wrapperCar .container .property .property-hd h1 {
+.mt-wrapperCar .container .property-hd h1 {
   margin-bottom: 4px;
   font-size: 28px;
   line-height: 1.2;
   font-weight: 700;
   color: #262626;
 }
-.mt-wrapperCar .container .property .property-hd .mod-info {
+.mt-wrapperCar .container .property-hd .mod-info {
   color: #e22841;
   font-size: 14px;
+}
+.mt-wrapperCar .container .property-sell {
+  position: relative;
+  padding: 16px 0 12px;
+  background: #f4f6fa;
+}
+.mt-wrapperCar .container .property-sell .property-sell-price {
+  height: 36px;
+  overflow: hidden;
+  padding-left: 10px;
+}
+.mt-wrapperCar .container .property-sell .property-sell-price .mod-price {
+  margin-right: 8px;
+  line-height: 36px;
+  color: #e02b40;
+  float: left;
+}
+.mt-wrapperCar .container .property-sell .property-sell-price .mod-price .vm-money {
+  color: #e02b40;
+  font-size: 36px;
+  font-weight: 500;
+}
+.mt-wrapperCar .container .property-sell .morebuy {
+  margin-left: 10px;
+  margin-top: 12px;
+  line-height: 22px;
+  font-size: 14px;
+}
+.mt-wrapperCar .container .property-sell .morebuy .entry {
+  float: left;
+  padding-left: 0;
+  line-height: 22px;
+  width: 85px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+.mt-wrapperCar .container .property-sell .morebuy .entry span {
+  border-radius: 2px;
+  color: #e02b40;
+  display: inline-block;
+  width: 72px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1;
+  padding: 4px 0;
+  background: #f2eaef;
+}
+.mt-wrapperCar .container .property-sell .morebuy dd {
+  color: #595959;
+}
+.mt-wrapperCar .container .property-sell .morebuy dd .more {
+  color: #27b3ff;
+  margin-left: 10px;
+}
+.mt-wrapperCar .container .property-service {
+  border-bottom: 1px dashed #dedede;
+  padding: 18px 0;
+}
+.mt-wrapperCar .container .property-service .mod-bd {
+  display: flex;
+}
+.mt-wrapperCar .container .property-service .mod-bd span {
+  display: flex;
+  margin-right: 20px;
+  color: #8c8c8c;
+  line-height: 20px;
+}
+.mt-wrapperCar .container .property-service .mod-bd span i {
+  margin-right: 8px;
+  line-height: 18px;
+  color: #595959;
+}
+.mt-wrapperCar .container .property-service .property-service-suda {
+  padding-top: 15px;
+}
+.mt-wrapperCar .container .property-service .property-service-suda .vm-metatit {
+  line-height: 20px;
+  float: left;
+  padding-left: 10px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+.mt-wrapperCar .container .property-service .property-service-suda .site-title {
+  position: relative;
+  float: left;
+}
+.mt-wrapperCar .container .property-service .property-service-suda .site-title .text {
+  display: inline-block;
+  padding-right: 10px;
+  height: 18px;
+  min-width: 96px;
+  line-height: 18px;
+  font-size: 14px;
+  color: #262626;
+  cursor: pointer;
+}
+.mt-wrapperCar .container .property-service .property-service-provider {
+  margin-top: 5px;
+  margin-left: 74px;
+  color: #8c8c8c;
+  display: flex;
+  line-height: 20px;
+}
+.mt-wrapperCar .container .property-service .property-service-provider .vm-kefu {
+  margin-left: 10px;
+  display: flex;
+}
+.mt-wrapperCar .container .property-set .property-set-sale {
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+.mt-wrapperCar .container .property-set .property-set-sale dd {
+  float: left;
+  width: 565px;
+  overflow: hidden;
+}
+.mt-wrapperCar .container .property-set .property-set-sale dd a {
+  color: #000;
+  position: relative;
+  float: left;
+  width: 176px;
+  margin: 0 10px 10px 0;
+  white-space: nowrap;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 14px;
+}
+.mt-wrapperCar .container .property-set .property-set-sale dd .active {
+  border: 1px solid #000;
+}
+.mt-wrapperCar .container .property-set .property-set-sale dd .vm-img {
+  height: 40px;
+  min-width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 172px;
+}
+.mt-wrapperCar .container .property-set .property-set-sale dd .vm-img img {
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.mt-wrapperCar .container .property-set .property-set-sale dd .vm-img span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.mt-wrapperCar .container .property-huabei {
+  position: relative;
+  margin-top: 20px;
+}
+.mt-wrapperCar .container .property-huabei .demo {
+  height: 20px;
+  margin-top: 15px;
+}
+.mt-wrapperCar .container .property-huabei .huabei-bd {
+  float: left;
+  width: 565px;
+  overflow: hidden;
+  margin-right: -20px;
+  margin-bottom: -10px;
+}
+.mt-wrapperCar .container .property-huabei .huabei-bd .tog {
+  border: 1px solid #000;
+}
+.mt-wrapperCar .container .property-huabei .huabei-bd a {
+  color: #000;
+  position: relative;
+  float: left;
+  width: 176px;
+  margin: 0 10px 10px 0;
+  white-space: nowrap;
+  line-height: 40px;
+  border: 1px solid #cccccc;
+  text-align: center;
+  font-size: 14px;
+  padding: 7px 0;
+  cursor: pointer;
+}
+.mt-wrapperCar .container .property-huabei .huabei-bd a .vm-periods {
+  display: block;
+  line-height: 18px;
+  font-size: 14px;
+  color: #595959;
+}
+.mt-wrapperCar .container .property-huabei .huabei-bd a .vm-rate {
+  display: block;
+  color: #8c8c8c;
+  font-size: 12px;
+  padding-top: 3px;
+  line-height: 18px;
+}
+.mt-wrapperCar .container .property .property-buy {
+  margin-top: 20px;
+}
+.mt-wrapperCar .container .property .property-buy-quantity {
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+.mt-wrapperCar .container .property .property-buy-quantity .mod-control {
+  position: relative;
+  z-index: 1;
+  height: 40px;
+  width: 122px;
+  overflow: hidden;
+  margin-right: 30px;
+  float: left;
+}
+.mt-wrapperCar .container .property .property-buy-quantity .mod-control input {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 60px;
+  height: 38px;
+  padding: 0;
+  line-height: 40px;
+  font-size: 12px;
+  text-align: center;
+  color: #595959;
+  overflow: visible;
+  border: 1px solid #dedede;
+}
+.mt-wrapperCar .container .property .property-buy-quantity .mod-control a {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #e7e7e7;
+  color: #000;
+  background: #f7f7f7;
+}
+.mt-wrapperCar .container .property .property-buy-quantity .mod-control .vm-minus {
+  left: 90px;
+}
+.mt-wrapperCar .container .property .property-buy-action {
+  margin-top: 17px;
+  margin-left: 10px;
+}
+.mt-wrapperCar .container .property .property-buy-action .btn {
+  display: inline-block;
+  padding: 15px 0;
+  width: 208px;
+  font-size: 20px;
+  line-height: 24px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  text-align: center;
+}
+.mt-wrapperCar .container .property .property-buy-action .buy {
+  display: inline-block;
+  color: #ffffff;
+  background: #27b3ff;
+  margin-right: 20px !important;
+}
+.mt-wrapperCar .container .property .property-buy-action .join {
+  display: inline-block;
+  color: #27b3ff;
+  background: #ffffff;
+  border: 1px solid #27b3ff;
+}
+.mt-wrapperCar .simple {
+  background: #f4f4f4;
+  padding-bottom: 60px;
+  margin-top: 60px;
+}
+.mt-wrapperCar .simple .simple-hd {
+  font-size: 24px;
+  padding-top: 45px;
+  padding-bottom: 20px;
+  width: 1240px;
+  margin: 0 auto;
+}
+.mt-wrapperCar .simple .simple-bd {
+  width: 1240px;
+  margin: 0 auto;
 }
