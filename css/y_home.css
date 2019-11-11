@@ -169,7 +169,7 @@
 .y_product .inner .prod_video li img {
   width: 100%;
 }
-.y_product .inner .prod_video li video {
+.y_product .inner .prod_video li a {
   position: absolute;
   display: inline-block;
   width: 50px;
