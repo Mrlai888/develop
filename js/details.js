@@ -62,3 +62,87 @@ $(window).scroll(function () {
     }
 })
 
+$(".site-title .text").mouseenter(function () {
+    $(".site-title .content").css({
+        display: "block"
+    })
+})
+$(".site-title").mouseleave(function () {
+    $(".site-title .content").css({
+        display: "none"
+    })
+})
+
+var item = $(".mt li")
+item.click(function () {
+    for (var i = 0; i < item.length; i++) {
+        item[i].className = " "
+    }
+    $(this).addClass('curr')
+})
+
+$(".mt li").eq(0).click(function () {
+    $(".mc").eq(0).css({
+        display: "block"
+    })
+    $(".mc").eq(1).css({
+        display: "none"
+    })
+    $(".mc").eq(2).css({
+        display: "none"
+    })
+
+})
+$(".mt li").eq(1).click(function () {
+    $(".mc").eq(0).css({
+        display: "none"
+    })
+    $(".mc").eq(1).css({
+        display: "block"
+    })
+    $(".mc").eq(2).css({
+        display: "none"
+    })
+})
+$(".mt li").eq(2).click(function () {
+    $(".mc").eq(0).css({
+        display: "none"
+    })
+    $(".mc").eq(1).css({
+        display: "none"
+    })
+    $(".mc").eq(2).css({
+        display: "block"
+    })
+})
+
+
+var li = $(".t1 li a");
+var lit2 = $(".t2 li a");
+var lit3 = $(".t3 li a");
+
+for (var i = 0; i < li.length; i++) {
+    (function (j) {
+        li[j].onclick = function () {
+            // console.log(this.innerText);
+            $("#sheng").text(this.innerText)
+        }
+    })(i)
+}
+
+for (var i = 0; i < lit2.length; i++) {
+    (function (j) {
+        lit2[j].onclick = function () {
+            // console.log(this.innerText);
+            $("#shi").text(this.innerText)
+        }
+    })(i)
+}
+for (var i = 0; i < lit3.length; i++) {
+    (function (j) {
+        lit3[j].onclick = function () {
+            // console.log(this.innerText);
+            $("#xuanze").text(this.innerText)
+        }
+    })(i)
+}
