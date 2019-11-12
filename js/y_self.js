@@ -32,16 +32,19 @@ Insert();
             })
             $('.login_block .but1').css('display', 'none')
             $('.login_block .but2').css('display', 'block')
-            var str = ''
-            for (var i = 0; i < 4; i++) {
-                str += randomInt(0, 10)
-            }
-            $('.auto_code span').html(str)
-            localStorage.setItem("res", str)
-
-
+            strCode()
         }
     });
+
+
+    function strCode() {
+        var str = ''
+        for (var i = 0; i < 4; i++) {
+            str += randomInt(0, 10)
+        }
+        $('.auto_code span').html(str)
+        localStorage.setItem("res", str)
+    }
 
 
     var arr = {
@@ -54,6 +57,8 @@ Insert();
 
 
     $('.login_block .but2').click(function() {
+        console.log($('.auto_code .code').val());
+
         if ($('.auto_code .code').val() == localStorage.getItem('res')) {
             // if (localStorage.getItem('user')) { //验证用户名
             for (var item in arr) {
@@ -64,13 +69,17 @@ Insert();
             // } else {
             //     $('.login_block .content').html('该用户名未注册')
             // }
-
+            $('.login_block .but1').css('display', 'block')
+            $('.login_block .but2').css('display', 'none')
 
         } else {
+            strCode()
             $('.login_block .content').html('验证码输入错误')
+            $('.login_block .but1').css('display', 'none')
+            $('.login_block .but2').css('display', 'block')
+
         }
-        $('.login_block .but1').css('display', 'block')
-        $('.login_block .but2').css('display', 'none')
+
     });
 
     function Res(reg, val) {

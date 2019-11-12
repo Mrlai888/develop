@@ -1,6 +1,6 @@
 //获取随机整数
 function randomInt(min, max) {
-    return Math.round(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
 // 随机颜色

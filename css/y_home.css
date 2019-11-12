@@ -314,6 +314,26 @@
   top: 0;
   left: 0;
 }
+.y_touch .touch_inner .touch_content .contact .aVx {
+  width: 180px;
+  height: 150px;
+  margin: 0 auto;
+  right: 0;
+  bottom: 0;
+  top: -10px;
+  left: 0;
+}
+.y_touch .touch_inner .touch_content .contact img {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  right: 0;
+  bottom: 0;
+  width: 180px;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+}
 .y_touch .touch_inner .touch_content .contact i {
   width: 35px;
   height: 35px;

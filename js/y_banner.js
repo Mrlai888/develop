@@ -35,7 +35,7 @@ fix();
                         <div class="swiper-slide"><img src="${response[2].url }" alt=""></div>
                         <div class="swiper-slide"><img src="${response[3].url }" alt=""></div>
                         <div class="swiper-slide"><img src="${response[4].url }" alt=""></div>
-                        <div class="swiper-slide"><img src="${response[5].url }" alt=""></div>`
+                        <div class="swiper-slide"><img src="${response[0].url }" alt=""></div>`
 
 
             )
@@ -94,14 +94,14 @@ fix();
                 $('.y_product .inner .prod_video ul').html(
                     ` <li>
                     <img src="./images/y_bg1.jpg" alt="">
-                    <a href="${response[0].url}"></a>
+                    <a href="${response[0].url}" target="_blank"></a>
                
                     <em>${response[0].title}</em>
                     <span>${response[0].slogan}</span>
                 </li>
                 <li>
                     <img src="./images/y_bg2.jpg" alt="">
-                     <a href="${response[1].url}"></a>
+                     <a href="${response[1].url}" target="_blank"></a>
                     <em>${response[1].title}</em>
                     <span>${response[1].slogan}</span>
                 </li>`
@@ -113,12 +113,58 @@ fix();
 })();
 
 
+(function() {
+
+    $('.touch_content .contact a').mouseenter(function(e) {
+        var ev = e || window.event
+        ev.stopPropagation()
+        $(this).siblings('span').css('color', 'blue')
+        $(this).closest('.vx').append('<img src="./images/y_vx.jpg" alt="#">')
+
+        $('.touch_content .contact a').mouseleave(function() {
+            $(this).siblings('span').css('color', 'black')
+            $(this).siblings('img').remove();
+        });
+    })
 
 
-;
+})();
+
+
+//了解 常见问题
+(function() {
+
+    $(' .server_content li .msg').click(function() {
+        var container = $(this).html() //获取a标签内容
+            // console.log(container)
+        localStorage.setItem('answer', container) //存入本地  标记用
+    })
+
+
+
+    function aContent() {
+        var array = [];
+        var elA = document.querySelectorAll(' .server_content li .msg') //拿到所有a标签内容放入数组
+        for (var i = 0; i < elA.length; i++) {
+            array.push(elA[i].innerHTML)
+        }
+        var jsonStr = JSON.stringify(array) //转化成格式
+            // console.log(jsonStr);
+        localStorage.setItem('oA', jsonStr) //存入本地
+    }
+    aContent()
+
+})();
+
+
+
+
+
+
+
 (function() {
     $('.y_product .inner .prod_content ').on('mouseenter', ' li a img', function() {
-        console.log(555)
+        // console.log(555)
         $(this).css({
             'width': '200px',
             'height': '200px'
@@ -135,13 +181,15 @@ fix();
     })
 })();
 
+
 (function() {
 
     var arr = {
         "注册产品": "y_login.html",
         "真伪查询": "y_taf.html",
         "自助服务": "y_self.html",
-        "寄送快修": "y_send.html"
+        "寄送快修": "y_send.html",
+        "预约维修": "y_reserve.html"
     }
 
     $('.y_main .wrap ').on('click', '.icon li a ', function() {
@@ -161,7 +209,7 @@ fix();
 
     $('.y_main .wrap ').on('click', '.module ul li a ', function() {
         var content = $(this).siblings('em').html()
-        console.log(content);
+            // console.log(content);
 
         if (localStorage.getItem('username')) {
 
@@ -173,4 +221,4 @@ fix();
             $(this).attr('href', "y_self.html")
         }
     })
-})()
+})();
