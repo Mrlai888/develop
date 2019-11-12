@@ -1,4 +1,19 @@
 
+// 头部鼠标移除隐藏
+$('.Jin_hide_content').mouseleave(function () {
+    $(this).css('display', 'none');
+});
+
+$('.Jin_hide_content_ding').mouseleave(function(){
+    $(this).css('display','none')
+});
+
+$('.Jin_car_hide').mouseleave(function(){
+    $(this).css('display','none')
+});
+
+
+
 ajax({//推荐
     url: 'php/goods.php',
     data: 'module=accessory_rec',

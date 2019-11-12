@@ -1,3 +1,16 @@
+// 头部鼠标移除隐藏
+$('.Jin_hide_content').mouseleave(function () {
+    $(this).css('display', 'none');
+});
+
+$('.Jin_hide_content_ding').mouseleave(function(){
+    $(this).css('display','none')
+});
+
+$('.Jin_car_hide').mouseleave(function(){
+    $(this).css('display','none')
+});
+
 
 
 // 配件
@@ -93,8 +106,6 @@ ajax({  //新品
 
 
 
-
-
 //轮播图
 var mySwiper = new Swiper('.swiper-container', {
     // 分页器
@@ -137,8 +148,6 @@ ajax({   //轮播
 
 
 // 切换
-
-
 
 // for (var i = 0; i < oA.length; i++) {
 //     var link = oA[i];

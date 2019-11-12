@@ -341,6 +341,7 @@
         $('.Jin_car_hide').css('display', 'none')
     })
 
+
     // 购物车隐藏
     $('#car').mouseover(function () {
         $('.Jin_User_hide').css('display', 'none');
@@ -366,3 +367,4 @@
 
 })
 ();
+
