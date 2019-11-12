@@ -21,7 +21,7 @@ ajax({
         var json = JSON.parse(data);
         for (var i = 0, len = json.length; i < len; i++) {
             document.querySelector('.good-list-wrap').innerHTML += `
-                          <li class="gl-item" code = "${json[i].id}">
+                          <li class="gl-item">
                         <a href="Details.html" class="gl-item-link" title="${json[i].name}">
                         <img src="${json[i].pic}" alt="${json[i].name}" class="item-pic">
                         <ul class="item-slide">
@@ -52,9 +52,8 @@ ajax({
 })
 
 window.onload = function () {
-    $(".gl-item").on("click", 'img', function () {
-        var title = $(this).siblings('h3').html()
-
+    $(".gl-item").on("click", '.gl-item-link', function () {
+        var title = $(this).find('h3').html()
         localStorage.setItem('dom', title)
 
     })
