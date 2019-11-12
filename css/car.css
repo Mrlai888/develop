@@ -1,0 +1,293 @@
+@charset "UTF-8";
+/*头部导航栏*/
+#ly-nav {
+  width: 100%;
+  height: 81px;
+  background: pink;
+  margin: 0 auto;
+}
+#ly-nav content {
+  width: 100%;
+  height: 81px;
+  background: pink;
+  margin: 0 auto;
+}
+
+/*show  商品参数详情 */
+#ly-show {
+  width: 100%;
+}
+#ly-show .content {
+  width: 1240px;
+  margin: 0 auto;
+}
+#ly-show .content .content-con .left {
+  width: 560px;
+  height: 734px;
+  background: #fff;
+  float: left;
+  margin-right: 40px;
+}
+#ly-show .content .content-con .left img {
+  width: 560px;
+  height: 560px;
+  cursor: pointer;
+  display: none;
+}
+#ly-show .content .content-con .left .show {
+  display: block;
+}
+#ly-show .content .content-con .left .img-min {
+  width: 536px;
+  height: 107px;
+  background: #fff;
+}
+#ly-show .content .content-con .left .img-min img {
+  width: 80px;
+  height: 80px;
+  margin: 0 40px;
+  display: inline-block;
+}
+#ly-show .content .content-con .left .collect {
+  width: 560px;
+  height: 48px;
+  margin-left: 50px;
+}
+#ly-show .content .content-con .left .collect .coll {
+  width: 560px;
+  height: 48px;
+  background: #fff;
+}
+#ly-show .content .content-con .right {
+  width: 640px;
+  height: 531px;
+  background: #fff;
+  float: right;
+  margin-top: 30px;
+}
+#ly-show .content .content-con .right .name {
+  width: 640px;
+  height: 88px;
+}
+#ly-show .content .content-con .right .name h1 {
+  font-size: 28px;
+  height: 33px;
+  color: #262626;
+}
+#ly-show .content .content-con .right .name p {
+  color: #e22841;
+  margin: 10px 0;
+}
+#ly-show .content .content-con .right .price {
+  width: 640px;
+  height: 64px;
+  background: #f4f6fa;
+}
+#ly-show .content .content-con .right .price span {
+  color: #e02b41;
+  font-size: 36px;
+  font-weight: 500;
+}
+#ly-show .content .content-con .right .msg {
+  width: 640px;
+  height: 118px;
+  position: relative;
+  /*地区部分*/
+}
+#ly-show .content .content-con .right .msg span {
+  margin: 0 5px;
+  margin-right: 20px;
+  color: #8c8c8c;
+  line-height: 30px;
+}
+#ly-show .content .content-con .right .msg .address {
+  border-bottom: 1px dashed #dedede;
+  padding: 20px 0;
+}
+#ly-show .content .content-con .right .msg .address .a:hover {
+  cursor: pointer;
+}
+#ly-show .content .content-con .right .msg .address em {
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 5px solid #1a0000;
+  position: relative;
+  top: 12px;
+  left: 4px;
+}
+#ly-show .content .content-con .right .msg .address .copy {
+  margin-left: 30px;
+}
+#ly-show .content .content-con .right .msg .add-ress {
+  width: 500px;
+  min-height: 200px;
+  border: 1px solid #eee;
+  position: absolute;
+  top: 72px;
+  z-index: 99999;
+  background: #fff;
+  display: none;
+}
+#ly-show .content .content-con .right .msg .add-ress .tt {
+  margin-left: 55px;
+  position: relative;
+}
+#ly-show .content .content-con .right .msg .add-ress .tt span {
+  color: #000;
+  cursor: pointer;
+  border: 1px solid #eee;
+  padding: 6px 18px;
+  border-bottom: none;
+}
+#ly-show .content .content-con .right .msg .add-ress .tt em {
+  text-align: center;
+  display: block;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  color: #fff;
+  background: #998080;
+  border-radius: 50%;
+  position: absolute;
+  right: -3px;
+  top: -6px;
+  user-select: none;
+}
+#ly-show .content .content-con .right .msg .add-ress .tt em:hover {
+  cursor: pointer;
+}
+#ly-show .content .content-con .right .msg .add-ress .shen {
+  display: none;
+}
+#ly-show .content .content-con .right .msg .add-ress .shen i {
+  display: inline-block;
+  padding: 5px 20px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+#ly-show .content .content-con .right .msg .add-ress .shen i:hover {
+  color: #fff;
+  background: #27b3ff;
+}
+#ly-show .content .content-con .right .msg .style {
+  width: 640px;
+  height: 52px;
+  margin-top: 20px;
+}
+#ly-show .content .content-con .right .msg .style a {
+  width: 164px;
+  height: 42px;
+  line-height: 42px;
+  display: inline-block;
+  border: 1px solid #000;
+  position: relative;
+  top: 0px;
+  left: 5px;
+  color: black;
+}
+#ly-show .content .content-con .right .msg .style a img {
+  width: 32px;
+  height: 32px;
+  margin-left: 24px;
+}
+#ly-show .content .content-con .right .msg .amount {
+  width: 640px;
+  height: 42px;
+}
+#ly-show .content .content-con .right .msg .amount i {
+  text-align: center;
+  display: inline-block;
+  width: 32px;
+  height: 20px;
+  background: #f7f7f7;
+  user-select: none;
+}
+#ly-show .content .content-con .right .msg .amount input {
+  width: 62px;
+  height: 20px;
+  background: #fff;
+  text-align: center;
+}
+#ly-show .content .content-con .right .jiagou {
+  width: 630px;
+  height: 56px;
+}
+#ly-show .content .content-con .right .jiagou span {
+  display: inline-block;
+  width: 210px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  color: #27b3ff;
+  border: 1px solid #27b3ff;
+}
+#ly-show .content .content-con .right .jiagou .w {
+  background: #27b3ff;
+  color: #fff;
+}
+#ly-show .content .content-con .right .jiagou .w:hover {
+  background: #27b3ff;
+  color: #fff;
+}
+#ly-show .content .content-con .right .jiagou span:hover {
+  background: rgba(113, 181, 236, 0.1);
+  cursor: pointer;
+}
+
+/*下面商品详情部分*/
+#ly-product .pr-msg {
+  width: 100%;
+  height: 60px;
+  background: #f7f7f7;
+}
+#ly-product .pr-msg .msg-cont {
+  width: 1240px;
+  height: 60px;
+  line-height: 60px;
+  background: #f7f7f7;
+  margin: 0 auto;
+}
+#ly-product .pr-msg .msg-cont a {
+  display: inline-block;
+  height: 58px;
+  margin: 0 10px;
+  color: #000;
+  font-size: 16px;
+}
+#ly-product .box {
+  width: 1240px;
+  margin: 0 auto;
+  display: none;
+}
+#ly-product .active {
+  display: block;
+}
+#ly-product .canshu {
+  width: 1240px;
+  height: 251px;
+}
+#ly-product .canshu table {
+  width: 1240px;
+  border-collapse: collapse;
+}
+#ly-product .canshu table #xx {
+  width: 1240px;
+  height: 38px;
+  background-color: #eee;
+}
+#ly-product .canshu table tr .a1 {
+  width: 22%;
+  color: #333;
+  font-weight: 400;
+  padding: 14px 0;
+}
+#ly-product .canshu table tr td {
+  border: 1px solid #dedede;
+  padding-left: 35px;
+  color: #999;
+}
+#ly-product .canshu table tr th {
+  border: 1px solid #dedede;
+}

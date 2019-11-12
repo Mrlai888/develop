@@ -3,13 +3,17 @@ $('.Jin_hide_content').mouseleave(function () {
     $(this).css('display', 'none');
 });
 
-$('.Jin_hide_content_ding').mouseleave(function(){
-    $(this).css('display','none')
+$('.Jin_hide_content_ding').mouseleave(function () {
+    $(this).css('display', 'none')
 });
 
-$('.Jin_car_hide').mouseleave(function(){
-    $(this).css('display','none')
+$('.Jin_car_hide').mouseleave(function () {
+    $(this).css('display', 'none')
 });
+
+
+
+
 
 
 
@@ -29,7 +33,7 @@ ajax({   //推荐
             ulCont.innerHTML += `
 
         <li>
-            <a href="#">
+            <a href="car.html">
                 <img src="${json[i].pic}" alt="">
                 <em></em>
                 <h3>${json[i].name}</h3>
@@ -44,7 +48,7 @@ ajax({   //推荐
     }, faild: function (err) {
         console.log(err);
     }
-})
+});
 
 ajax({  //新品
     url: 'php/goods.php',
@@ -72,8 +76,8 @@ ajax({  //新品
             </a>
         </li>
             `;
-        }
-        // console.log(ulCont)
+        };
+
 
         var oA = document.querySelectorAll('#ly-main .cont .title .right a');
         var lists = document.querySelectorAll('#ly-main .cont .list')
@@ -96,13 +100,60 @@ ajax({  //新品
         }
         // console.log(lists[0])
 
-
-
     }, faild: function (err) {
         console.log(err);
 
     }
-})
+});
+
+
+
+// 价格排序
+ajax({   //推荐
+    url: 'php/goods.php',
+    data: 'module=life_rec',
+    type: 'get',
+    succeed: function (data) {
+        // console.log(data);
+        var json = JSON.parse(data);
+        // console.log(json);
+        var ulCont = document.querySelector('.seal')
+        // console.log(ulCont)
+
+        for (var i = 0; i < 12; i++) {
+            ulCont.innerHTML += `
+
+        <li>
+            <a href="#">
+                <img src="${json[i].pic}" alt="">
+                <em></em>
+                <h3>${json[i].name}</h3>
+                <p>${json[i].slogan}</p>
+                <i>  
+                    <span>${json[i].price}</span>
+                </i>
+            </a>
+        </li>
+            `;
+        }
+    }, faild: function (err) {
+        console.log(err);
+    }
+});
+
+
+
+
+// 获取价格旁边的两个三角形 注册点击事件
+
+var prev = document.querySelector('#ly-main .cont .title .right .price')
+var prevStyle = document.getComputedStyle(prev,':after');
+
+alert('prevStyle.getPropertyValue("width") result: ' + prevStyle.getPropertyValue('width'))
+
+
+
+
 
 
 
@@ -115,7 +166,7 @@ var mySwiper = new Swiper('.swiper-container', {
         clickable: true,//鼠标点击圆点控制图片
     },
 
-})
+});
 
 // 轮播
 ajax({   //轮播
@@ -146,8 +197,7 @@ ajax({   //轮播
 
 
 
-
-// 切换
+// 推荐新品切换
 
 // for (var i = 0; i < oA.length; i++) {
 //     var link = oA[i];
@@ -162,3 +212,7 @@ ajax({   //轮播
 //         }
 //     }
 // }
+
+
+
+

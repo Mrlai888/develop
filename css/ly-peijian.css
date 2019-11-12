@@ -59,8 +59,7 @@
 #ly-main .cont .title .right .price {
   margin-right: 0;
 }
-#ly-main .cont .title .right .price:before {
-  content: "";
+#ly-main .cont .title .right .i1 {
   position: absolute;
   top: 32px;
   right: -14px;
@@ -70,8 +69,7 @@
   border-left: 5px solid transparent;
   border-bottom: 5px solid #343434;
 }
-#ly-main .cont .title .right .price:after {
-  content: "";
+#ly-main .cont .title .right .i2 {
   position: absolute;
   bottom: 28px;
   right: -14px;
@@ -79,6 +77,9 @@
   height: 0;
   border: 5px solid transparent;
   border-top-color: inherit;
+}
+#ly-main .cont .title .i2:hover {
+  color: #00c3f5;
 }
 #ly-main .cont .list {
   width: 1240px;

@@ -29,7 +29,7 @@ ajax({//推荐
             ulCont.innerHTML += `
 
     <li>
-        <a href="#">
+        <a href="car.html">
             <img src="${json[i].pic}" alt="">
             <em></em>
             <h3>${json[i].name}</h3>
@@ -77,8 +77,6 @@ ajax({ //
             </li>
                 `;
         }
-
-
         var oA = document.querySelectorAll('#ly-main .cont .title .right a');
         var lists = document.querySelectorAll('#ly-main .cont .list')
 
@@ -103,6 +101,51 @@ ajax({ //
 
     }
 })
+
+
+// 价格排序
+ajax({   //推荐
+    url: 'php/goods.php',
+    data: 'module=accessory_rec',
+    type: 'get',
+    succeed: function (data) {
+        // console.log(data);
+        var json = JSON.parse(data);
+        // console.log(json);
+        var ulCont = document.querySelector('.seal')
+        // console.log(ulCont)
+
+        for (var i = 0; i < 12; i++) {
+            ulCont.innerHTML += `
+
+        <li>
+            <a href="car.html">
+                <img src="${json[i].pic}" alt="">
+                <em></em>
+                <h3>${json[i].name}</h3>
+                <p>${json[i].slogan}</p>
+                <i>  
+                    <span>${json[i].price}</span>
+                </i>
+            </a>
+        </li>
+            `;
+        }
+    }, faild: function (err) {
+        console.log(err);
+    }
+});
+
+
+$a1 = $('#ly-main .cont .title .right .price');
+$a1Style = $('#ly-main .cont .title .right .price',':after')
+console.log($a1Style)
+
+$('.price:after').click (function(){
+    console.log(333)
+})
+
+
 
 
 
