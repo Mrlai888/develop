@@ -1,9 +1,13 @@
+//覆盖公共头部导航移出隐藏事件
 $('.mt-wrapperCar').mouseenter(function () {
     $('.Jin_hide_content').css('display', 'none');
     $('.Jin_hide_content_ding').css('display', 'none');
     $('.Jin_User_hide').css('display', 'none');
     $('.Jin_car_hide').css('display', 'none')
 })
+
+
+//切换
 var list = $('.preview-thumb li');
 var img = $('.preview-booth img');
 swh(list, "current");
@@ -45,6 +49,7 @@ function swh2(ele, clsname) {
     })
 }
 
+//导航栏的固定
 $(window).scroll(function () {
     // 获取网页滚动的偏移位
     var offset = $("html,body").scrollTop();
@@ -62,6 +67,8 @@ $(window).scroll(function () {
     }
 })
 
+
+//图片切换
 $(".site-title .text").mouseenter(function () {
     $(".site-title .content").css({
         display: "block"
@@ -117,6 +124,7 @@ $(".mt li").eq(2).click(function () {
 })
 
 
+//地址栏选项
 var li = $(".t1 li a");
 var lit2 = $(".t2 li a");
 var lit3 = $(".t3 li a");
@@ -145,4 +153,24 @@ for (var i = 0; i < lit3.length; i++) {
             $("#xuanze").text(this.innerText)
         }
     })(i)
+}
+
+
+var atr = JSON.parse(localStorage.getItem('obj'))
+
+for (var i = 0; i < atr.length; i++) {
+    // console.log(aaa[i]);
+
+    if (atr[i].name == localStorage.getItem('dom')) {
+        console.log(atr[i].price);
+        console.log(atr[i].name);
+
+        $(".content .name").text(atr[i].name);
+        $(".property-hd h1").text(atr[i].name);
+        $(".property-hd .mod-info").text(atr[i].slogan)
+        $(".mod-price .vm-money").text(atr[i].price)
+        $(".preview-booth a img").attr("src", atr[i].pic)
+        // $(".preview-thumb li .pic01").attr("src", aaa[i][key].pic)
+
+    }
 }

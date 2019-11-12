@@ -4,7 +4,7 @@ $.ajax({
     data: "module=adv",
     dataType: "json",
     success: function (data) {
-        console.log(data);
+        // console.log(data);
         for (var i = 0; i < data.length; i++) {
             $('.mt-image').css({
                 backgroundImage: 'url(' + data[0].url + ')'
@@ -17,11 +17,11 @@ ajax({
     type: "get",
     data: "module=phone_rec",
     succeed: function (data) {
+        localStorage.setItem('obj', data)
         var json = JSON.parse(data);
-        console.log(json);
         for (var i = 0, len = json.length; i < len; i++) {
             document.querySelector('.good-list-wrap').innerHTML += `
-                          <li class="gl-item">
+                          <li class="gl-item" code = "${json[i].id}">
                         <a href="Details.html" class="gl-item-link" title="${json[i].name}">
                         <img src="${json[i].pic}" alt="${json[i].name}" class="item-pic">
                         <ul class="item-slide">
@@ -45,22 +45,31 @@ ajax({
                         </p>
                         <p class="item-hot"> ${json[i].activity} </p>
                     </a>
-                </li> 
+                </li>
             `
         }
     }
 })
 
+window.onload = function () {
+    $(".gl-item").on("click", 'img', function () {
+        var title = $(this).siblings('h3').html()
+
+        localStorage.setItem('dom', title)
+
+    })
+}
+
 
 $('#rec').click(function () {
     document.querySelector('.good-list-wrap').innerHTML = '';
-        ajax({
+    ajax({
         url: "php/goods.php",
         type: "get",
         data: "module=phone_rec",
         succeed: function (data) {
             var json = JSON.parse(data);
-            console.log(json);
+            // console.log(json);
             for (var i = 0, len = json.length; i < len; i++) {
                 document.querySelector('.good-list-wrap').innerHTML += `
                           <li class="gl-item">
@@ -102,7 +111,7 @@ $('#new').click(function () {
         data: "module=phone_new",
         succeed: function (data) {
             var json = JSON.parse(data);
-            console.log(json);
+            // console.log(json);
             for (var i = 0, len = json.length; i < len; i++) {
                 document.querySelector('.good-list-wrap').innerHTML += `
                           <li class="gl-item">
@@ -144,7 +153,7 @@ ajax({
     data: "module=banner",
     succeed: function (data) {
         var json = JSON.parse(data);
-        console.log(json);
+        // console.log(json);
         for (var i = 0, len = json.length; i < len; i++) {
             document.querySelector('.recommend-slider-wrap').innerHTML += `
                     <li class="rs-item" style="width: 310px; margin-right: 0px; float: left; display: block;">
@@ -169,7 +178,6 @@ ajax({
 $('.filter-order a').click(function () {
     $(this).toggleClass('active').siblings().removeClass('active');
 })
-
 
 var list = $('.flex-control-nav a');
 list.click(function () {
@@ -206,6 +214,8 @@ list.eq(2).click(function () {
         marginRight: '-100px',
         overflow: 'hidden'
     })
-})
+});
+
+
 
 
