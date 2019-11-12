@@ -4,7 +4,7 @@ $.ajax({
     data: "module=adv",
     dataType: "json",
     success: function(data) {
-        console.log(data);
+        // console.log(data);
         for (var i = 0; i < data.length; i++) {
             $('.mt-image').css({
                 backgroundImage: 'url(' + data[0].url + ')'
@@ -110,7 +110,7 @@ $('#new').click(function() {
         data: "module=phone_new",
         succeed: function(data) {
             var json = JSON.parse(data);
-            console.log(json);
+            // console.log(json);
             for (var i = 0, len = json.length; i < len; i++) {
                 document.querySelector('.good-list-wrap').innerHTML += `
                           <li class="gl-item">
@@ -152,7 +152,7 @@ ajax({
     data: "module=banner",
     succeed: function(data) {
         var json = JSON.parse(data);
-        console.log(json);
+        // console.log(json);
         for (var i = 0, len = json.length; i < len; i++) {
             document.querySelector('.recommend-slider-wrap').innerHTML += `
                     <li class="rs-item" style="width: 310px; margin-right: 0px; float: left; display: block;">
@@ -213,4 +213,4 @@ list.eq(2).click(function() {
         marginRight: '-100px',
         overflow: 'hidden'
     })
-})
+});

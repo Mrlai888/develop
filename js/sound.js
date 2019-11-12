@@ -19,12 +19,13 @@ ajax({
     type: "get",
     data: "module=music_rec",
     succeed: function (data) {
+        localStorage.setItem('obj', data)
         var json = JSON.parse(data);
-        console.log(json);
+
         for (var i = 0, len = json.length; i < len; i++) {
             document.querySelector('.good-list-wrap').innerHTML += `
                           <li class="gl-item">
-                        <a href="javascript:;" class="gl-item-link" title="${json[i].name}">
+                        <a href="Details.html" class="gl-item-link" title="${json[i].name}">
                         <img src="${json[i].pic}" alt="${json[i].name}" class="item-pic">
                         <ul class="item-slide">
                             <li class="item-slide-dot active" title="湖光绿">
@@ -52,7 +53,13 @@ ajax({
         }
     }
 })
+window.onload = function () {
+    $(".gl-item").on("click", '.gl-item-link', function () {
+        var title = $(this).find('h3').html()
+        localStorage.setItem('dom', title)
 
+    })
+}
 
 $('#rec').click(function () {
     document.querySelector('.good-list-wrap').innerHTML = '';
@@ -62,7 +69,6 @@ $('#rec').click(function () {
         data: "module=music_rec",
         succeed: function (data) {
             var json = JSON.parse(data);
-            console.log(json);
             for (var i = 0, len = json.length; i < len; i++) {
                 document.querySelector('.good-list-wrap').innerHTML += `
                           <li class="gl-item">
@@ -104,7 +110,6 @@ $('#new').click(function () {
         data: "module=music_new",
         succeed: function (data) {
             var json = JSON.parse(data);
-            console.log(json);
             for (var i = 0, len = json.length; i < len; i++) {
                 document.querySelector('.good-list-wrap').innerHTML += `
                           <li class="gl-item">
@@ -146,7 +151,6 @@ ajax({
     data: "module=banner",
     succeed: function (data) {
         var json = JSON.parse(data);
-        console.log(json);
         for (var i = 0, len = json.length; i < len; i++) {
             document.querySelector('.recommend-slider-wrap').innerHTML += `
                     <li class="rs-item" style="width: 310px; margin-right: 0px; float: left; display: block;">
@@ -171,7 +175,6 @@ ajax({
 $('.filter-order a').click(function () {
     $(this).toggleClass('active').siblings().removeClass('active');
 })
-
 
 var list = $('.flex-control-nav a');
 list.click(function () {
