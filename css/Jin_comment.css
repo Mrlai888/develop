@@ -5,13 +5,14 @@
 
 #Jin_header {
     width: 100%;
-    background: #ffffff;
+    background: #fff;
 }
 
 #Jin_header .header_inner {
     /*position: absolute;*/
     z-index: 1000;
     width: 100%;
+    height: 80px;
 }
 
 #Jin_header .top_content {
