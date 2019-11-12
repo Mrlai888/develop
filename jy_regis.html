@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Flyme 账号 - 注册</title>
+    <link rel="stylesheet" href="css/jy_regis.css">
+    <link rel="shortcut icon" href="images/jy2_favicon.ico">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-mid">
+            <a href="#" class="logo"></a>
+        </div>
+    </div>
+    <div class="con">
+        <div class="box">
+            <!-- 注册 -->
+            <div class="tab-title">
+                <a href="#" class="linkablue">注册 Flyme 账号</a>
+            </div>
+
+            <!-- 提示框 -->
+            <div class="tip-box">
+                <span class="err"></span>
+                <span class="text">提示信息框</span>
+                <span class="close"></span>
+            </div>
+
+            <!-- 手机号码框 -->
+            <div class="text-box">
+                <div class="area">
+                    <input type="text" value="+86">
+                    <span class="arrow-down"></span>
+                    <div class="area-num">
+                        <ul>
+                            <li class="text">常用</li>
+                            <li class="data">中国<span>+86</span></li>
+                            <li class="data">中国台湾<span>+886</span></li>
+                            <li class="data">中国香港<span>+852</span></li>
+                            <li class="data">Brazil<span>+55</span></li>
+                            <li class="data">India<span>+91</span></li>
+                            <li class="data">Indonesin<span>+62</span></li>
+                            <li class="data">Malaysia<span>+60</span></li>
+                            <li class="text">A</li>
+                            <li class="text">B</li>
+                            <li class="text">C</li>
+                            <li class="text">D</li>
+                            <li class="text">E</li>
+                            <li class="text">F</li>
+                            <li class="text">G</li>
+                            <li class="text">H</li>
+                            <li class="text">I</li>
+                            <li class="text">J</li>
+                            <li class="text">K</li>
+                            <li class="text">L</li>
+                            <li class="text">M</li>
+                            <li class="text">N</li>
+                            <li class="text">O</li>
+                            <li class="text">P</li>
+                            <li class="text">Q</li>
+                            <li class="text">R</li>
+                            <li class="text">S</li>
+                            <li class="text">T</li>
+                            <li class="text">U</li>
+                            <li class="text">P</li>
+                            <li class="text">W</li>
+                            <li class="text">V</li>
+                            <li class="text">S</li>
+                            <li class="text">Y</li>
+                            <li class="text">Z</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="phone-ipt">
+                    <input type="text" placeholder="手机号码">
+                </div>
+            </div>
+
+            <!-- 验证 -->
+            <div class="reg-api">
+                <span class="leida"></span>
+                <span class="text">点击按钮进行验证</span>
+                <span class="logo"></span>
+            </div>
+
+            <!-- 协议 -->
+            <div class="prodocol">
+                <span class="circle-chk"></span>注册账号即表示您同意并愿意遵守<a href="#">Flyme账号服务协议</a>、<a href="#">法律声明</a>和<a
+                    href="#">隐私政策</a></span>
+            </div>
+            
+            <div class="res-btn">立即注册</div>
+
+            <!-- 情况一：已注册 -->
+            <div class="already-reg">
+                <span class="already-tip-area"></span>
+                <span class="already-phone-num"></span>
+                <p>该手机号已注册flyme账号</p>
+            </div>
+            <div class="ready-login"><a href="jy_login.html">立即登录</a></div>
+
+            <!-- 情况二：未注册 -->
+            <div class="tip-code">我们已发送一条验证码至<span class="tip-area"></span><span class="phone-num"></span>，请输入短信中的验证码
+            </div>
+            <div class="reg-code">
+                <input class="ipt-code" type="text">
+                <button class="get-code">获取验证码</button>
+            </div>
+            <div class="next-step">下一步</div>
+
+            <!-- 填写密码 -->
+            <div class="tip-pwd">密码长度为 8-16 位，至少包含字母、数字和符号中的两种类型，且不可与账号相同</div>
+            <div class="reg-pwd">
+                <input class="ipt-pwd" type="password" placeholder="密码">
+                <span class="look-pwd"></span>
+            </div>
+            <div class="submit">提交</div>
+
+            <!-- 登录页 -->
+            <div class="login-btn">
+                <a href="jy_login.html">登录</a>
+            </div>
+            <div class="register">
+                <a href="jy_regis.html">注册</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ajax.js"></script>
+    <script src="js/jy_regis.js"></script>
+
+</body>
+
+</html>

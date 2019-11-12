@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+    background: url(../images/jy_pic-flyme.png)no-repeat;
+    background-size: cover;
+    /* 让图片随屏幕大小同步缩放，但是有部分可能会被裁切，不过不至于会露白。 */
+    background-position: -50px 0;
+    /* 图片的位置，居中，靠左对齐 */
+    background-color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: 68px;
+}
+
+.header-mid {
+    width: 1240px;
+    height: 68px;
+    margin: 0 auto;
+    /* background-color: #cfc; */
+    position: relative;
+}
+
+.header-mid .logo {
+    display: block;
+    width: 110px;
+    height: 20px;
+    background: url(../images/jy_base.png) -2px -4px no-repeat;
+    cursor: pointer;
+    position: absolute;
+    top: 23px;
+}
+
+.con {
+    width: 1240px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.box-phone-login {
+    /* display: none; */
+    width: 298px;
+    /* height: 280px; */
+    position: absolute;
+    top: 24%;
+    right: 85px;
+    background-color: #FFF;
+    padding: 35px 35px 10px;
+    border-radius: 2px;
+    box-shadow: 0 6px 12px 0 rgba(138, 153, 150, 0.15);
+}
+
+.tab-title {
+    text-align: center;
+}
+
+.tab-title a {
+    color: #7f7f7f;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.tab-title span {
+    padding: 0 10px;
+}
+
+.tab-title .activity {
+    color: #515151;
+}
+
+
+.box-phone-login .tip-box {
+    width: 300px;
+    height: 30px;
+    font-size: 12px;
+    background-color: #FFD1CA;
+    margin-top: 20px;
+    color: #666;
+    position: relative;
+    visibility: hidden;
+}
+
+.box-phone-login .tip-box .err {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(../images/jy_error-ico.png)no-repeat;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}
+
+.box-phone-login .tip-box .text {
+    display: block;
+    float: left;
+    width: 268px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #666;
+}
+
+.box-phone-login .tip-box .close {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(../images/jy_close-ico.png)no-repeat;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.box-phone-login .text-box {
+    width: 298px;
+    height: 40px;
+    border: 1px solid #DDD;
+    margin-top: 20px;
+}
+
+.box-phone-login .text-box .area {
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    float: left;
+    border-right: 1px solid #ddd;
+    position: relative;
+}
+
+.box-phone-login .text-box .area .area-num {
+    width: 298px;
+    height: 200px;
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: -1px;
+    line-height: 30px;
+    background: #FFF;
+    border: 1px solid #E8E8E8;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #666;
+}
+
+.box-phone-login .text-box .area .area-num ul {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.box-phone-login .text-box .area .area-num ul li {
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+.box-phone-login .text-box .area .area-num ul li:hover {
+    background-color: #eee;
+}
+
+.box-phone-login .text-box .area .area-num ul li span {
+    float: right;
+}
+
+.box-phone-login .text-box .area .area-num .text {
+    cursor: text;
+}
+
+.box-phone-login .text-box .area input {
+    border: none;
+    width: 50px;
+    /* background-color: #ccf; */
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    line-height: 40px;
+    float: left;
+    cursor: pointer;
+    outline: 0;
+}
+
+.box-phone-login .text-box .area .arrow-down {
+    background: url(../images/jy_arrow-down.png)no-repeat;
+    float: left;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 16px;
+}
+
+.box-phone-login .text-box .phone-ipt {
+    width: 200px;
+    height: 40px;
+    float: left;
+}
+
+.box-phone-login .text-box .phone-ipt input {
+    border: none;
+    width: 197px;
+    /* background-color: #fcf; */
+    height: 40px;
+    font-size: 16px;
+    padding: 0 15px;
+    line-height: 40px;
+    outline: 0;
+}
+
+.box-phone-login .reg-api {
+    width: 298px;
+    height: 40px;
+    /* background-color: #cfc; */
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: none;
+}
+
+.box-phone-login .reg-api .leida {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/jy_leida.png)no-repeat;
+    float: left;
+}
+
+.box-phone-login .reg-api .text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 218px;
+    text-align: center;
+    float: left;
+    color: #666;
+    background: linear-gradient(to top, #f3f3f3, #fefefe);
+}
+
+.box-phone-login .reg-api .logo {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/jy_gee_logo.png)no-repeat;
+    float: left;
+}
+
+.box-phone-login .reg-api .true {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/jy_true.png)no-repeat;
+    float: left;
+}
+
+.box-phone-login .reg-api .text2 {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 218px;
+    text-align: center;
+    float: left;
+    color: #18a452;
+    background: #EEFFF5;
+}
+
+.box-phone-login .reg-api .logo2 {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/jy_gee_logo_true.png)no-repeat;
+    float: left;
+}
+
+.box-phone-login .reg-code {
+    width: 298px;
+    height: 40px;
+    /* background-color: #cfc; */
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: none;
+}
+
+.box-phone-login .ipt-code {
+    width: 108px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 16px;
+    color: #909090;
+    outline: 0;
+    border: 0;
+    border-right: 1px solid #ddd;
+    float: left;
+}
+
+.box-phone-login .get-code {
+    display: block;
+    width: 169px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    /* padding: 0 20px; */
+    font-size: 16px;
+    color: #909090;
+    float: left;
+    border: none;
+    background: #fff;
+    outline: 0;
+    cursor: pointer;
+}
+
+.box-phone-login .get-code:hover {
+    color: #387aff;
+}
+
+.box-phone-login .login-btn {
+    width: 300px;
+    height: 46px;
+    background-color: #387aff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 46px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+
+.box-phone-login .rf-btn {
+    height: 30px;
+    /* background-color: #dca; */
+    margin-top: 20px;
+}
+
+.box-phone-login .rf-btn a {
+    color: #387aff;
+}
+
+.box-phone-login .rf-btn .forget {
+    float: right;
+}
+
+.box-phone-login .login-way {
+    width: 35px;
+    height: 35px;
+    background: url(../images/jy_pc.png)no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.box-computer-login {
+    display: none;
+    width: 298px;
+    position: absolute;
+    top: 17%;
+    right: 85px;
+    background-color: #FFF;
+    padding: 35px 35px 10px;
+    border-radius: 2px;
+    box-shadow: 0 6px 12px 0 rgba(138, 153, 150, 0.15);
+}
+
+
+.box-computer-login .tip-box {
+    width: 300px;
+    height: 30px;
+    font-size: 12px;
+    background-color: #FFD1CA;
+    margin-top: 20px;
+    color: #666;
+    position: relative;
+    visibility: hidden;
+}
+
+.box-computer-login .tip-box .err {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(../images/jy_error-ico.png)no-repeat;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}
+
+.box-computer-login .tip-box .text {
+    display: block;
+    float: left;
+    width: 268px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #666;
+}
+
+.box-computer-login .tip-box .close {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(../images/jy_close-ico.png)no-repeat;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.box-computer-login .ipt-box input {
+    display: block;
+    width: 268px;
+    height: 40px;
+    line-height: 22px;
+    font-size: 14px;
+    outline: none;
+    color: #474747;
+    margin-top: 20px;
+    padding: 0 15px;
+    border: 1px solid #DDD;
+}
+
+
+.box-computer-login .reg-api {
+    width: 298px;
+    height: 40px;
+    /* background-color: #cfc; */
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background: linear-gradient(to top, #f3f3f3, #fefefe);
+    cursor: pointer;
+}
+
+.box-computer-login .reg-api .leida {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/jy_leida.png)no-repeat;
+    float: left;
+}
+
+.box-computer-login .reg-api .text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 218px;
+    text-align: center;
+    float: left;
+    color: #666;
+}
+
+.box-computer-login .reg-api .logo {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/jy_gee_logo.png);
+    float: left;
+}
+
+.box-computer-login .reg-api .true {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/jy_true.png)no-repeat;
+    float: left;
+}
+
+.box-computer-login .reg-api .text2 {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 218px;
+    text-align: center;
+    float: left;
+    color: #18a452;
+    background: #EEFFF5;
+}
+
+.box-computer-login .reg-api .logo2 {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/jy_gee_logo_true.png)no-repeat;
+    float: left;
+}
+
+.box-computer-login .rem-log {
+    margin-top: 20px;
+    color: #7f7f7f;
+    /* background-color: #cff; */
+}
+
+.box-computer-login .rem-log:hover {
+    color: #000;
+}
+
+.box-computer-login .rem-log .log-chk {
+    background: url(../images/jy_elements.png)no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-position: 0 -128px;
+    vertical-align: -4px;
+    margin-right: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.box-computer-login .login-btn {
+    width: 300px;
+    height: 46px;
+    background-color: #387aff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 46px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+
+.box-computer-login .rf-btn {
+    height: 30px;
+    /* background-color: #dca; */
+    margin-top: 20px;
+}
+
+.box-computer-login .rf-btn a {
+    color: #387aff;
+}
+
+.box-computer-login .rf-btn .forget {
+    float: right;
+}
+
+.box-computer-login .login-way {
+    width: 35px;
+    height: 35px;
+    background: url(../images/jy_phone.png)no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}

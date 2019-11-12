@@ -21,6 +21,7 @@
 		if(!$res){
 			echo 'SQL执行错误，错误编号为：' . mysql_errno() . '<br/>';
 			echo 'SQL执行错误，错误信息为：' . mysql_error() . '<br/>';
+
 			//终止错误继续执行
 			exit;
 		}
@@ -32,4 +33,3 @@
 	//字符集处理
 	my_error('set names utf8');
 
-	
