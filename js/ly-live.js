@@ -146,10 +146,6 @@ ajax({   //推荐
 
 // 获取价格旁边的两个三角形 注册点击事件
 
-var prev = document.querySelector('#ly-main .cont .title .right .price')
-var prevStyle = document.getComputedStyle(prev,':after');
-
-alert('prevStyle.getPropertyValue("width") result: ' + prevStyle.getPropertyValue('width'))
 
 
 
