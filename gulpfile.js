@@ -16,12 +16,15 @@ const rename = require('gulp-rename')
 const auto = require('gulp-connect')
     // es6转es5
 const babel = require('gulp-babel')
+    //打印错误
+    // const gutil = require('gulp-util');
+    // const pump = require('pump')
 
 
 
 //合并压缩css
 gulp.task('minCss', function() {
-    return gulp.src(['./css/*.css', '!./css/swiper*.css'])
+    return gulp.src(['./css/*.css', '!./css/swiper*.css', '!./css/iconfont.css', '!./css/Jin_comment.css'])
         .pipe(concat('main.css'))
         .pipe(minifyCss())
         .pipe(gulp.dest('./dist/css'))
@@ -30,23 +33,26 @@ gulp.task('minCss', function() {
 
 //合并压缩js
 gulp.task('minJs', function() {
-    return gulp.src(['./js/*.js', '!./js/jquery*.js', '!./js/swiper*.js'])
+    return gulp.src(['./js/*.js', '!./js/jquery*.js', '!./js/swiper*.js', '!./js/tool.js', '!./js/Jin_comment.js'])
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js'))
         .pipe(auto.reload())
+
+
 })
 
 
-//把swiper.min.css 添加到dist
+
+//把swiper.min.css iconfont添加到dist
 gulp.task('addCss', function() {
-    return gulp.src(['./css/swiper*.css'])
+    return gulp.src(['./css/swiper*.css', './css/iconfont.css', './css/Jin_comment.css'])
         .pipe(gulp.dest('./dist/css'))
 })
 
 //把jquery.min.js swiper.min.js 添加到dist
 gulp.task('addJs', function() {
-    return gulp.src(['./js/jquery*.js', './js/swiper*.js'])
+    return gulp.src(['./js/jquery*.js', './js/swiper*.js', './js/tool.js', './js/Jin_comment.js'])
         .pipe(gulp.dest('./dist/js'))
 })
 
@@ -61,7 +67,7 @@ gulp.task('minHtml', function() {
 //压缩图片
 
 gulp.task('minImages', function() {
-    return gulp.src('./images/*.*')
+    return gulp.src(['./images/*.*', './imgs/*.*', './Jin_footer_img/*.*'])
         // .pipe(minImg())
         .pipe(gulp.dest('./dist/images'))
         // .pipe(auto.reload())
@@ -69,8 +75,8 @@ gulp.task('minImages', function() {
 
 // es6转es5
 gulp.task('es62es5', function() { //es6 to es5
-    return gulp.src('./js/class.js')
-        .pipe(babel({ presets: ['@babel/preset-env'] }))
+    return gulp.src(['./js/*.js', '!./js/jquery*.js', '!./js/swiper*.js', '!./js/tool.js', '!./js/Jin_comment.js'])
+        .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(gulp.dest('./dist/js'))
 });
 
@@ -104,6 +110,8 @@ gulp.task('build', gulp.parallel( //init
     gulp.series('minCss'),
     gulp.series('minJs'),
     gulp.series('minHtml'),
-    gulp.series('minImages')
+    gulp.series('minImages'),
+    // gulp.series('es62es5')
+
 
 ))

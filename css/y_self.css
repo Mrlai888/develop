@@ -1,0 +1,121 @@
+.y_wrapper .wrap_inner {
+  width: 1240px;
+  margin: 0 auto; }
+  .y_wrapper .wrap_inner h2 {
+    border: 1px solid #ffffff;
+    height: 70px; }
+    .y_wrapper .wrap_inner h2 i {
+      width: 100px;
+      margin-top: 30px;
+      height: 24px;
+      display: block;
+      background: url("../images/y_title.png") no-repeat;
+      background-size: 100px 24px; }
+  .y_wrapper .wrap_inner .wrap_main {
+    position: relative;
+    height: 750px;
+    background: url("../images/Y_bigbg.png"); }
+    .y_wrapper .wrap_inner .wrap_main .login_block {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      top: 0px;
+      margin: auto;
+      width: 300px;
+      height: 320px;
+      padding: 20px 35px 0 35px;
+      border: 1px solid black; }
+      .y_wrapper .wrap_inner .wrap_main .login_block h2 {
+        font-size: 20px;
+        font-weight: bold; }
+      .y_wrapper .wrap_inner .wrap_main .login_block .wrap_number {
+        border: 1px solid #e5e5e5;
+        border-radius: 10px; }
+        .y_wrapper .wrap_inner .wrap_main .login_block .wrap_number span {
+          float: left;
+          width: 90px;
+          height: 40px;
+          text-align: center;
+          line-height: 40px;
+          position: relative; }
+        .y_wrapper .wrap_inner .wrap_main .login_block .wrap_number .phoneNumber {
+          width: 200px;
+          height: 40px;
+          outline: none;
+          border: none;
+          float: left;
+          outline: none;
+          background: none; }
+        .y_wrapper .wrap_inner .wrap_main .login_block .wrap_number span:after {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 20px;
+          display: inline-block;
+          background: #776e6e;
+          top: 10px;
+          right: 0; }
+      .y_wrapper .wrap_inner .wrap_main .login_block .auto_code {
+        border: 1px solid #e5e5e5;
+        border-radius: 10px;
+        margin-top: 10px;
+        display: none; }
+        .y_wrapper .wrap_inner .wrap_main .login_block .auto_code .code {
+          width: 200px;
+          height: 40px;
+          outline: none;
+          border: none;
+          float: left;
+          outline: none;
+          background: none; }
+        .y_wrapper .wrap_inner .wrap_main .login_block .auto_code span {
+          float: left;
+          width: 90px;
+          height: 40px;
+          text-align: center;
+          line-height: 40px;
+          position: relative;
+          font-weight: bold;
+          font-size: 18px; }
+        .y_wrapper .wrap_inner .wrap_main .login_block .auto_code span:before {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 20px;
+          display: inline-block;
+          background: #776e6e;
+          top: 10px;
+          left: 0; }
+      .y_wrapper .wrap_inner .wrap_main .login_block .but1 {
+        display: block;
+        width: 300px;
+        height: 40px;
+        margin-top: 20px;
+        background: #217fef;
+        border: 1px solid #217fef;
+        border-radius: 10px;
+        outline: none; }
+      .y_wrapper .wrap_inner .wrap_main .login_block .but2 {
+        display: block;
+        width: 300px;
+        height: 40px;
+        margin-top: 20px;
+        background: #217fef;
+        border: 1px solid #217fef;
+        border-radius: 10px;
+        outline: none;
+        display: none; }
+      .y_wrapper .wrap_inner .wrap_main .login_block .box .login {
+        float: left;
+        color: blue;
+        padding: 5px; }
+      .y_wrapper .wrap_inner .wrap_main .login_block .box .password {
+        color: blue;
+        float: right;
+        padding: 5px; }
+      .y_wrapper .wrap_inner .wrap_main .login_block .content {
+        display: block;
+        margin-top: 10px;
+        min-height: 40px;
+        min-width: 300px; }
