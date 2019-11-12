@@ -1,0 +1,56 @@
+.y_header_wrap {
+  height: 82px;
+  background: #ffffff; }
+
+.phone_nav li a {
+  display: block;
+  padding: 31px 20px 30px;
+  line-height: 21px;
+  font-size: 14px;
+  color: black; }
+
+#Jin_header .top_content {
+  width: 1240px;
+  margin: 0 auto;
+  background: #ffffff; }
+
+.y_more {
+  width: 1240px;
+  height: 85px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 85px; }
+  .y_more a {
+    font-size: 18px;
+    font-weight: bold; }
+  .y_more .more {
+    font-size: 18px;
+    font-weight: bold; }
+
+.y_answers {
+  border: 1px solid #f4f4f4;
+  min-height: 980px; }
+  .y_answers .answers_inner {
+    width: 1240px;
+    min-height: 980px;
+    margin: 0 auto;
+    position: relative; }
+    .y_answers .answers_inner div {
+      margin: auto;
+      border: 1px solid #e5e5e5; }
+      .y_answers .answers_inner div img {
+        width: 100%; }
+    .y_answers .answers_inner .bot {
+      width: 1240px;
+      height: 250px;
+      margin: 0 auto; }
+    .y_answers .answers_inner h2 {
+      text-align: center;
+      font-size: 20px;
+      height: 400px;
+      position: absolute;
+      left: 0px;
+      top: 0;
+      right: 0px;
+      bottom: 0px;
+      margin: auto; }
