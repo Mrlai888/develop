@@ -1,11 +1,12 @@
-function more() {
+function more() { //查询  标记
     $('.y_main .wrap .icon li a  ').on('click', 'span', function() {
         // console.log(666)
         var elMore = $(this).html();
-        localStorage.setItem('more', elMore)
+        localStorage.setItem('more', elMore) //动态添加
     })
 }
 more();
+
 
 function fix() {
     $('.y_main .wrap .module ul li  ').on('click', 'a', function() {
@@ -18,7 +19,19 @@ fix();
 
 
 
-(function() {
+function phone() {
+    $('.y_product .inner .prod_content li').on('click', 'a', function() {
+        var elPhone = $(this).find('span').html()
+        console.log(elPhone)
+        localStorage.setItem('phone', elPhone)
+    })
+}
+phone()
+
+
+
+;
+(function() { //轮播图  后台请求数据
 
     $.ajax({
         type: "get",
@@ -26,21 +39,16 @@ fix();
         data: "module=server_swiper ",
         dataType: "json",
         success: function(response) {
-            console.log(response[0].url);
-
-
+            // console.log(response[0].url);
             $('.swiper-wrapper').html(
-                `<div class="swiper-slide"><img src=" ${response[0].url }" alt=""></div>
+                    `<div class="swiper-slide"><img src=" ${response[0].url }" alt=""></div>
                         <div class="swiper-slide"><img src="${response[1].url }" alt=""></div>
                         <div class="swiper-slide"><img src="${response[2].url }" alt=""></div>
                         <div class="swiper-slide"><img src="${response[3].url }" alt=""></div>
                         <div class="swiper-slide"><img src="${response[4].url }" alt=""></div>
                         <div class="swiper-slide"><img src="${response[0].url }" alt=""></div>`
-
-
-            )
-
-            // console.log(str)
+                )
+                // console.log(str)
         }
     });
 
@@ -79,7 +87,7 @@ fix();
 
 
 
-(function() {
+(function() { //请求视屏
     $.ajax({
         type: "get",
         url: "http://localhost/project/php/fodder.php",
@@ -113,7 +121,7 @@ fix();
 })();
 
 
-(function() {
+(function() { //联系方式  mouse事件
 
     $('.touch_content .contact a').mouseenter(function(e) {
         var ev = e || window.event
@@ -131,8 +139,8 @@ fix();
 })();
 
 
-//了解 常见问题
-(function() {
+
+(function() { //了解常见问题
 
     $(' .server_content li .msg').click(function() {
         var container = $(this).html() //获取a标签内容
@@ -140,20 +148,16 @@ fix();
         localStorage.setItem('answer', container) //存入本地  标记用
     })
 
-
-
     function aContent() {
         var array = [];
-        var elA = document.querySelectorAll(' .server_content li .msg') //拿到所有a标签内容放入数组
+        var elA = document.querySelectorAll(' .server_content li .msg')
         for (var i = 0; i < elA.length; i++) {
-            array.push(elA[i].innerHTML)
+            array.push(elA[i].innerHTML) //拿到所有a标签html内容放入数组
         }
-        var jsonStr = JSON.stringify(array) //转化成格式
+        var jsonStr = JSON.stringify(array) //转化成json字符串
             // console.log(jsonStr);
         localStorage.setItem('oA', jsonStr) //存入本地
     }
-    aContent()
-
 })();
 
 
@@ -162,52 +166,49 @@ fix();
 
 
 
-(function() {
+(function() { //产品页 动图
     $('.y_product .inner .prod_content ').on('mouseenter', ' li a img', function() {
         // console.log(555)
         $(this).css({
             'width': '200px',
             'height': '200px'
-
         })
         $('.y_product .inner .prod_content ').on('mouseleave', ' li a img', function() {
             $(this).css({
                 'width': '180px',
                 'height': '200px'
-
             })
         })
-
     })
 })();
 
 
-(function() {
-
+(function() { //查询部分
     var arr = {
         "注册产品": "y_login.html",
         "真伪查询": "y_taf.html",
-        "自助服务": "y_self.html",
+        "自助服务": "y_phone.html",
+        "支付查询": "y_pay.html",
         "寄送快修": "y_send.html",
         "预约维修": "y_reserve.html"
     }
 
-    $('.y_main .wrap ').on('click', '.icon li a ', function() {
+    $('.y_main .wrap ').on('click', '.icon li a ', function() { //查询
         var content = $(this).find('span').html()
             // console.log(content);
+        if (localStorage.getItem('username')) { //判断登录状态 
 
-        if (localStorage.getItem('username')) {
-
-            for (var item in arr) {
+            for (var item in arr) { //遍历arr
+                // console.log(item, arr[item]);
                 if (content === item) //根据标记跳到指定页面
-                    $(this).attr('href', arr[item])
+                    $(this).attr('href', arr[item]) //如果已是登录转态 直接跳过登录
             }
         } else {
-            $(this).attr('href', "y_self.html")
+            $(this).attr('href', "y_self.html") //未登录就进入登录验证
         }
     })
 
-    $('.y_main .wrap ').on('click', '.module ul li a ', function() {
+    $('.y_main .wrap ').on('click', '.module ul li a ', function() { //维修 
         var content = $(this).siblings('em').html()
             // console.log(content);
 
@@ -222,3 +223,13 @@ fix();
         }
     })
 })();
+
+
+
+//主页鼠标 移开下拉菜单下拉单消失
+$('.Jin_hide_content').mouseleave(function() {
+    $(this).css('display', 'none')
+})
+$('.Jin_hide_content_ding').mouseleave(function() {
+    $(this).css('display', 'none')
+})
