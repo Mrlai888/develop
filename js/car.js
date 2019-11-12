@@ -183,26 +183,6 @@ $ww.each(function () {
 
 
 
-
-// // 获取鼠标的当前位置
-// var addres = document.querySelector(".right .msg .add-ress")
-// // console.log(addres)
-// addres.onmousemove = function (e) {
-//     var ev = event || e;
-//     var x = addres.clientWidth;
-//     var y = addres.clientHeight;
-//     // console.log(x)
-//     // console.log(y)
-//     this.style.display = 'block';
-//     if (this.x > 500 || this.y > 205) {
-//         this.style.display = 'none';
-//     } else {
-
-//     }
-
-// }
-
-
 // 底部商品详情
 // 切换
 var msgCont = document.querySelectorAll('.pr-msg .msg-cont a')

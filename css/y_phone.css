@@ -1,0 +1,55 @@
+.y_header_wrap {
+  height: 82px;
+  background: #ffffff; }
+
+.phone_nav li a {
+  display: block;
+  padding: 31px 20px 30px;
+  line-height: 21px;
+  font-size: 14px;
+  color: black; }
+
+#Jin_header .top_content {
+  width: 1240px;
+  margin: 0 auto;
+  background: #ffffff; }
+
+.y_phone {
+  width: 1240px;
+  height: 85px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 85px; }
+  .y_phone a {
+    font-size: 18px;
+    font-weight: bold; }
+  .y_phone .phone {
+    font-size: 18px;
+    font-weight: bold; }
+
+.y_phone_page {
+  width: 1240px;
+  margin: 0 auto;
+  min-height: 840px; }
+  .y_phone_page .phone_banner {
+    width: 100%;
+    height: 446px; }
+    .y_phone_page .phone_banner img {
+      vertical-align: top; }
+  .y_phone_page p {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px; }
+  .y_phone_page a {
+    display: inline-block;
+    width: 24%;
+    height: 200px;
+    text-align: center; }
+    .y_phone_page a img {
+      margin: auto;
+      margin-top: 60px;
+      display: block; }
+    .y_phone_page a span {
+      display: block;
+      font-size: 20px; }

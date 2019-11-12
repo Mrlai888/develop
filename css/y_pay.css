@@ -1,0 +1,56 @@
+.y_header_wrap {
+  height: 82px;
+  background: #ffffff; }
+
+.phone_nav li a {
+  display: block;
+  padding: 31px 20px 30px;
+  line-height: 21px;
+  font-size: 14px;
+  color: black; }
+
+#Jin_header .top_content {
+  width: 1240px;
+  margin: 0 auto;
+  background: #ffffff; }
+
+.y_more {
+  width: 1240px;
+  height: 85px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 85px; }
+  .y_more a {
+    font-size: 18px;
+    font-weight: bold; }
+  .y_more .more {
+    font-size: 18px;
+    font-weight: bold; }
+
+.y_pay_page {
+  border: 1px solid #f4f4f4;
+  width: 440px;
+  height: 580px;
+  margin: 0 auto;
+  padding: 0 400px 0px 400px;
+  text-align: center; }
+  .y_pay_page input {
+    width: 200px;
+    height: 40px;
+    margin-top: 50px;
+    display: block; }
+  .y_pay_page .but {
+    width: 200px;
+    height: 40px;
+    margin-top: 80px;
+    display: block;
+    background: skyblue; }
+  .y_pay_page span {
+    margin-top: 30px;
+    display: block;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    font-weight: bold; }

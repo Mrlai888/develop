@@ -6,7 +6,7 @@
 	error_reporting(0);
 
 	//连接数据库
-	mysql_connect('10.36.147.35','user','1234') or die('数据库连接失败！');
+	mysql_connect('','root','') or die('数据库连接失败！');
 
 	//封装MySQL语法错误检查函数并执行
 	/*

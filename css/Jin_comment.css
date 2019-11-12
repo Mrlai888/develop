@@ -5,11 +5,10 @@
 
 #Jin_header {
     width: 100%;
-    background: #fff;
 }
 
 #Jin_header .header_inner {
-    /*position: absolute;*/
+    position: absolute;
     z-index: 1000;
     width: 100%;
     height: 80px;
@@ -18,7 +17,7 @@
 #Jin_header .top_content {
     width: 1240px;
     margin: 0 auto;
-    /*background: #fff;*/
+    background: pink;
 }
 
 #Jin_header .left_logo {
@@ -31,6 +30,7 @@
     height: 24px;
     padding: 28px 0;
     float: left;
+    color: black;
 }
 
 #Jin_header .left_logo a svg {
@@ -46,7 +46,7 @@
     margin: 27px 0 0 8px;
     font-size: 24px;
     position: relative;
-    /*color: #fff;*/
+    color: black;
 }
 
 #car span {
@@ -99,7 +99,7 @@
     cursor: pointer;
     font-size: 24px !important;
     padding: 27px 0 0 8px;
-    /*color: #fff;*/
+    color: #fff;
     position: relative;
 }
 
@@ -167,7 +167,7 @@
     padding: 31px 20px 30px;
     line-height: 21px;
     font-size: 14px;
-    color: #333;
+    color: #fff;
 }
 
 .phone_nav li a:hover {
@@ -177,7 +177,7 @@
 .Jin_hide_content {
     width: 100%;
     position: absolute;
-    z-index: 9999;
+    z-index: 1999;
     background: #fff;
     display: none;
     top: 80px;
@@ -256,7 +256,6 @@
 
 #Jin_footer {
     width: 100%;
-    background: #ffffff;
 }
 
 #Jin_footer .f_top {
@@ -285,7 +284,7 @@
 }
 
 #Jin_footer .f_top .f_nav li a span {
-    color: #999;
+    color: #ccc;
     font-size: 14px;
 }
 
@@ -328,11 +327,11 @@
 #Jin_footer .f_bottom {
     padding-top: 30px;
     padding-bottom: 10px;
-    color: #999;
+    color: #ccc;
 }
 
 #Jin_footer .f_bottom a {
-    color: #999;
+    color: #ccc;
     font-size: 12px;
     margin-right: 20px;
     padding-bottom: 10px;
@@ -356,12 +355,12 @@
 }
 
 #Jin_footer .f_f_copyright {
-    color: #999;
+    color: #ccc;
     padding-bottom: 30px;
 }
 
 #Jin_footer .f_f_copyright a {
-    color: #999;
+    color: #ccc;
 }
 
 #Jin_footer .f_f_copyright a:hover {
@@ -418,5 +417,6 @@
 #Jin_footer .right_title_four .icon-qzone:hover {
     color: yellow;
 }
+
 
 /*# sourceMappingURL=Jin_header.css.map */
