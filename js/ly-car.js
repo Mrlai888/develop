@@ -1,7 +1,5 @@
-
-
 /*顶部悬浮*/
-window.onscroll = function () {
+window.onscroll = function() {
     var t = document.querySelector('#ly-roof');
     var scrollTop = document.documentElement.scrollTop;
     console.log(scrollTop)
@@ -131,14 +129,15 @@ $shen2 = $('.tt .shen').eq(2);
 $span0.click(function() {
     $shen0.show();
     $shen1.hide();
-    $shen2.hide();
-<<<<<<< HEAD
+    $shen2.hide(); <<
+    << << < HEAD
     // $(this).css('border', '1px solid #000');
     // $(this).css('border-bottom', 'none');
-=======
-    $(this).css('border', '1px solid #000');
-    $(this).css('border-bottom', 'none');
->>>>>>> 09790a0885c8276a7b710460d2e7fb1b0f6eaeff
+        ===
+        === =
+        $(this).css('border', '1px solid #000');
+    $(this).css('border-bottom', 'none'); >>>
+    >>> > 09790 a0885c8276a7b710460d2e7fb1b0f6eaeff
 
 });
 $span1.click(function() {
@@ -251,10 +250,4 @@ for (var i = 0; i < att.length; i++) {
 
 
 
-<<<<<<< HEAD
-console.log(JSON.parse(localStorage.getItem('ly_obj')));
-=======
-
-
-
->>>>>>> 09790a0885c8276a7b710460d2e7fb1b0f6eaeff
+// console.log(JSON.parse(localStorage.getItem('ly_obj')));
