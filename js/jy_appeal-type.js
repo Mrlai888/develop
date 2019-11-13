@@ -38,10 +38,15 @@
     document.querySelector('.next-step').onclick = function () {
         let pwdTip = document.querySelector('.pwd-tip');
         let ipt = document.querySelector('.other input');
-        if (reg.test(ipt.value)) {
-            pwdTip.style.visibility = 'visible';
-        }else{
-            pwdTip.style.visibility = 'hidden';
+        if (index3 != 0) {
+            if (reg.test(ipt.value)) {
+                pwdTip.style.visibility = 'visible';
+                return;
+            } else {
+                pwdTip.style.visibility = 'hidden';
+            }
         }
+        pwdTip.style.visibility = 'hidden';
+        alert('wuwuwu~  后续功能正在努力研发中...');
     }
 })();

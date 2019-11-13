@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>账号管理</title>
+    <link rel="stylesheet" href="css/jy_personal.css">
+    <link rel="shortcut icon" href="images/jy2_favicon.ico">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-mid">
+            <a href="#" class="logo"></a>
+        </div>
+    </div>
+
+    <div class="con">
+
+        <div class="box">
+            <canvas class="cvs" width="200" height="200"></canvas>
+            <span class="btn">上传头像<input type="file" class="upload"></span>
+        </div>
+
+        <div class="ipt">
+            <h1>设置密保</h1>
+            <div class="question question1">
+                <span class="tiptext">问题1：</span>
+                <input type="text" value="您母亲的名字是？" class="que1">
+            </div>
+            <div class="answer answer1">
+                <span class="tiptext aswque1">问题答案：</span>
+                <input type="text" placeholder="请设置密保问题答案" class="asw1">
+                <p class="err-tip">密保问题与答案均不能为空</p>
+            </div>
+            <div class="question question2">
+                <span class="tiptext">问题2：</span>
+                <input type="text" value="您父亲的名字是？" class="que2">
+            </div>
+            <div class="answer answer2">
+                <span class="tiptext">问题答案：</span>
+                <input type="text" placeholder="请设置密保问题答案" class="asw2">
+                <p class="err-tip">密保问题与答案均不能为空</p>
+            </div>
+        </div>
+
+        <div class="finish">完成注册</div>
+
+    </div>
+
+    <script src="js/ajax.js"></script>
+    <script src="js/jy_personal.js"></script>
+
+</body>
+
+</html>

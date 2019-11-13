@@ -195,19 +195,22 @@
         let tipText = document.querySelector('.tip-box .text');
         let iptPwd = document.querySelector('.ipt-pwd');
         let phone = document.querySelector('.phone-ipt input');
-        if(reg2.test(iptPwd.value)){
+        if (reg2.test(iptPwd.value)) {
             tip.style.visibility = 'hidden';
             ajax({
                 data: 'username=' + phone.value + '&password=' + iptPwd.value + '&ope=res',
                 url: 'php/logRes.php',
                 type: 'post',
                 succeed: function (data) {
-                    // console.log(data);
+                    console.log(data);
                     let json = JSON.parse(data);
                     if (json.err == "1") {
                         alert(json.msg);
                     } else {
-                        alert(json.msg);
+                        //设置
+                        localStorage.setItem('key1', phone.value); //设置 
+                        localStorage.setItem('key2', iptPwd.value); //设置 
+                        window.location.assign('jy_personal.html');
                     }
                 },
                 failed: function (code) {
@@ -215,7 +218,7 @@
                     console.log(code);
                 }
             });
-        }else{
+        } else {
             tip.style.visibility = 'visible';
             tipText.innerText = '密码格式错误';
         }

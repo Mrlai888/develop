@@ -27,7 +27,11 @@
     //接收参数
     $user = $_POST['username'];
     $pwd = $_POST['password'];
-    $ope = $_POST['ope'];
+	$ope = $_POST['ope'];
+	$que1 = $_POST['question1'];
+	$que2 = $_POST['question2'];
+	$asw1 = $_POST['answer1'];
+	$asw2 = $_POST['answer2'];
 
     //判断是注册还是登录操作
     switch($ope){
@@ -45,9 +49,10 @@
             }
             //添加用户入库
 	        $time = time();
-	        $sql2 = "insert into user values(null,'{$user}','{$pwd}',$time)";
+	        $sql2 = "insert into user values(null,'{$user}','{$pwd}',$time,null,null,null,null)";
 	        $insert_id = my_error($sql2);
-            break;
+			break;
+			
         case "log":
 			//判断数据库中是否已存在该用户名
 			$sql = "select * from user where username = '{$user}'";
@@ -69,6 +74,7 @@
                 echo '{"err":"1","msg":"用户名与密码不匹配！"}';
             }
 			break;
+			
 		case "rew"://重置密码
 			$sql =  "update user set password = '{$pwd}', time = '{$time}' where username = {$user}";
 			my_error($sql);
@@ -82,7 +88,6 @@
 			echo '{"err":"0","data":'.$data.'}';
 			break;
 			
-			
 		case "answer"://拿答案
 			$sql = "select * from user where username = '{$user}'";
 			$res = my_error($sql);
@@ -90,6 +95,14 @@
 			$data = json_encode($row);
 			echo '{"err":"0","data":'.$data.'}';
 			break;
+
+		case "setqueasw":
+			$time = time();
+	        $sql = "insert into user values(null,'{$user}','{$pwd}',$time,'{$que1}','{$asw1}','{$que2}','{$asw2}')";
+			$insert_id = my_error($sql);
+			echo 'haha';
+			break;
+
 
 		default://只验证用户名是否存在
 			$sql = "select * from user where username = '{$user}'";
