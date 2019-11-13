@@ -239,7 +239,7 @@ var mySwiper = new Swiper('.swiper-container', {
 
 });
 
-// 轮播
+
 ajax({ //轮播
     url: 'php/goods.php',
     data: 'module=banner',
@@ -253,13 +253,12 @@ ajax({ //轮播
 
         for (var i = 0; i < json.length; i++) {
             lis[i].innerHTML = `
-            <img src="${json[i].pic}" alt="">
-            <h3>${json[i].name}</h3>
-           
-            <span>${json[i].price}</span>
-                                                
-            `;
-        }
+                <img src="${json[i].pic}" alt="">
+                <h3>${json[i].name}</h3>                  
+                <span>${json[i].price}</span>
+                                                        
+                 `;
+        };
     },
     faild: function(err) {
         console.log(err);

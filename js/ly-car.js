@@ -131,13 +131,8 @@ $span0.click(function() {
     $shen0.show();
     $shen1.hide();
     $shen2.hide();
-<<<<<<< HEAD
-    // $(this).css('border', '1px solid #000');
-    // $(this).css('border-bottom', 'none');
-=======
     $(this).css('border', '1px solid #000');
     $(this).css('border-bottom', 'none');
->>>>>>> 09790a0885c8276a7b710460d2e7fb1b0f6eaeff
 
 });
 $span1.click(function() {
@@ -239,7 +234,8 @@ for (var i = 0; i < att.length; i++) {
         $(".right .name h1").text(att[i].name);
         $(".right .name p").text(att[i].slogan);
         $(".price span").text(att[i].price);
-        $(".img .show ").attr('src', att[i].pic)
+        $(".img .show ").attr('src', att[i].pic);
+
             // $(".mod-price .vm-money").text(atr[i].price)
             // $(".preview-booth a img").attr("src", atr[i].pic)
             // $(".preview-thumb li .pic01").attr("src", aaa[i][key].pic)
@@ -250,10 +246,4 @@ for (var i = 0; i < att.length; i++) {
 
 
 
-<<<<<<< HEAD
-console.log(JSON.parse(localStorage.getItem('ly_obj')));
-=======
-
-
-
->>>>>>> 09790a0885c8276a7b710460d2e7fb1b0f6eaeff
+// console.log(JSON.parse(localStorage.getItem('ly_obj')));
