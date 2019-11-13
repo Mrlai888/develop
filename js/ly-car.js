@@ -1,3 +1,26 @@
+
+
+/*顶部悬浮*/
+window.onscroll = function () {
+    var t = document.querySelector('#ly-roof');
+    var scrollTop = document.documentElement.scrollTop;
+    console.log(scrollTop)
+
+    if (scrollTop >= 200) {
+        t.style.display = 'block';
+        t.style.position = 'fixed';
+        t.style.top = 0;
+        t.style.left = 0;
+        t.style.right = 0;
+
+    } else {
+        t.style.display = 'none';
+        // t.style.position = 'initial';//初始化
+    }
+
+}
+
+
 // 头部移除隐藏
 $('.Jin_hide_content').mouseleave(function () {
     $(this).css('display', 'none');
@@ -10,7 +33,6 @@ $('.Jin_hide_content_ding').mouseleave(function () {
 $('.Jin_car_hide').mouseleave(function () {
     $(this).css('display', 'none')
 });
-
 
 
 function Tab() {
@@ -44,7 +66,6 @@ Tab.prototype.clickTab = function () {
 // 5. 构造函数实例化
 var tab1 = new Tab();
 tab1.clickTab();
-
 
 
 
@@ -111,9 +132,9 @@ $span0.click(function () {
     $shen0.show();
     $shen1.hide();
     $shen2.hide();
-    // $(this).css('border', '1px solid #000');
-    // $(this).css('border-bottom', 'none');
-    
+    $(this).css('border', '1px solid #000');
+    $(this).css('border-bottom', 'none');
+
 });
 $span1.click(function () {
     $shen1.show();
@@ -121,7 +142,7 @@ $span1.click(function () {
     $shen2.hide();
     // $(this).css('border', '1px solid #000');
     // $(this).css('border-bottom', 'none');
-   
+
 });
 $span2.click(function () {
     $shen2.show();
@@ -130,7 +151,6 @@ $span2.click(function () {
     // $(this).css('border', '1px solid #000');
     // $(this).css('border-bottom', 'none');
 });
-
 
 
 // 当鼠标移入省区位置时显示其他省份选择
@@ -200,6 +220,7 @@ for (var i = 0; i < msgCont.length; i++) {
         boxs[this.index].style.display = 'block';
     }
 }
+
 
 
 
