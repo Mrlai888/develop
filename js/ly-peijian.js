@@ -1,29 +1,29 @@
-
 // 头部鼠标移除隐藏
-$('.Jin_hide_content').mouseleave(function () {
+$('.Jin_hide_content').mouseleave(function() {
     $(this).css('display', 'none');
 });
 
-$('.Jin_hide_content_ding').mouseleave(function(){
-    $(this).css('display','none')
+$('.Jin_hide_content_ding').mouseleave(function() {
+    $(this).css('display', 'none')
 });
 
-$('.Jin_car_hide').mouseleave(function(){
-    $(this).css('display','none')
+$('.Jin_car_hide').mouseleave(function() {
+    $(this).css('display', 'none')
 });
 
 
 
-ajax({//推荐
+ajax({ //推荐
     url: 'php/goods.php',
     data: 'module=accessory_rec',
     type: 'get',
-    succeed: function (data) {
-        // console.log(data);
+    succeed: function(data) {
+        localStorage.setItem('ly_obj', data)
+            // console.log(data);
         var json = JSON.parse(data);
         // console.log(json);
         var ulCont = document.querySelector('.ul-con')
-        // console.log(ulCont)
+            // console.log(ulCont)
 
         for (var i = 0; i < 8; i++) {
             ulCont.innerHTML += `
@@ -41,7 +41,15 @@ ajax({//推荐
     </li>
         `;
         }
-    }, faild: function (err) {
+        $(".list ul ").on("click", 'li a', function() {
+            console.log(666)
+            var title = $(this).find('h3').html()
+
+            localStorage.setItem('ly_phone', title)
+
+        });
+    },
+    faild: function(err) {
         console.log(err);
     }
 });
@@ -52,12 +60,12 @@ ajax({ //
     url: 'php/goods.php',
     data: 'module=accessory_new',
     type: 'get',
-    succeed: function (data) {
+    succeed: function(data) {
         // console.log(data);
         var json = JSON.parse(data);
         // console.log(json);
         var ulCont = document.querySelector('.ul-con1')
-        // console.log(ulCont)
+            // console.log(ulCont)
 
         ulCont.innerHTML = '';
         for (var i = 0; i < 8; i++) {
@@ -81,7 +89,7 @@ ajax({ //
         // console.log(oA);
         for (var i = 0; i < oA.length; i++) {
             oA[i].index = i;
-            oA[i].onclick = function () {
+            oA[i].onclick = function() {
                 for (var i = 0; i < lists.length; i++) {
 
                     // oA[i].classList.remove = 'show';
@@ -93,7 +101,8 @@ ajax({ //
                 lists[this.index].style.display = 'block';
             }
         }
-    }, faild: function (err) {
+    },
+    faild: function(err) {
         console.log(err);
 
     }
@@ -101,16 +110,16 @@ ajax({ //
 
 
 // 价格排序
-ajax({   //
+ajax({ //
     url: 'php/goods.php',
     data: 'module=accessory_rec',
     type: 'get',
-    succeed: function (data) {
+    succeed: function(data) {
         // console.log(data);
         var json = JSON.parse(data);
         // console.log(json);
         var ulCont = document.querySelector('.seal')
-        // console.log(ulCont)
+            // console.log(ulCont)
 
         for (var i = 0; i < 12; i++) {
             ulCont.innerHTML += `
@@ -128,23 +137,24 @@ ajax({   //
         </li>
             `;
         }
-    }, faild: function (err) {
+    },
+    faild: function(err) {
         console.log(err);
     }
 });
 
 
 // 价格旁边的三角形
-ajax({//三角形上
+ajax({ //三角形上
     url: 'php/goods.php',
     data: 'module=accessory_rec',
     type: 'get',
-    succeed: function (data) {
+    succeed: function(data) {
         // console.log(data);
         var json = JSON.parse(data);
         // console.log(json);
         var prev = document.querySelector('.prev')
-        // console.log(ulCont)
+            // console.log(ulCont)
 
         for (var i = 0; i < 8; i++) {
             prev.innerHTML += `
@@ -162,7 +172,8 @@ ajax({//三角形上
     </li>
         `;
         }
-    }, faild: function (err) {
+    },
+    faild: function(err) {
         console.log(err);
 
     }
@@ -170,16 +181,16 @@ ajax({//三角形上
 
 
 // 三角形下
-ajax({//下
+ajax({ //下
     url: 'php/goods.php',
     data: 'module=life_rec',
     type: 'get',
-    succeed: function (data) {
+    succeed: function(data) {
         // console.log(data);
         var json = JSON.parse(data);
         // console.log(json);
         var next = document.querySelector('.next')
-        // console.log(ulCont)
+            // console.log(ulCont)
 
         for (var i = 0; i < 8; i++) {
             next.innerHTML += `
@@ -197,7 +208,8 @@ ajax({//下
     </li>
         `;
         }
-    }, faild: function (err) {
+    },
+    faild: function(err) {
         console.log(err);
 
     }
@@ -211,22 +223,22 @@ var mySwiper = new Swiper('.swiper-container', {
     pagination: {
 
         el: '.swiper-pagination',
-        clickable: true,//鼠标点击圆点控制图片
+        clickable: true, //鼠标点击圆点控制图片
     },
 
 });
 
 
-ajax({  //轮播
+ajax({ //轮播
     url: 'php/goods.php',
     data: 'module=banner',
     type: 'get',
-    succeed: function (data) {
+    succeed: function(data) {
         // console.log(data);
         var json = JSON.parse(data);
         // console.log(json);
         var lis = document.querySelectorAll('.swiper-slide a')
-        // console.log(lis)
+            // console.log(lis)
 
         for (var i = 0; i < json.length; i++) {
             lis[i].innerHTML = `
@@ -236,24 +248,9 @@ ajax({  //轮播
                                                         
                  `;
         };
-    }, faild: function (err) {
+    },
+    faild: function(err) {
         console.log(err);
 
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

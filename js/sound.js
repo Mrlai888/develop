@@ -3,7 +3,7 @@ $.ajax({
     type: "get",
     data: "module=adv",
     dataType: "json",
-    success: function (data) {
+    success: function(data) {
         console.log(data);
         for (var i = 0; i < data.length; i++) {
             $('.mt-image').css({
@@ -18,7 +18,7 @@ ajax({
     url: "php/goods.php",
     type: "get",
     data: "module=music_rec",
-    succeed: function (data) {
+    succeed: function(data) {
         localStorage.setItem('obj', data)
         var json = JSON.parse(data);
 
@@ -51,23 +51,24 @@ ajax({
                 </li> 
             `
         }
+        $(".gl-item").on("click", '.gl-item-link', function() {
+            var title = $(this).find('h3').html()
+            localStorage.setItem('dom', title)
+
+        })
     }
 })
-window.onload = function () {
-    $(".gl-item").on("click", '.gl-item-link', function () {
-        var title = $(this).find('h3').html()
-        localStorage.setItem('dom', title)
 
-    })
-}
 
-$('#rec').click(function () {
+
+
+$('#rec').click(function() {
     document.querySelector('.good-list-wrap').innerHTML = '';
     ajax({
         url: "php/goods.php",
         type: "get",
         data: "module=music_rec",
-        succeed: function (data) {
+        succeed: function(data) {
             var json = JSON.parse(data);
             for (var i = 0, len = json.length; i < len; i++) {
                 document.querySelector('.good-list-wrap').innerHTML += `
@@ -102,13 +103,13 @@ $('#rec').click(function () {
     })
 })
 
-$('#new').click(function () {
+$('#new').click(function() {
     document.querySelector('.good-list-wrap').innerHTML = '';
     ajax({
         url: "php/goods.php",
         type: "get",
         data: "module=music_new",
-        succeed: function (data) {
+        succeed: function(data) {
             var json = JSON.parse(data);
             for (var i = 0, len = json.length; i < len; i++) {
                 document.querySelector('.good-list-wrap').innerHTML += `
@@ -149,7 +150,7 @@ ajax({
     url: "php/goods.php",
     type: "get",
     data: "module=banner",
-    succeed: function (data) {
+    succeed: function(data) {
         var json = JSON.parse(data);
         for (var i = 0, len = json.length; i < len; i++) {
             document.querySelector('.recommend-slider-wrap').innerHTML += `
@@ -172,19 +173,19 @@ ajax({
 })
 
 
-$('.filter-order a').click(function () {
+$('.filter-order a').click(function() {
     $(this).toggleClass('active').siblings().removeClass('active');
 })
 
 var list = $('.flex-control-nav a');
-list.click(function () {
+list.click(function() {
     for (var i = 0; i < list.length; i++) {
         list[i].className = '';
     }
     $(this).addClass('flex-active')
 })
 
-list.eq(0).click(function () {
+list.eq(0).click(function() {
     $(" .recommend-slider-wrap").css({
         width: '2000%',
         transitionDduration: '0s',
@@ -194,7 +195,7 @@ list.eq(0).click(function () {
     })
 })
 
-list.eq(1).click(function () {
+list.eq(1).click(function() {
     $(" .recommend-slider-wrap").css({
         width: '2000%',
         transitionDduration: '0s',
@@ -203,7 +204,7 @@ list.eq(1).click(function () {
         overflow: 'hidden'
     })
 })
-list.eq(2).click(function () {
+list.eq(2).click(function() {
     $(" .recommend-slider-wrap").css({
         width: '2000%',
         transitionDduration: '0s',
