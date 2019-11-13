@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*头部导航栏*/
-.top_content {
+#Jin_header .w .top_content {
   background: #fff;
 }
 
@@ -18,6 +18,7 @@
 #ly-main {
   width: 100%;
   background: #f4f4f4;
+  /*为您推荐部分*/
 }
 #ly-main .cont {
   width: 1240px;
@@ -25,7 +26,6 @@
   background: #f4f4f4;
   /*配件*/
   /*图片部分*/
-  /*为您推荐部分*/
 }
 #ly-main .cont .title {
   width: 1240px;
@@ -60,22 +60,23 @@
 #ly-main .cont .title .right .price {
   margin-right: 0;
 }
-#ly-main .cont .title .right .price:before {
-  content: "";
+#ly-main .cont .title .right .i1:hover {
+  color: #00c3f5;
+}
+#ly-main .cont .title .right .i1 {
   position: absolute;
-  top: 32px;
-  right: -14px;
+  top: 33px;
+  right: -50px;
   width: 0;
   height: 0;
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
   border-bottom: 5px solid #343434;
 }
-#ly-main .cont .title .right .price:after {
-  content: "";
+#ly-main .cont .title .right .i2 {
   position: absolute;
   bottom: 28px;
-  right: -14px;
+  right: -50px;
   width: 0;
   height: 0;
   border: 5px solid transparent;
@@ -138,22 +139,22 @@
   line-height: 30px;
   margin-top: 64px;
 }
-#ly-main .cont .show {
+#ly-main .show {
   display: block;
 }
-#ly-main .cont .tuijian .tuijian-title h2 {
+#ly-main .tuijian .tuijian-title h2 {
   font-size: 24px;
   color: #333;
   padding-bottom: 25px;
   padding-top: 80px;
 }
-#ly-main .cont .tuijian .tuijian-list {
+#ly-main .tuijian .tuijian-list {
   width: 1240px;
   height: 429px;
   background: #fff;
   padding-bottom: 20px;
 }
-#ly-main .cont .tuijian .tuijian-list a {
+#ly-main .tuijian .tuijian-list a {
   display: block;
   width: 310px;
   height: 428px;
@@ -161,25 +162,25 @@
   float: left;
   padding-top: 50px;
 }
-#ly-main .cont .tuijian .tuijian-list a img {
+#ly-main .tuijian .tuijian-list a img {
   width: 230px;
   height: 230px;
 }
-#ly-main .cont .tuijian .tuijian-list a h3 {
+#ly-main .tuijian .tuijian-list a h3 {
   font-size: 22px;
   color: #2b2b2b;
   margin-top: 20px;
   margin-bottom: 10px;
 }
-#ly-main .cont .tuijian .tuijian-list a em {
+#ly-main .tuijian .tuijian-list a em {
   font-size: 16px;
   color: #c00;
 }
-#ly-main .cont .tuijian .tuijian-list a span {
+#ly-main .tuijian .tuijian-list a span {
   font-size: 28px;
   color: #c00;
 }
-#ly-main .cont .tuijian .tuijian-list a:hover {
+#ly-main .tuijian .tuijian-list a:hover {
   transform: scale(1.1);
 }
 
