@@ -29,7 +29,7 @@ ajax({//推荐
             ulCont.innerHTML += `
 
     <li>
-        <a href="car.html">
+        <a href="ly-car.html">
             <img src="${json[i].pic}" alt="">
             <em></em>
             <h3>${json[i].name}</h3>
@@ -44,7 +44,7 @@ ajax({//推荐
     }, faild: function (err) {
         console.log(err);
     }
-})
+});
 
 
 // 新品
@@ -64,7 +64,7 @@ ajax({ //
             ulCont.innerHTML += `
 
             <li>
-                <a href="#">
+                <a href="ly-car.html">
                     <img src="${json[i].pic}" alt="">
                     <em></em>
                     <h3>${json[i].name}</h3>
@@ -77,10 +77,8 @@ ajax({ //
                 `;
         }
         var oA = document.querySelectorAll('#ly-main .cont .title .right a');
-        var lists = document.querySelectorAll('#ly-main .cont .list')
-
+        var lists = document.querySelectorAll('#ly-main .cont .list');
         // console.log(oA);
-
         for (var i = 0; i < oA.length; i++) {
             oA[i].index = i;
             oA[i].onclick = function () {
@@ -99,7 +97,7 @@ ajax({ //
         console.log(err);
 
     }
-})
+});
 
 
 // 价格排序
@@ -118,7 +116,7 @@ ajax({   //
             ulCont.innerHTML += `
 
         <li>
-            <a href="car.html">
+            <a href="ly-car.html">
                 <img src="${json[i].pic}" alt="">
                 <em></em>
                 <h3>${json[i].name}</h3>
@@ -137,8 +135,7 @@ ajax({   //
 
 
 // 价格旁边的三角形
-
-ajax({//上
+ajax({//三角形上
     url: 'php/goods.php',
     data: 'module=accessory_rec',
     type: 'get',
@@ -153,7 +150,7 @@ ajax({//上
             prev.innerHTML += `
 
     <li>
-        <a href="car.html">
+        <a href="ly-car.html">
             <img src="${json[i].pic}" alt="">
             <em></em>
             <h3>${json[i].name}</h3>
@@ -169,7 +166,7 @@ ajax({//上
         console.log(err);
 
     }
-})
+});
 
 
 // 三角形下
@@ -188,7 +185,7 @@ ajax({//下
             next.innerHTML += `
 
     <li>
-        <a href="car.html">
+        <a href="ly-car.html">
             <img src="${json[i].pic}" alt="">
             <em></em>
             <h3>${json[i].name}</h3>
@@ -204,9 +201,7 @@ ajax({//下
         console.log(err);
 
     }
-})
-
-
+});
 
 
 
@@ -219,7 +214,7 @@ var mySwiper = new Swiper('.swiper-container', {
         clickable: true,//鼠标点击圆点控制图片
     },
 
-})
+});
 
 
 ajax({  //轮播

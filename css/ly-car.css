@@ -115,12 +115,6 @@
 #ly-show .content .content-con .right .msg .address .copy {
   margin-left: 30px;
 }
-#ly-show .content .content-con .right .msg .address .copy .ww {
-  color: #27b3ff;
-}
-#ly-show .content .content-con .right .msg .address .copy .ww:hover {
-  cursor: pointer;
-}
 #ly-show .content .content-con .right .msg .add-ress {
   width: 500px;
   min-height: 200px;
@@ -135,14 +129,14 @@
   margin-left: 55px;
   position: relative;
 }
-#ly-show .content .content-con .right .msg .add-ress .tt .change span {
+#ly-show .content .content-con .right .msg .add-ress .tt span {
   color: #000;
   cursor: pointer;
   border: 1px solid #eee;
   padding: 6px 18px;
   border-bottom: none;
 }
-#ly-show .content .content-con .right .msg .add-ress .tt .change em {
+#ly-show .content .content-con .right .msg .add-ress .tt em {
   text-align: center;
   display: block;
   width: 15px;
@@ -156,7 +150,7 @@
   top: -6px;
   user-select: none;
 }
-#ly-show .content .content-con .right .msg .add-ress .tt .change em:hover {
+#ly-show .content .content-con .right .msg .add-ress .tt em:hover {
   cursor: pointer;
 }
 #ly-show .content .content-con .right .msg .add-ress .shen {

@@ -29,7 +29,7 @@ ajax({   //推荐
             ulCont.innerHTML += `
 
         <li>
-            <a href="car.html">
+            <a href="ly-car.html">
                 <img src="${json[i].pic}" alt="">
                 <em></em>
                 <h3>${json[i].name}</h3>
@@ -46,6 +46,7 @@ ajax({   //推荐
     }
 });
 
+
 ajax({  //新品
     url: 'php/goods.php',
     data: 'module=life_new',
@@ -61,7 +62,7 @@ ajax({  //新品
             ulCont.innerHTML += `
 
         <li>
-            <a href="#">
+            <a href="ly-car.html">
                 <img src="${json[i].pic}" alt="">
                 <em></em>
                 <h3>${json[i].name}</h3>
@@ -77,14 +78,11 @@ ajax({  //新品
 
         var oA = document.querySelectorAll('#ly-main .cont .title .right a');
         var lists = document.querySelectorAll('#ly-main .cont .list')
-
         // console.log(oA);
-
         for (var i = 0; i < oA.length; i++) {
             oA[i].index = i;
             oA[i].onclick = function () {
                 for (var i = 0; i < lists.length; i++) {
-
                     // oA[i].classList.remove = 'show';
                     oA[i].style.color = '';
 
@@ -120,7 +118,7 @@ ajax({
             ulCont.innerHTML += `
 
         <li>
-            <a href="#">
+            <a href="ly-car.html">
                 <img src="${json[i].pic}" alt="">
                 <em></em>
                 <h3>${json[i].name}</h3>
@@ -139,7 +137,6 @@ ajax({
 
 
 // 获取价格旁边的两个三角形 注册点击事件
-
 ajax({//三角形上
     url: 'php/goods.php',
     data: 'module=accessory_rec',
@@ -155,7 +152,7 @@ ajax({//三角形上
             prev.innerHTML += `
 
     <li>
-        <a href="car.html">
+        <a href="ly-car.html">
             <img src="${json[i].pic}" alt="">
             <em></em>
             <h3>${json[i].name}</h3>
@@ -173,8 +170,8 @@ ajax({//三角形上
     }
 })
 
-// 三角形下
-ajax({//下
+
+ajax({//三角形下
     url: 'php/goods.php',
     data: 'module=life_rec',
     type: 'get',
@@ -189,7 +186,7 @@ ajax({//下
             next.innerHTML += `
 
     <li>
-        <a href="car.html">
+        <a href="ly-car.html">
             <img src="${json[i].pic}" alt="">
             <em></em>
             <h3>${json[i].name}</h3>
@@ -206,42 +203,6 @@ ajax({//下
 
     }
 });
-
-ajax({//推荐
-    url: 'php/goods.php',
-    data: 'module=accessory_rec',
-    type: 'get',
-    succeed: function (data) {
-        // console.log(data);
-        var json = JSON.parse(data);
-        // console.log(json);
-        var next = document.querySelector('.next')
-        // console.log(ulCont)
-
-        for (var i = 0; i < 8; i++) {
-            next.innerHTML += `
-
-    <li>
-        <a href="car.html">
-            <img src="${json[i].pic}" alt="">
-            <em></em>
-            <h3>${json[i].name}</h3>
-            <p>${json[i].slogan}</p>
-            <i>  
-                <span>${json[i].price}</span>
-            </i>
-        </a>
-    </li>
-        `;
-        }
-    }, faild: function (err) {
-        console.log(err);
-
-    }
-})
-
-
-
 
 
 

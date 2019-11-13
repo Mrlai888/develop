@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /*头部导航栏*/
+#Jin_header {
+  height: 80px;
+}
+
 #Jin_header .w .top_content {
   background: #fff;
 }
@@ -18,7 +22,6 @@
 #ly-main {
   width: 100%;
   background: #f4f4f4;
-  /*为您推荐部分*/
 }
 #ly-main .cont {
   width: 1240px;
@@ -87,6 +90,7 @@
   min-height: 400px;
   margin: 0 auto;
   display: none;
+  /*为您推荐部分*/
 }
 #ly-main .cont .list ul {
   width: 1240px;
@@ -139,22 +143,25 @@
   line-height: 30px;
   margin-top: 64px;
 }
-#ly-main .show {
+#ly-main .cont .list ul li li:hover {
   display: block;
 }
-#ly-main .tuijian .tuijian-title h2 {
+#ly-main .cont .list .show {
+  display: block;
+}
+#ly-main .cont .list .tuijian .tuijian-title h2 {
   font-size: 24px;
   color: #333;
   padding-bottom: 25px;
   padding-top: 80px;
 }
-#ly-main .tuijian .tuijian-list {
+#ly-main .cont .list .tuijian .tuijian-list {
   width: 1240px;
   height: 429px;
   background: #fff;
   padding-bottom: 20px;
 }
-#ly-main .tuijian .tuijian-list a {
+#ly-main .cont .list .tuijian .tuijian-list a {
   display: block;
   width: 310px;
   height: 428px;
@@ -162,25 +169,25 @@
   float: left;
   padding-top: 50px;
 }
-#ly-main .tuijian .tuijian-list a img {
+#ly-main .cont .list .tuijian .tuijian-list a img {
   width: 230px;
   height: 230px;
 }
-#ly-main .tuijian .tuijian-list a h3 {
+#ly-main .cont .list .tuijian .tuijian-list a h3 {
   font-size: 22px;
   color: #2b2b2b;
   margin-top: 20px;
   margin-bottom: 10px;
 }
-#ly-main .tuijian .tuijian-list a em {
+#ly-main .cont .list .tuijian .tuijian-list a em {
   font-size: 16px;
   color: #c00;
 }
-#ly-main .tuijian .tuijian-list a span {
+#ly-main .cont .list .tuijian .tuijian-list a span {
   font-size: 28px;
   color: #c00;
 }
-#ly-main .tuijian .tuijian-list a:hover {
+#ly-main .cont .list .tuijian .tuijian-list a:hover {
   transform: scale(1.1);
 }
 
