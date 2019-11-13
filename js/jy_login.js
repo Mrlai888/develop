@@ -236,6 +236,7 @@
                 } else {
                     tip.style.visibility = 'hidden';
                     alert(json.msg);
+                    localStorage.setItem("username", "login");
                     if (index3 == 1) {
                         setCookie('user', [ipt, pwd], 7);
                     }

@@ -158,6 +158,7 @@ phone()
             // console.log(jsonStr);
         localStorage.setItem('oA', jsonStr) //存入本地
     }
+    aContent()
 })();
 
 

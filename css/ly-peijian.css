@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*头部导航栏*/
-.top_content {
+#Jin_header .w .top_content {
   background: #fff;
 }
 
@@ -60,6 +60,7 @@
   margin-right: 0;
 }
 #ly-main .cont .title .right .i1 {
+  display: block;
   position: absolute;
   top: 33px;
   right: -50px;
@@ -70,6 +71,7 @@
   border-bottom: 5px solid #343434;
 }
 #ly-main .cont .title .right .i2 {
+  display: block;
   position: absolute;
   bottom: 28px;
   right: -50px;
@@ -78,7 +80,7 @@
   border: 5px solid transparent;
   border-top-color: inherit;
 }
-#ly-main .cont .title .i:hover {
+#ly-main .cont .title .right .i1:hover {
   color: #00c3f5;
 }
 #ly-main .cont .list {
