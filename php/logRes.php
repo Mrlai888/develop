@@ -69,6 +69,28 @@
                 echo '{"err":"1","msg":"用户名与密码不匹配！"}';
             }
 			break;
+		case "rew"://重置密码
+			$sql =  "update user set password = '{$pwd}', time = '{$time}' where username = {$user}";
+			my_error($sql);
+			break;
+			
+		case "question"://拿问题
+			$sql = "select * from user where username = '{$user}'";
+			$res = my_error($sql);
+			$row = mysql_fetch_row($res);
+			$data = json_encode($row);
+			echo '{"err":"0","data":'.$data.'}';
+			break;
+			
+			
+		case "answer"://拿答案
+			$sql = "select * from user where username = '{$user}'";
+			$res = my_error($sql);
+			$row = mysql_fetch_row($res);
+			$data = json_encode($row);
+			echo '{"err":"0","data":'.$data.'}';
+			break;
+
 		default://只验证用户名是否存在
 			$sql = "select * from user where username = '{$user}'";
 			$res = my_error($sql);

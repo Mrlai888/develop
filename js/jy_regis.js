@@ -176,7 +176,7 @@
     }
 
     //点击眼睛
-    let eindex = 0;
+    let eindex = 1;
     document.querySelector('.look-pwd').onclick = function () {
         let iptPwd = document.querySelector('.ipt-pwd');
         if (eindex == 0) {

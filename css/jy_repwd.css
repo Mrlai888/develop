@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* li {
+    list-style: none;
+} */
+
+body {
+    background-color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: 68px;
+}
+
+.header-mid {
+    width: 1240px;
+    height: 68px;
+    margin: 0 auto;
+    /* background-color: #cfcc; */
+    position: relative;
+}
+
+.header-mid .logo {
+    display: block;
+    width: 110px;
+    height: 20px;
+    background: url(../images/jy_base.png) -2px -4px no-repeat;
+    cursor: pointer;
+    position: absolute;
+    top: 23px;
+}
+
+.con {
+    width: 1240px;
+    margin: 0 auto;
+    /* background-color: #ffc; */
+}
+
+.tab-title {
+    text-align: center;
+}
+
+.tab-title h1 {
+    height: 35px;
+    margin-top: 55px;
+    margin-bottom: 45px;
+    font-size: 26px;
+    color: #010101;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 508px;
+    /* background-color: #fcf; */
+    margin: 0 auto;
+}
+
+.progress-bar .graph {
+    height: 24px;
+}
+
+.progress-bar .graph .circle {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: #387aff;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    float: left;
+}
+
+.progress-bar .graph .progress {
+    display: block;
+    width: 218px;
+    height: 10px;
+    background: #387aff;
+    float: left;
+    margin: 7px -1px;
+}
+
+.progress-bar .textbox {
+    margin-top: 10px;
+    height: 30px;
+    /* line-height: 30px; */
+    position: relative;
+    /* background-color: #09c; */
+}
+
+.progress-bar .textbox span {
+    font-size: 16px;
+    color: #000;
+    position: absolute;
+}
+
+.progress-bar .textbox .ipt-user {
+    top: 0;
+    left: -20px;
+}
+
+.progress-bar .textbox .reg {
+    top: 0;
+    left: 237px;
+}
+
+.progress-bar .textbox .repwd {
+    top: 0;
+    right: -20px;
+}
+
+.ipt {
+    margin: 45px auto 0;
+    width: 570px;
+}
+
+.ipt .tiptext {
+    color: #000;
+    font-size: 16px;
+    display: inline-block;
+    width: 136px;
+    height: 36px;
+    line-height: 36px;
+    text-align: right;
+    /* vertical-align: top; */
+}
+
+.ipt input {
+    width: 290px;
+    height: 36px;
+    padding: 0 10px;
+    color: #474747;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #ccc;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.ipt .err-tip {
+    font-size: 12px;
+    color: #de3131;
+    margin: 6px 0 0 145px;
+    visibility: hidden;
+}
+
+.ipt .eye {
+    background: url(../images/jy_eye.png)no-repeat;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    position: absolute;
+    top:3px;
+    right: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.username div,
+.password div{
+    position: relative;
+    display: inline-block;
+}
+
+.password {
+    margin-top: 20px;
+}
+
+.link {
+    width: 290px;
+    margin: 40px auto 30px;
+    text-align: center;
+}
+
+.true-rew {
+    width: 290px;
+    height: 36px;
+    background-color: #387aff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 36px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+}
