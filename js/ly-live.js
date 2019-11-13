@@ -13,10 +13,6 @@ $('.Jin_car_hide').mouseleave(function () {
 
 
 
-
-
-
-
 // 配件
 ajax({   //推荐
     url: 'php/goods.php',
@@ -108,8 +104,8 @@ ajax({  //新品
 
 
 
-// 价格排序
-ajax({   //推荐
+// 价格 
+ajax({   
     url: 'php/goods.php',
     data: 'module=life_rec',
     type: 'get',
@@ -142,9 +138,107 @@ ajax({   //推荐
 });
 
 
-
-
 // 获取价格旁边的两个三角形 注册点击事件
+
+ajax({//三角形上
+    url: 'php/goods.php',
+    data: 'module=accessory_rec',
+    type: 'get',
+    succeed: function (data) {
+        // console.log(data);
+        var json = JSON.parse(data);
+        // console.log(json);
+        var prev = document.querySelector('.prev')
+        // console.log(ulCont)
+
+        for (var i = 0; i < 8; i++) {
+            prev.innerHTML += `
+
+    <li>
+        <a href="car.html">
+            <img src="${json[i].pic}" alt="">
+            <em></em>
+            <h3>${json[i].name}</h3>
+            <p>${json[i].slogan}</p>
+            <i>  
+                <span>${json[i].price}</span>
+            </i>
+        </a>
+    </li>
+        `;
+        }
+    }, faild: function (err) {
+        console.log(err);
+
+    }
+})
+
+// 三角形下
+ajax({//下
+    url: 'php/goods.php',
+    data: 'module=life_rec',
+    type: 'get',
+    succeed: function (data) {
+        // console.log(data);
+        var json = JSON.parse(data);
+        // console.log(json);
+        var next = document.querySelector('.next')
+        // console.log(ulCont)
+
+        for (var i = 0; i < 8; i++) {
+            next.innerHTML += `
+
+    <li>
+        <a href="car.html">
+            <img src="${json[i].pic}" alt="">
+            <em></em>
+            <h3>${json[i].name}</h3>
+            <p>${json[i].slogan}</p>
+            <i>  
+                <span>${json[i].price}</span>
+            </i>
+        </a>
+    </li>
+        `;
+        }
+    }, faild: function (err) {
+        console.log(err);
+
+    }
+});
+
+ajax({//推荐
+    url: 'php/goods.php',
+    data: 'module=accessory_rec',
+    type: 'get',
+    succeed: function (data) {
+        // console.log(data);
+        var json = JSON.parse(data);
+        // console.log(json);
+        var next = document.querySelector('.next')
+        // console.log(ulCont)
+
+        for (var i = 0; i < 8; i++) {
+            next.innerHTML += `
+
+    <li>
+        <a href="car.html">
+            <img src="${json[i].pic}" alt="">
+            <em></em>
+            <h3>${json[i].name}</h3>
+            <p>${json[i].slogan}</p>
+            <i>  
+                <span>${json[i].price}</span>
+            </i>
+        </a>
+    </li>
+        `;
+        }
+    }, faild: function (err) {
+        console.log(err);
+
+    }
+})
 
 
 

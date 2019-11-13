@@ -43,7 +43,6 @@ ajax({//推荐
         }
     }, faild: function (err) {
         console.log(err);
-
     }
 })
 
@@ -104,7 +103,7 @@ ajax({ //
 
 
 // 价格排序
-ajax({   //推荐
+ajax({   //
     url: 'php/goods.php',
     data: 'module=accessory_rec',
     type: 'get',
@@ -138,7 +137,6 @@ ajax({   //推荐
 
 
 // 价格旁边的三角形
-
 
 ajax({//上
     url: 'php/goods.php',
@@ -207,47 +205,6 @@ ajax({//下
 
     }
 })
-
-
-
-
-
-
-ajax({//推荐
-    url: 'php/goods.php',
-    data: 'module=accessory_rec',
-    type: 'get',
-    succeed: function (data) {
-        // console.log(data);
-        var json = JSON.parse(data);
-        // console.log(json);
-        var next = document.querySelector('.next')
-        // console.log(ulCont)
-
-        for (var i = 0; i < 8; i++) {
-            next.innerHTML += `
-
-    <li>
-        <a href="car.html">
-            <img src="${json[i].pic}" alt="">
-            <em></em>
-            <h3>${json[i].name}</h3>
-            <p>${json[i].slogan}</p>
-            <i>  
-                <span>${json[i].price}</span>
-            </i>
-        </a>
-    </li>
-        `;
-        }
-    }, faild: function (err) {
-        console.log(err);
-
-    }
-})
-
-
-
 
 
 
