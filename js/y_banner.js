@@ -35,7 +35,7 @@ phone()
 
     $.ajax({
         type: "get",
-        url: "http://localhost/project/php/fodder.php",
+        url: "./php/fodder.php",
         data: "module=server_swiper ",
         dataType: "json",
         success: function(response) {
