@@ -1,6 +1,5 @@
-
 /*顶部悬浮*/
-window.onscroll = function () {
+window.onscroll = function() {
     var t = document.querySelector('#ly-roof');
     var scrollTop = document.documentElement.scrollTop;
     console.log(scrollTop)

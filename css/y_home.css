@@ -8,6 +8,7 @@
 }
 
 .y_banner {
+  margin: auto;
   min-height: 580px;
 }
 .y_banner .swiper-container {

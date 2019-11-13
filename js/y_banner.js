@@ -61,7 +61,7 @@ phone()
             direction: 'horizontal', // 垂直切换选项
             loop: true, // 循环模式选项
             // autoplay: true,
-            centeredSlides: false,
+            // centeredSlides: false,
             //等同于以下设置
             autoplay: {
                 delay: 4000,
@@ -96,7 +96,7 @@ phone()
 (function() { //请求视屏
     $.ajax({
         type: "get",
-        url: "http://localhost/project/php/fodder.php",
+        url: "./php/fodder.php",
         data: "module=server_video",
         dataType: "json",
         success: function(response) {
