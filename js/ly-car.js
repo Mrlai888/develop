@@ -1,16 +1,38 @@
+
+
+/*顶部悬浮*/
+window.onscroll = function () {
+    var t = document.querySelector('#ly-roof');
+    var scrollTop = document.documentElement.scrollTop;
+    console.log(scrollTop)
+
+    if (scrollTop >= 200) {
+        t.style.display = 'block';
+        t.style.position = 'fixed';
+        t.style.top = 0;
+        t.style.left = 0;
+        t.style.right = 0;
+
+    } else {
+        t.style.display = 'none';
+        // t.style.position = 'initial';//初始化
+    }
+
+}
+
+
 // 头部移除隐藏
-$('.Jin_hide_content').mouseleave(function () {
+$('.Jin_hide_content').mouseleave(function() {
     $(this).css('display', 'none');
 });
 
-$('.Jin_hide_content_ding').mouseleave(function () {
+$('.Jin_hide_content_ding').mouseleave(function() {
     $(this).css('display', 'none')
 });
 
-$('.Jin_car_hide').mouseleave(function () {
+$('.Jin_car_hide').mouseleave(function() {
     $(this).css('display', 'none')
 });
-
 
 
 function Tab() {
@@ -20,11 +42,11 @@ function Tab() {
 
 }
 // 3. 把函数变成对象的方法（prototype原型）
-Tab.prototype.clickTab = function () {
-    var self = this;//保存当前的this
+Tab.prototype.clickTab = function() {
+    var self = this; //保存当前的this
     for (var i = 0; i < this.imgMin.length; i++) {
         this.imgMin[i].index = i;
-        this.imgMin[i].onclick = function () {
+        this.imgMin[i].onclick = function() {
 
             // 上次选中的元素清空类名
             self.imgMin[self.prevIndex].className = '';
@@ -35,7 +57,7 @@ Tab.prototype.clickTab = function () {
             this.className = 'active';
             self.imgs[this.index].className = 'show';
 
-            self.prevIndex = this.index;    //更新上次选中的元素
+            self.prevIndex = this.index; //更新上次选中的元素
 
         };
     };
@@ -47,7 +69,6 @@ tab1.clickTab();
 
 
 
-
 // 数量加购
 var ipt = document.querySelector('.msg .amount .input-content');
 var i = document.querySelectorAll('.amount i');
@@ -55,7 +76,7 @@ var cont = ipt.value;
 $a1 = $('.amount i').eq(0);
 $a2 = $('.amount i').eq(1);
 
-$('.amount i').eq(0).click(function () {
+$('.amount i').eq(0).click(function() {
 
     $a2.css("color", "#000");
 
@@ -73,7 +94,7 @@ $('.amount i').eq(0).click(function () {
 
 });
 
-$('.amount i').eq(1).click(function () {
+$('.amount i').eq(1).click(function() {
 
     $('.amount i').eq(0).css("color", "#000")
 
@@ -90,10 +111,10 @@ $('.amount i').eq(1).click(function () {
 
 
 // 鼠标移入 + - 变小手
-$a1.mouseenter(function () {
+$a1.mouseenter(function() {
     $(this).css("cursor", "pointer");
 });
-$a2.mouseenter(function () {
+$a2.mouseenter(function() {
     $(this).css("cursor", "pointer");
 });
 
@@ -107,23 +128,28 @@ $shen0 = $('.tt .shen').eq(0);
 $shen1 = $('.tt .shen').eq(1);
 $shen2 = $('.tt .shen').eq(2);
 
-$span0.click(function () {
+$span0.click(function() {
     $shen0.show();
     $shen1.hide();
     $shen2.hide();
+<<<<<<< HEAD
     // $(this).css('border', '1px solid #000');
     // $(this).css('border-bottom', 'none');
-    
+=======
+    $(this).css('border', '1px solid #000');
+    $(this).css('border-bottom', 'none');
+>>>>>>> 09790a0885c8276a7b710460d2e7fb1b0f6eaeff
+
 });
-$span1.click(function () {
+$span1.click(function() {
     $shen1.show();
     $shen0.hide();
     $shen2.hide();
     // $(this).css('border', '1px solid #000');
     // $(this).css('border-bottom', 'none');
-   
+
 });
-$span2.click(function () {
+$span2.click(function() {
     $shen2.show();
     $shen1.hide();
     $shen0.hide();
@@ -132,20 +158,19 @@ $span2.click(function () {
 });
 
 
-
 // 当鼠标移入省区位置时显示其他省份选择
-$as = $('.right .msg .address .a').mouseenter(function () {
+$as = $('.right .msg .address .a').mouseenter(function() {
     $area = $(".right .msg .add-ress");
     $area.show();
 });
-$(".right .msg .add-ress").mouseleave(function () {
+$(".right .msg .add-ress").mouseleave(function() {
     $area = $(".right .msg .add-ress");
     document.onmouseenter = false;
     $area.hide();
 });
 
 // // 点击X关闭
-$('.add-ress .tt em').click(function () {
+$('.add-ress .tt em').click(function() {
     // $('.right .msg .add-ress').hide()
     $(".add-ress").css("display", "none");
 })
@@ -160,23 +185,23 @@ $b1 = $(".address b").eq(1);
 $b2 = $('.address b').eq(2);
 $b3 = $('.address b').eq(3);
 
-$qw.each(function () {//循环下标
+$qw.each(function() { //循环下标
     // console.log($(this).text())
-    $(this).click(function () { // 
+    $(this).click(function() { // 
         // console.log($(this).text())   
         $b1.html($(this).text()); //赋值
     });
 });
 
-$province.each(function () {
+$province.each(function() {
     // console.log($(this).text());
-    $(this).click(function () {
+    $(this).click(function() {
         $b2.html($(this).text());
     });
 });
 
-$ww.each(function () {
-    $(this).click(function () {
+$ww.each(function() {
+    $(this).click(function() {
         $b3.html($(this).text())
     });
 });
@@ -187,10 +212,10 @@ $ww.each(function () {
 // 切换
 var msgCont = document.querySelectorAll('.pr-msg .msg-cont a')
 var boxs = document.querySelectorAll('#ly-product .box')
-// console.log(boxs)
+    // console.log(boxs)
 for (var i = 0; i < msgCont.length; i++) {
     msgCont[i].index = i;
-    msgCont[i].onclick = function () {
+    msgCont[i].onclick = function() {
 
         for (var i = 0; i < boxs.length; i++) {
             msgCont[i].classList.remove('active');
@@ -203,13 +228,33 @@ for (var i = 0; i < msgCont.length; i++) {
 
 
 
+var att = JSON.parse(localStorage.getItem('ly_obj'))
+
+for (var i = 0; i < att.length; i++) {
+    // console.log(aaa[i]);
+
+    if (localStorage.getItem('ly_phone') === att[i].name) {
+        console.log(att[i].price);
+        console.log(att[i].name);
+
+        $(".right .name h1").text(att[i].name);
+        $(".right .name p").text(att[i].slogan);
+        $(".price span").text(att[i].price);
+        $(".img .show ").attr('src', att[i].pic)
+            // $(".mod-price .vm-money").text(atr[i].price)
+            // $(".preview-booth a img").attr("src", atr[i].pic)
+            // $(".preview-thumb li .pic01").attr("src", aaa[i][key].pic)
+
+    }
+}
 
 
 
 
+<<<<<<< HEAD
+console.log(JSON.parse(localStorage.getItem('ly_obj')));
+=======
 
 
 
-
-
-
+>>>>>>> 09790a0885c8276a7b710460d2e7fb1b0f6eaeff

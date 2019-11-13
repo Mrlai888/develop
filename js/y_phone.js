@@ -1,5 +1,9 @@
 (function() {
-    $('.y_phone').append('<a href="javascript:;" class="phone">' + localStorage.getItem('phone') + '</a>')
+    $('.y_phone').append('<a href="javascript:;" class="phone">' + localStorage.getItem('phone') + '</a>');
+    $('.y_more .phone').css({
+        " font-size": "18px",
+        "font-weight": "bold"
+    })
 })();
 
 
@@ -31,3 +35,9 @@
     });
     return mySwiper
 })();
+$('.Jin_hide_content').mouseleave(function() {
+    $(this).css('display', 'none')
+})
+$('.Jin_hide_content_ding').mouseleave(function() {
+    $(this).css('display', 'none')
+})

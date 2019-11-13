@@ -1,0 +1,68 @@
+.y_header_wrap {
+  height: 82px;
+  background: #ffffff; }
+
+.phone_nav li a {
+  display: block;
+  padding: 31px 20px 30px;
+  line-height: 21px;
+  font-size: 14px;
+  color: black; }
+
+#Jin_header .top_content {
+  width: 1240px;
+  margin: 0 auto;
+  background: #ffffff; }
+
+.y_more {
+  width: 1240px;
+  height: 85px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 85px; }
+  .y_more a {
+    font-size: 18px;
+    font-weight: bold; }
+  .y_more .more {
+    font-size: 18px;
+    font-weight: bold; }
+
+.y_selfServer_page {
+  border: 1px solid #f4f4f4;
+  width: 440px;
+  height: 580px;
+  margin: 0 auto;
+  padding: 0 400px 0px 400px;
+  text-align: center; }
+  .y_selfServer_page h2 {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    text-align: center; }
+  .y_selfServer_page .selfServer_box {
+    width: 100%;
+    height: 350px;
+    border: 1px solid #e5e5e5; }
+    .y_selfServer_page .selfServer_box label {
+      font-size: 18px;
+      font-weight: bold;
+      display: block;
+      width: 80%;
+      height: 40px;
+      text-align: left;
+      line-height: 40px;
+      margin: 20px; }
+    .y_selfServer_page .selfServer_box input {
+      width: 80%;
+      height: 40px;
+      outline: none;
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      display: block;
+      margin: 20px; }
+  .y_selfServer_page p {
+    padding-top: 20px;
+    width: 100%;
+    text-align: left; }

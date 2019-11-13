@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /*头部导航栏*/
+#Jin_header {
+  height: 82px;
+}
+
 #Jin_header .w .top_content {
   background: #fff;
 }
@@ -24,7 +28,7 @@
   margin: 0 auto;
   background: #f4f4f4;
   /*配件*/
-  /*图片部分*/
+  /*图片信息展示部分*/
   /*为您推荐部分*/
 }
 #ly-main .cont .title {
@@ -59,6 +63,9 @@
 #ly-main .cont .title .right .price {
   margin-right: 0;
 }
+#ly-main .cont .title .right .i1:hover {
+  color: #00c3f5;
+}
 #ly-main .cont .title .right .i1 {
   display: block;
   position: absolute;
@@ -79,9 +86,6 @@
   height: 0;
   border: 5px solid transparent;
   border-top-color: inherit;
-}
-#ly-main .cont .title .right .i1:hover {
-  color: #00c3f5;
 }
 #ly-main .cont .list {
   width: 1240px;

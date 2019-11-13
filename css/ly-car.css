@@ -1,46 +1,4 @@
 @charset "UTF-8";
-/*顶部悬浮*/
-#ly-roof {
-  width: 100%;
-  height: 80px;
-  display: none;
-}
-#ly-roof .roof-cont {
-  width: 1240px;
-  height: 80px;
-  background: #f7f7f7;
-  margin: 0 auto;
-}
-#ly-roof .roof-cont .r {
-  float: right;
-  width: 800px;
-  height: 80px;
-  line-height: 80px;
-  background: #f7f7f7;
-}
-#ly-roof .roof-cont .r .r-con {
-  position: relative;
-}
-#ly-roof .roof-cont .r .r-con em {
-  position: absolute;
-  right: 144px;
-  top: 10px;
-  color: red;
-  font-weight: bold;
-}
-#ly-roof .roof-cont .r .r-con p {
-  position: absolute;
-  right: 0;
-  top: 26px;
-  width: 118px;
-  height: 40px;
-  background: #f66567;
-  line-height: 40px;
-  border-radius: 5px;
-  text-align: center;
-  color: #fff;
-}
-
 /*头部导航栏*/
 #Jin_header {
   height: 82px;
@@ -172,19 +130,19 @@
   z-index: 99999;
   background: #fff;
   display: none;
-  margin-left: 50px;
 }
 #ly-show .content .content-con .right .msg .add-ress .tt {
+  margin-left: 55px;
   position: relative;
 }
-#ly-show .content .content-con .right .msg .add-ress .tt span {
+#ly-show .content .content-con .right .msg .add-ress .tt .change span {
   color: #000;
   cursor: pointer;
   border: 1px solid #eee;
   padding: 6px 18px;
   border-bottom: none;
 }
-#ly-show .content .content-con .right .msg .add-ress .tt em {
+#ly-show .content .content-con .right .msg .add-ress .tt .change em {
   text-align: center;
   display: block;
   width: 15px;
@@ -198,16 +156,15 @@
   top: -6px;
   user-select: none;
 }
-#ly-show .content .content-con .right .msg .add-ress .tt em:hover {
+#ly-show .content .content-con .right .msg .add-ress .tt .change em:hover {
   cursor: pointer;
 }
 #ly-show .content .content-con .right .msg .add-ress .shen {
   display: none;
-  border-top: 1px solid #000;
 }
 #ly-show .content .content-con .right .msg .add-ress .shen i {
   display: inline-block;
-  padding: 5px 27px;
+  padding: 5px 20px;
   margin-top: 6px;
   cursor: pointer;
 }

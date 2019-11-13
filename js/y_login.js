@@ -12,4 +12,10 @@ Insert();
     $(' .y_login_page .but').click(function() {
         window.open("y_pay.html", "_blank")
     })
-})()
+})();
+$('.Jin_hide_content').mouseleave(function() {
+    $(this).css('display', 'none')
+})
+$('.Jin_hide_content_ding').mouseleave(function() {
+    $(this).css('display', 'none')
+})
