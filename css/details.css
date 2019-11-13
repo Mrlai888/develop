@@ -7,6 +7,24 @@ body {
   font-size: 14px;
 }
 
+/*头部样式的覆盖*/
+#Jin_header .header_inner {
+  position: inherit;
+}
+
+.user {
+  color: #000000;
+}
+
+.phone_nav li a {
+  color: #000000;
+}
+
+/*底部样式的覆盖*/
+#Jin_footer {
+  background: #fff;
+}
+
 .Jin_User_hide,
 .Jin_car_hide {
   z-index: 99;
