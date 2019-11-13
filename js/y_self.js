@@ -12,7 +12,7 @@ Insert();
     var arr = {
             "注册产品": "y_login.html",
             "真伪查询": "y_taf.html",
-            "自助服务": "y_phone.html",
+            "自助服务": "y_selfServer.html",
             "支付查询": "y_pay.html",
             "寄送快修": "y_send.html",
             "预约维修": "y_reserve.html"
@@ -94,4 +94,10 @@ Insert();
 
     });
 
-})()
+})();
+$('.Jin_hide_content').mouseleave(function() {
+    $(this).css('display', 'none')
+})
+$('.Jin_hide_content_ding').mouseleave(function() {
+    $(this).css('display', 'none')
+})

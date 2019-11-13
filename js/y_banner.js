@@ -45,8 +45,7 @@ phone()
                         <div class="swiper-slide"><img src="${response[1].url }" alt=""></div>
                         <div class="swiper-slide"><img src="${response[2].url }" alt=""></div>
                         <div class="swiper-slide"><img src="${response[3].url }" alt=""></div>
-                        <div class="swiper-slide"><img src="${response[4].url }" alt=""></div>
-                        <div class="swiper-slide"><img src="${response[0].url }" alt=""></div>`
+                        <div class="swiper-slide"><img src="${response[4].url }" alt=""></div>`
                 )
                 // console.log(str)
         }
@@ -57,32 +56,39 @@ phone()
 
 
 (function() {
-    var mySwiper = new Swiper('.swiper-container', {
-        direction: 'horizontal', // 垂直切换选项
-        loop: true, // 循环模式选项
-        autoplay: true, //等同于以下设置
-        autoplay: {
-            delay: 4000,
-            stopOnLastSlide: false,
-            disableOnInteraction: false,
-        },
-        // 如果需要分页器
-        pagination: {
-            el: '.swiper-pagination',
-        },
+    window.onload = function() {
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+            // autoplay: true,
+            centeredSlides: false,
+            //等同于以下设置
+            autoplay: {
+                delay: 4000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
 
-        // 如果需要前进后退按钮
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
 
-        // 如果需要滚动条
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-    });
-    return mySwiper
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+        // return mySwiper
+    }
 })();
 
 
@@ -188,7 +194,7 @@ phone()
     var arr = {
         "注册产品": "y_login.html",
         "真伪查询": "y_taf.html",
-        "自助服务": "y_phone.html",
+        "自助服务": "y_selfServer.html",
         "支付查询": "y_pay.html",
         "寄送快修": "y_send.html",
         "预约维修": "y_reserve.html"

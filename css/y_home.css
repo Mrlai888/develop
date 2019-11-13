@@ -13,6 +13,11 @@
 .y_banner .swiper-container {
   height: 580px;
 }
+.y_banner .swiper-container .swiper-wrapper img {
+  height: 580px;
+  width: 100%;
+  margin: auto;
+}
 
 .y_main {
   height: 450px;
