@@ -1,3 +1,26 @@
+
+
+/*顶部悬浮*/
+window.onscroll = function () {
+    var t = document.querySelector('#ly-roof');
+    var scrollTop = document.documentElement.scrollTop;
+    console.log(scrollTop)
+
+    if (scrollTop >= 200) {
+        t.style.display = 'block';
+        t.style.position = 'fixed';
+        t.style.top = 0;
+        t.style.left = 0;
+        t.style.right = 0;
+
+    } else {
+        t.style.display = 'none';
+        // t.style.position = 'initial';//初始化
+    }
+
+}
+
+
 // 头部移除隐藏
 $('.Jin_hide_content').mouseleave(function() {
     $(this).css('display', 'none');
@@ -10,7 +33,6 @@ $('.Jin_hide_content_ding').mouseleave(function() {
 $('.Jin_car_hide').mouseleave(function() {
     $(this).css('display', 'none')
 });
-
 
 
 function Tab() {
@@ -44,7 +66,6 @@ Tab.prototype.clickTab = function() {
 // 5. 构造函数实例化
 var tab1 = new Tab();
 tab1.clickTab();
-
 
 
 
@@ -111,8 +132,13 @@ $span0.click(function() {
     $shen0.show();
     $shen1.hide();
     $shen2.hide();
+<<<<<<< HEAD
     // $(this).css('border', '1px solid #000');
     // $(this).css('border-bottom', 'none');
+=======
+    $(this).css('border', '1px solid #000');
+    $(this).css('border-bottom', 'none');
+>>>>>>> 09790a0885c8276a7b710460d2e7fb1b0f6eaeff
 
 });
 $span1.click(function() {
@@ -130,7 +156,6 @@ $span2.click(function() {
     // $(this).css('border', '1px solid #000');
     // $(this).css('border-bottom', 'none');
 });
-
 
 
 // 当鼠标移入省区位置时显示其他省份选择
@@ -226,4 +251,10 @@ for (var i = 0; i < att.length; i++) {
 
 
 
+<<<<<<< HEAD
 console.log(JSON.parse(localStorage.getItem('ly_obj')));
+=======
+
+
+
+>>>>>>> 09790a0885c8276a7b710460d2e7fb1b0f6eaeff
