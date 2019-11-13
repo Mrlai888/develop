@@ -196,19 +196,24 @@ body {
 .mt-wrapper .con .good-list * {
   box-sizing: inherit;
 }
-.mt-wrapper .con .list-floor {
-  display: block;
+.mt-wrapper .list-floor {
+  width: 1240px;
+  margin: 0 auto;
 }
-.mt-wrapper .con .list-floor .compare {
+.mt-wrapper .list-floor .compare {
   display: block;
   height: 100%;
 }
-.mt-wrapper .con .list-floor .compare img {
+.mt-wrapper .list-floor .compare img {
   display: inline;
   width: 100%;
   max-height: 250px;
 }
-.mt-wrapper .con .recommend .mod-title {
+.mt-wrapper .recommend {
+  width: 1240px;
+  margin: 0 auto;
+}
+.mt-wrapper .recommend .mod-title {
   text-align: left;
   font-size: 24px;
   color: #333333;
@@ -217,23 +222,23 @@ body {
   margin-top: 90px;
   margin-bottom: 25px;
 }
-.mt-wrapper .con .recommend .recommend-slider {
+.mt-wrapper .recommend .recommend-slider {
   overflow: hidden;
   background: #ffffff;
   border: 1px solid #fefefe;
 }
-.mt-wrapper .con .recommend .recommend-slider .flex {
+.mt-wrapper .recommend .recommend-slider .flex {
   overflow: hidden;
   position: relative;
 }
-.mt-wrapper .con .recommend .recommend-slider .flex .recommend-slider-wrap {
+.mt-wrapper .recommend .recommend-slider .flex .recommend-slider-wrap {
   width: 2000%;
   transition-duration: 0s;
   transform: translate3d(-1860px, 0px, 0px);
   margin-right: -100px;
   overflow: hidden;
 }
-.mt-wrapper .con .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item {
+.mt-wrapper .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item {
   position: relative;
   float: left;
   display: block;
@@ -241,54 +246,54 @@ body {
   height: 429px;
   transition: all .2s ease;
 }
-.mt-wrapper .con .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .rs-item-wrap {
+.mt-wrapper .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .rs-item-wrap {
   display: block;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 44px;
 }
-.mt-wrapper .con .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .rs-item-wrap img {
+.mt-wrapper .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .rs-item-wrap img {
   width: 230px;
   min-height: 230px;
 }
-.mt-wrapper .con .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .rs-item-wrap img:hover {
+.mt-wrapper .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .rs-item-wrap img:hover {
   transform: scale(1.1);
 }
-.mt-wrapper .con .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .mod-desc {
+.mt-wrapper .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .mod-desc {
   margin-top: 36px;
   text-align: center;
 }
-.mt-wrapper .con .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .mod-desc .vm-title {
+.mt-wrapper .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .mod-desc .vm-title {
   font-size: 21px;
   color: #2b2b2b;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.mt-wrapper .con .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .mod-desc .vm-price {
+.mt-wrapper .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .mod-desc .vm-price {
   margin-top: 8px;
   font-size: 16px;
   color: #c00;
 }
-.mt-wrapper .con .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .mod-desc .vm-price .vm-price-text {
+.mt-wrapper .recommend .recommend-slider .flex .recommend-slider-wrap .rs-item .mod-desc .vm-price .vm-price-text {
   font-size: 26px;
 }
-.mt-wrapper .con .recommend .mod-control {
+.mt-wrapper .recommend .mod-control {
   position: relative;
   margin-top: 20px;
 }
-.mt-wrapper .con .recommend .mod-control .flex-control-nav {
+.mt-wrapper .recommend .mod-control .flex-control-nav {
   width: 100%;
   position: absolute;
   bottom: -40px;
   text-align: center;
 }
-.mt-wrapper .con .recommend .mod-control .flex-control-nav li {
+.mt-wrapper .recommend .mod-control .flex-control-nav li {
   margin: 0 6px;
   display: inline-block;
   zoom: 1;
 }
-.mt-wrapper .con .recommend .mod-control .flex-control-nav li a {
+.mt-wrapper .recommend .mod-control .flex-control-nav li a {
   display: block;
   width: 11px;
   height: 11px;
@@ -300,6 +305,6 @@ body {
   cursor: pointer;
   text-indent: -9999px;
 }
-.mt-wrapper .con .recommend .mod-control .flex-control-nav li .flex-active {
+.mt-wrapper .recommend .mod-control .flex-control-nav li .flex-active {
   background-color: #a1a1a1;
 }
