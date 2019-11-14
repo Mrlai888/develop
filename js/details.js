@@ -154,6 +154,7 @@ for (var i = 0; i < lit3.length; i++) {
 
 //数量加减
 $('.mod-control .vm-minus').click(function () {
+    
 
 })
 
