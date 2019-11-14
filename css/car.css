@@ -28,6 +28,9 @@
   color: red;
   font-weight: bold;
 }
+#ly-roof .roof-cont .r .r-con span {
+  margin-left: 20px;
+}
 #ly-roof .roof-cont .r .r-con p {
   position: absolute;
   right: 0;
@@ -258,7 +261,7 @@
   width: 630px;
   height: 56px;
 }
-#ly-show .content .content-con .right .jiagou span {
+#ly-show .content .content-con .right .jiagou a {
   display: inline-block;
   width: 210px;
   height: 56px;
@@ -275,7 +278,7 @@
   background: #27b3ff;
   color: #fff;
 }
-#ly-show .content .content-con .right .jiagou span:hover {
+#ly-show .content .content-con .right .jiagou a:hover {
   background: rgba(113, 181, 236, 0.1);
   cursor: pointer;
 }

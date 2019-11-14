@@ -151,6 +151,7 @@
             document.querySelector('.box-phone-login .reg-api').style.border = '1px solid #ccc';
         } else {
             tip.style.visibility = 'hidden';
+            localStorage.setItem("username", "login");//存一个登录状态
             alert('登录成功');
         }
     }
@@ -236,7 +237,7 @@
                 } else {
                     tip.style.visibility = 'hidden';
                     alert(json.msg);
-                    localStorage.setItem("username", "login");
+                    localStorage.setItem("username", "login");//存一个登录状态
                     if (index3 == 1) {
                         setCookie('user', [ipt, pwd], 7);
                     }
