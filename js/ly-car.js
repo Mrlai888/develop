@@ -130,8 +130,11 @@ $span0.click(function () {
     $shen0.show();
     $shen1.hide();
     $shen2.hide();
+<<<<<<< HEAD
+=======
     $(this).css('border', '1px solid #000');
     $(this).css('border-bottom', 'none');
+>>>>>>> 530fb1f9720268cb75082dc5d13bfb491bd4da35
 
 });
 $span1.click(function () {

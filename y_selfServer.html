@@ -47,8 +47,8 @@
                     <!--user-->
                     <div class="user iconfont icon-user">
                         <ul class="Jin_User_hide">
-                            <li><a href="##">立即登录</a></li>
-                            <li><a href="##">立即注册</a></li>
+                            <li><a href="jy_login.html">立即登录</a></li>
+                            <li><a href="jy_regis.html">立即注册</a></li>
                             <li><a href="##">我的订单</a></li>
                             <li><a href="##">M码通道</a></li>
                         </ul>
@@ -122,11 +122,26 @@
         <h2>填写自助服务单</h2>
         <div class="selfServer_box">
             <label for="txt1">服务单类型</label >
-            <input type="text" id="txt1" placeholder="请输入">
+                <div class="downBox1">
+                    <input type="text" id="txt1" placeholder="请输入">
+                    <i>&#9660</i>
+                    <div class="content">
+                       <!-- <p>服务类型单</p>  -->
+                    </div>
+                </div>
+            
             <label for="txt2">服务单</label>
-            <input type="text" id="txt2" placeholder="请输入">
+            <div class="downBox2">
+                <input type="text" id="txt2" placeholder="请输入">
+                <i>&#9660</i>
+                <div class="content">
+                    <!-- <p>服务单</p> -->
+                </div>
+            </div>
+
             <p>温馨提示： 亲爱的魅友，为了确保您的资料能顺利提交，建议您在稳定的 Wi-Fi 网络环境下进行上传。</p>
         </div>
+        <button>下一步</button>
 
     </div>
 
@@ -223,6 +238,7 @@
     <script src="./js/Jin_comment.js"></script>
     <script src="./js/swiper.min.js"></script>
     <script src="./js/y_selfServer.js"></script>
+    <script src="./js/tool.js"></script>
     <!-- <script src="./js/home.js"></script> -->
 
 </body>

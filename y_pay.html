@@ -47,8 +47,8 @@
                     <!--user-->
                     <div class="user iconfont icon-user">
                         <ul class="Jin_User_hide">
-                            <li><a href="##">立即登录</a></li>
-                            <li><a href="##">立即注册</a></li>
+                            <li><a href="jy_login.html">立即登录</a></li>
+                            <li><a href="jy_regis.html">立即注册</a></li>
                             <li><a href="##">我的订单</a></li>
                             <li><a href="##">M码通道</a></li>
                         </ul>
@@ -119,11 +119,19 @@
     </div>
 
     <div class="y_pay_page">
-        <input type="text" placeholder="输入手机号码 " class='txt'> 1开头的11位数字：
-        <input type="text" placeholder="图形验证" class="code">四位数
-        <input type="text" placeholder="短信 验证" class="note"> 四位数字：
-        <button class="but">立即查询</button>
-        <span></span>
+        <div class="box">
+            <label for="pay1" class="forPay1">输入手机号码</label>
+            <input type="text" placeholder="输入手机号码 " class='txt' id="pay1">
+            <label for="pay2">请输入验证码</label>
+            <!--        
+            <input type="text" placeholder="输入验证码" class="code" id="pay2">
+            <label for="pay3">请输入短信验证码</label>
+            <em></em> -->
+
+            <input type="text" placeholder="短信 验证" class="note" id="pay3">
+            <button class="but">立即查询</button>
+            <span></span>
+        </div>
     </div>
 
 

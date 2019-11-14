@@ -151,7 +151,9 @@
             document.querySelector('.box-phone-login .reg-api').style.border = '1px solid #ccc';
         } else {
             tip.style.visibility = 'hidden';
-            alert('登录成功');
+            localStorage.setItem("username", "login");//存一个登录状态
+            // alert('登录成功');
+            window.location.assign('Jin-index.html');
         }
     }
 
@@ -235,11 +237,12 @@
                     rindex2=0;
                 } else {
                     tip.style.visibility = 'hidden';
-                    alert(json.msg);
-                    localStorage.setItem("username", "login");
+                    // alert(json.msg);  
+                    localStorage.setItem("username", "login");//存一个登录状态
                     if (index3 == 1) {
                         setCookie('user', [ipt, pwd], 7);
                     }
+                    window.location.assign('Jin-index.html');
                 }
             },
             failed: function (code) {

@@ -34,23 +34,44 @@
   margin: 0 auto;
   padding: 0 400px 0px 400px;
   text-align: center; }
-  .y_pay_page input {
-    width: 200px;
-    height: 40px;
-    margin-top: 50px;
-    display: block; }
-  .y_pay_page .but {
-    width: 200px;
-    height: 40px;
-    margin-top: 80px;
-    display: block;
-    background: skyblue; }
-  .y_pay_page span {
-    margin-top: 30px;
-    display: block;
-    width: 200px;
-    height: 40px;
-    text-align: center;
-    color: red;
-    font-size: 18px;
-    font-weight: bold; }
+  .y_pay_page .box {
+    border: 1px solid #e5e5e5;
+    margin-top: 100px;
+    padding-left: 70px; }
+    .y_pay_page .box .forPay1 {
+      margin-top: 50px; }
+    .y_pay_page .box label {
+      width: 300px;
+      height: 40px;
+      display: block;
+      outline: none;
+      border-radius: 10px;
+      text-align: left;
+      font-size: bold; }
+    .y_pay_page .box input {
+      width: 300px;
+      height: 40px;
+      margin-bottom: 30px;
+      display: block;
+      outline: none;
+      border: 1px solid #666666;
+      border-radius: 10px; }
+    .y_pay_page .box .but {
+      width: 300px;
+      height: 40px;
+      margin-top: 40px;
+      display: block;
+      background: skyblue;
+      outline: none;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px; }
+    .y_pay_page .box span {
+      margin-top: 30px;
+      display: block;
+      width: 100%;
+      height: 40px;
+      text-align: center;
+      color: red;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px; }
