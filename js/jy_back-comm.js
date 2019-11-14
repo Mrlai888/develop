@@ -3,7 +3,7 @@
     layui.use('layer', function () {
         var layer = layui.layer; //使用layui弹出层模块
         ajax({
-            url: 'php/user.php',
+            url: 'php/back-comm.php',
             type: 'post',
             succeed: function (data) {
                 console.log(data);
@@ -211,17 +211,16 @@ function refresh(json) {
     var tbody = document.querySelector('tbody');
     tbody.innerHTML = '';
     for (var i = 0, len = json.data.length; i < len; i++) {
-        let d = new Date(json.data[i].time*1000);
+        // let d = new Date(json.data[i].time*1000);
         tbody.innerHTML += `<tr>
                                 <td>${i+1}</td>
-                                        <td id="userID">${json.data[i].ID}</td>
-                                        <td id="uName">${json.data[i].username}</td>
-                                        <td id="uPwd">${json.data[i].password}</td>
-                                        <td>${d.toLocaleString()}</td>
-                                        <td id="uPwd">${json.data[i].question1}</td>
-                                        <td id="uPwd">${json.data[i].answer1}</td>
-                                        <td id="uPwd">${json.data[i].question2}</td>
-                                        <td id="uPwd">${json.data[i].answer2}</td>
+                                        <td id="userID">${json.data[i].id}</td>
+                                        <td id="uName">${json.data[i].module}</td>
+                                        <td id="uPwd">${json.data[i].pic}</td>
+                                        <td id="uPwd">${json.data[i].user_info}</td>
+                                        <td id="uPwd">${json.data[i].username}</td>
+                                        <td id="uPwd">${json.data[i].introduce}</td>
+                                        <td id="uPwd">${json.data[i].type}</td>
                                         <td>
                                             <button type="button" class="layui-btn layui-btn-sm" id="rewUser">
                                                 <i class="layui-icon">&#xe642;</i>编辑
@@ -253,7 +252,7 @@ function fenpage(total) {
                 if (!first) { //首次不执行
                     // console.log('hahaha');
                     ajax({
-                        url: 'php/user.php',
+                        url: 'php/back-comm.php',
                         type: 'post',
                         data: 'page=' + obj.curr + '&num=' + obj.limit,
                         succeed: function (data) {

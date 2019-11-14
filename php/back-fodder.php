@@ -136,12 +136,12 @@
 
 	//更新展示数据
 	function eachData($page,$num){
-        $sql = "select * from user";
+        $sql = "select * from fodder";
         $res = my_error($sql);
         $total = mysql_num_rows($res);//拿到总条数
         $totalPage = ceil($total/$num);//计算分多少页
         $start=($page-1)*$num;//匹配数据库limit规则：limit(0,5)从第一条开始，显示5条。
-        $sql2 = "select * from user limit $start,$num";//查找该页数据
+        $sql2 = "select * from fodder limit $start,$num";//查找该页数据
         $res2 = my_error($sql2);
         while($row = mysql_fetch_assoc($res2)){
             $users[] = $row;//把该页的数据取出来
