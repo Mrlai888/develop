@@ -241,3 +241,25 @@ function promiseAjax(option) {
 }
 
 //
+(function() {
+
+    $('.user').mouseenter(function() {
+        $('.Jin_User_hide').show()
+        $('.user').mouseleave(function() {
+            $('.Jin_User_hide').hide()
+        })
+    })
+
+})();
+
+(function() {
+    $('#car').mouseenter(function() {
+        $('.Jin_car_hide').show()
+        $('#car').mouseleave(function() {
+            $('.Jin_car_hide').hide()
+        })
+    })
+
+})();
+
+$(".user").css('color', 'black')

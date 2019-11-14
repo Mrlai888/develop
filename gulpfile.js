@@ -34,8 +34,8 @@ gulp.task('minCss', function() {
 //合并压缩js
 gulp.task('minJs', function() {
     return gulp.src(['./js/*.js', '!./js/jquery*.js', '!./js/swiper*.js', '!./js/tool.js', '!./js/Jin_comment.js'])
-        .pipe(concat('main.js'))
-        .pipe(uglify())
+        // .pipe(concat('main.js'))
+        // .pipe(uglify())
         .pipe(gulp.dest('./dist/js'))
         .pipe(auto.reload())
 
