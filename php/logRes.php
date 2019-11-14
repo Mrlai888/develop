@@ -50,7 +50,7 @@
             }
             //添加用户入库
 	        $time = time();
-	        $sql2 = "insert into user values(null,'{$user}','{$pwd}',$time,null,null,null,null)";
+	        $sql2 = "insert into user (username,password,time) values('{$user}','{$pwd}',$time)";
 	        $insert_id = my_error($sql2);
 			break;
 			

@@ -77,6 +77,8 @@
             succeed: function (data) {
                 // console.log(data);
                 localStorage.setItem("username", "login");//存一个登录状态
+                localStorage.removeItem('key1'); //清除key1;
+                localStorage.removeItem('key2'); //清除key1;
                 window.location.assign('Jin-index.html');//注册成功，直接去首页，免登录
             },
             failed: function (code) {
