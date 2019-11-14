@@ -86,7 +86,8 @@
                             regCode.style.display = "block";
                         }, 500);
                         getRegCode1();
-                        localStorage.setItem('photo', json.data[8]); //设置 photo
+                        let photo = json.data[8].replace(/\s+/g,"\+");
+                        localStorage.setItem('photo', photo); //设置 photo
                     }
                 },
                 failed: function (code) {
@@ -239,11 +240,12 @@
                 } else {
                     tip.style.visibility = 'hidden';
                     // alert(json.msg);  
+                    let photo2 = json.data[8].replace(/\s+/g,"\+");
+                    localStorage.setItem('photo', photo2); //设置 photo
                     localStorage.setItem("username", "login"); //存一个登录状态
                     if (index3 == 1) {
                         setCookie('user', [ipt, pwd], 7);
                     }
-                    localStorage.setItem('photo', json.data[8]); //设置 photo
                     window.location.assign('Jin_index.html');
                 }
             },

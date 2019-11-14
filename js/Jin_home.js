@@ -1,48 +1,51 @@
 (function () {
+
     //登录状态
-    if(localStorage.getItem('username')){
+    if (localStorage.getItem('username')) {
         // console.log(1);
         // loginIindex = 1;
         let userPhoto = localStorage.getItem('photo');
         // console.log(userPhoto);
-        document.querySelector('#userPhoto').style.backgroundImage = 'url('+userPhoto+')';
+        document.querySelector('#userPhoto').style.backgroundImage = 'url(' + userPhoto + ')';
         document.querySelector('.Jin_User_hide').innerHTML = `
-        <li><a href="##" class="exitLogin">退出登录</a></li>
-        <li><a href="##">个人中心</a></li>
-        <li><a href="##">我的订单</a></li>
-        <li><a href="##">M码通道</a></li>
-        `;
-        localStorage.removeItem('photo'); //清除photo;
-    }else{
+            <li><a href="##" class="exitLogin">退出登录</a></li>
+            <li><a href="##">个人中心</a></li>
+            <li><a href="##">我的订单</a></li>
+            <li><a href="##">M码通道</a></li>
+            `;
+        // localStorage.removeItem('photo'); //清除photo;
+    } else {
         // console.log(0);
         // loginIindex = 0;
         document.querySelector('#userPhoto').style.backgroundImage = 'url(images/jy_icon-default-user.png)';
         document.querySelector('.Jin_User_hide').innerHTML = `
-        <li><a href="jy_login.html">立即登录</a></li>
-        <li><a href="jy_regis.html">立即注册</a></li>
-        <li><a href="##">我的订单</a></li>
-        <li><a href="##">M码通道</a></li>
-        `;
+            <li><a href="jy_login.html">立即登录</a></li>
+            <li><a href="jy_regis.html">立即注册</a></li>
+            <li><a href="##">我的订单</a></li>
+            <li><a href="##">M码通道</a></li>
+            `;
         localStorage.removeItem('photo'); //清除photo;
     }
-    
+
+
     //退出登录
     // 事件委托
-document.body.onclick = function (e){
-    var e = e || window.event;
-    var tg = e.target || e.srcElement;
-    // 创建元素
-    if (tg.className == 'exitLogin') {
-       localStorage.removeItem('username'); //清除登录标识;
-       document.querySelector('#userPhoto').style.backgroundImage = 'url(images/jy_icon-default-user.png)';
-        document.querySelector('.Jin_User_hide').innerHTML = `
+    document.body.onclick = function (e) {
+        localStorage.removeItem('photo'); //清除photo;
+        var e = e || window.event;
+        var tg = e.target || e.srcElement;
+        // 创建元素
+        if (tg.className == 'exitLogin') {
+            localStorage.removeItem('username'); //清除登录标识;
+            document.querySelector('#userPhoto').style.backgroundImage = 'url(images/jy_icon-default-user.png)';
+            document.querySelector('.Jin_User_hide').innerHTML = `
         <li><a href="jy_login.html">立即登录</a></li>
         <li><a href="jy_regis.html">立即注册</a></li>
         <li><a href="##">我的订单</a></li>
         <li><a href="##">M码通道</a></li>
         `;
+        }
     }
-}
 
 
 
@@ -55,7 +58,7 @@ document.body.onclick = function (e){
 
     var Jin_hide_inner = document.querySelector('.Jin_hide_inner');
 
-      $('.phone_nav li').mouseover(function () {
+    $('.phone_nav li').mouseover(function () {
         $('#car').css('color', '#000');
         $('.user').css('color', '#000');
         $(this).children().css('color', '#00c3f5');
@@ -67,134 +70,142 @@ document.body.onclick = function (e){
     });
     var json;
     $.ajax({
-        url:'php/goods.php',
-        data:{module:'phone_rec'},
-        type:'get',
-        success:function(data){
-             json = JSON.parse(data);
-            
+        url: 'php/goods.php',
+        data: {
+            module: 'phone_rec'
+        },
+        type: 'get',
+        success: function (data) {
+            json = JSON.parse(data);
+
         }
     })
-      $('.cla:eq(0)').mouseover(function () {
+    $('.cla:eq(0)').mouseover(function () {
         var jsonOne = json;
         $('.Jin_hide_inner').html('');
         var tag = '';
-                for (var i = 0; i < 8; i++){
-                     tag +=`<li>
+        for (var i = 0; i < 8; i++) {
+            tag += `<li>
                     <a href="##">
                         <img src="${jsonOne[i].pic}"/>
                         <span>${jsonOne[i].name}</span><br>
                         <strong>${jsonOne[i].price}</strong>
                     </a>
                 </li>`
-            }
-            var Jin_ul = ` <ul class="clearfix Jin_hide_li"></ul>`;
-                     $('.Jin_hide_inner').append(Jin_ul);
-                     $('.Jin_hide_li').append(tag);
-                     $('.Jin_hide_li li').mouseover(function () {
-                     $(this).css('opacity', 1);
-                     $(this).siblings('li').css('opacity', 0.5);
+        }
+        var Jin_ul = ` <ul class="clearfix Jin_hide_li"></ul>`;
+        $('.Jin_hide_inner').append(Jin_ul);
+        $('.Jin_hide_li').append(tag);
+        $('.Jin_hide_li li').mouseover(function () {
+            $(this).css('opacity', 1);
+            $(this).siblings('li').css('opacity', 0.5);
         });
         $('.Jin_hide_content_ding').css('display', 'none');
         $('.Jin_User_hide').css('display', 'none');
     });
     var Sum;
     $.ajax({
-        url:'php/goods.php',
-        data:{module:'music_rec'},
-        type:'get',
-        success:function(data){
-             Sum = JSON.parse(data);
+        url: 'php/goods.php',
+        data: {
+            module: 'music_rec'
+        },
+        type: 'get',
+        success: function (data) {
+            Sum = JSON.parse(data);
         }
     })
-      $('.cla:eq(1)').mouseover(function () {
+    $('.cla:eq(1)').mouseover(function () {
         $('.Jin_hide_inner').html('');
         var jsonTwo = Sum;
-            var tag = '';
-        
-                for (var i = 0; i < 8; i++){
-                     tag +=`<li>
+        var tag = '';
+
+        for (var i = 0; i < 8; i++) {
+            tag += `<li>
                     <a href="##">
                         <img src="${jsonTwo[i].pic}"/>
                         <span>${jsonTwo[i].name}</span><br>
                         <strong>${jsonTwo[i].price}</strong>
                     </a>
                 </li>`
-            }
-            var Jin_ul = ` <ul class="clearfix Jin_hide_li"></ul>`;
-                     $('.Jin_hide_inner').append(Jin_ul);
-                     $('.Jin_hide_li').append(tag);
-                     $('.Jin_hide_li li').mouseover(function () {
-                     $(this).css('opacity', 1);
-                     $(this).siblings('li').css('opacity', 0.5);
+        }
+        var Jin_ul = ` <ul class="clearfix Jin_hide_li"></ul>`;
+        $('.Jin_hide_inner').append(Jin_ul);
+        $('.Jin_hide_li').append(tag);
+        $('.Jin_hide_li li').mouseover(function () {
+            $(this).css('opacity', 1);
+            $(this).siblings('li').css('opacity', 0.5);
         });
         $('.Jin_hide_content_ding').css('display', 'none');
         $('.Jin_User_hide').css('display', 'none');
     });
-      var pada;
+    var pada;
     $.ajax({
-        url:'php/goods.php',
-        data:{module:'accessory_rec'},
-        type:'get',
-        success:function(data){
-             pada = JSON.parse(data);
-            
-    
+        url: 'php/goods.php',
+        data: {
+            module: 'accessory_rec'
+        },
+        type: 'get',
+        success: function (data) {
+            pada = JSON.parse(data);
+
+
         }
     })
-      $('.cla:eq(2)').mouseover(function () {
+    $('.cla:eq(2)').mouseover(function () {
         $('.Jin_hide_inner').html('');
         var jsonTwo = pada;
-            var tag = '';
-        
-                for (var i = 0; i < 8; i++){
-                     tag +=`<li>
+        var tag = '';
+
+        for (var i = 0; i < 8; i++) {
+            tag += `<li>
                     <a href="##">
                         <img src="${jsonTwo[i].pic}"/>
                         <span>${jsonTwo[i].name}</span><br>
                         <strong>${jsonTwo[i].price}</strong>
                     </a>
                 </li>`
-            }
-            var Jin_ul = ` <ul class="clearfix Jin_hide_li"></ul>`;
-                     $('.Jin_hide_inner').append(Jin_ul);
-                     $('.Jin_hide_li').append(tag);
-                     $('.Jin_hide_li li').mouseover(function () {
-                     $(this).css('opacity', 1);
-                     $(this).siblings('li').css('opacity', 0.5);
+        }
+        var Jin_ul = ` <ul class="clearfix Jin_hide_li"></ul>`;
+        $('.Jin_hide_inner').append(Jin_ul);
+        $('.Jin_hide_li').append(tag);
+        $('.Jin_hide_li li').mouseover(function () {
+            $(this).css('opacity', 1);
+            $(this).siblings('li').css('opacity', 0.5);
         });
         $('.Jin_hide_content_ding').css('display', 'none');
         $('.Jin_User_hide').css('display', 'none');
     });
-     var praseJin;
+    var praseJin;
     $.ajax({
-        url:'php/goods.php',
-        data:{module:'life_rec'},
-        type:'get',
-        success:function(data){
-             praseJin = JSON.parse(data);
+        url: 'php/goods.php',
+        data: {
+            module: 'life_rec'
+        },
+        type: 'get',
+        success: function (data) {
+            praseJin = JSON.parse(data);
         }
     })
-      $('.cla:eq(3)').mouseover(function () {
+    $('.cla:eq(3)').mouseover(function () {
         $('.Jin_hide_inner').html('');
         var jsonTwo = praseJin;
-            var tag = '';
-        
-                for (var i = 0; i < 8; i++){
-                     tag +=`<li>
+        var tag = '';
+
+        for (var i = 0; i < 8; i++) {
+            tag += `<li>
                     <a href="##">
                         <img src="${jsonTwo[i].pic}"/>
                         <span>${jsonTwo[i].name}</span><br>
                         <strong>${jsonTwo[i].price}</strong>
                     </a>
                 </li>`
-            }
-            var Jin_ul = ` <ul class="clearfix Jin_hide_li"></ul>`;
-                     $('.Jin_hide_inner').append(Jin_ul);
-                     $('.Jin_hide_li').append(tag);
-                     $('.Jin_hide_li li').mouseover(function () {
-                     $(this).css('opacity', 1);
-                     $(this).siblings('li').css('opacity', 0.5);
+        }
+        var Jin_ul = ` <ul class="clearfix Jin_hide_li"></ul>`;
+        $('.Jin_hide_inner').append(Jin_ul);
+        $('.Jin_hide_li').append(tag);
+        $('.Jin_hide_li li').mouseover(function () {
+            $(this).css('opacity', 1);
+            $(this).siblings('li').css('opacity', 0.5);
         });
         $('.Jin_hide_content_ding').css('display', 'none');
         $('.Jin_User_hide').css('display', 'none');
@@ -203,17 +214,19 @@ document.body.onclick = function (e){
 
 
 
-// 请求数据
+    // 请求数据
 
-  $.ajax({
-        url:'php/goods.php',
-        data:{module:'phone_new'},
-        type:'get',
-        success:function(data){
-             var json = JSON.parse(data);
-             var tag = '';
+    $.ajax({
+        url: 'php/goods.php',
+        data: {
+            module: 'phone_new'
+        },
+        type: 'get',
+        success: function (data) {
+            var json = JSON.parse(data);
+            var tag = '';
             for (var i = 0; i < 4; i++) {
-               tag += `<li>
+                tag += `<li>
                 <a href="##">
                     <img src="${json[i].pic}"/>
                     <h3>${json[i].name}</h3>
@@ -223,34 +236,36 @@ document.body.onclick = function (e){
             }
             $('.phone_content').append(tag);
             $('.phone_content li').mouseover(function () {
-            $(this).css('opacity', 0.8);
-            $(this).siblings('li').css('opacity', 1);
-    });
-    $('.phone_content li').mouseout(function () {
-        $(this).css('opacity', 1);
-    });
+                $(this).css('opacity', 0.8);
+                $(this).siblings('li').css('opacity', 1);
+            });
+            $('.phone_content li').mouseout(function () {
+                $(this).css('opacity', 1);
+            });
         }
     })
 
     $.ajax({
-        url:'php/fodder.php',
-        data:{module:'adv'},
-        type:'get',
-        success:function(data){
+        url: 'php/fodder.php',
+        data: {
+            module: 'adv'
+        },
+        type: 'get',
+        success: function (data) {
             var main_nav_phone = document.querySelectorAll('.main_nav_phone');
             var json = JSON.parse(data);
             var tag = '';
-            json.forEach(function(item,index){
-                tag =`<a href="##">
+            json.forEach(function (item, index) {
+                tag = `<a href="##">
                      <img src="${item.url}"/>
                     </a>`;
                 main_nav_phone[index].innerHTML = tag;
             })
         }
     })
- // console.log($('.main_nav_phone'));
+    // console.log($('.main_nav_phone'));
 
-          // main_nav_phone[index]
+    // main_nav_phone[index]
 
 
 
@@ -306,8 +321,8 @@ document.body.onclick = function (e){
         $('.Jin_car_hide').slideDown();
     });
 
-//手机导航部分
-    
+    //手机导航部分
+
     $('.phone_content li').mouseover(function () {
         $(this).css('opacity', 0.8);
         $(this).siblings('li').css('opacity', 1);
@@ -366,11 +381,11 @@ document.body.onclick = function (e){
         $(this).children().css('display', 'none');
     });
 
-// <source src="videos/video1.mp4"/>
+    // <source src="videos/video1.mp4"/>
     //视频点击
     $('#close').click(function () {
-        $('.videos_main').css('display','none');
-        $('.Jin_new').css("display",'none');
+        $('.videos_main').css('display', 'none');
+        $('.Jin_new').css("display", 'none');
     })
 
     var data = [
@@ -414,11 +429,11 @@ document.body.onclick = function (e){
 
 
 
-    var video1 = document.getElementById("vi");  //括号内为video标签的id
+    var video1 = document.getElementById("vi"); //括号内为video标签的id
     //播放视频（点击播放按钮，后变成暂停）
     function isPlay(obj1) {
-            video1.pause();
-            video1.play();
+        video1.pause();
+        video1.play();
     }
     isPlay(video1);
 })
