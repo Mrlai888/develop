@@ -541,3 +541,22 @@
 #ly-product .canshu table tr th {
   border: 1px solid #dedede;
 }
+
+.phone_nav li a {
+  display: block;
+  padding: 31px 20px 30px;
+  line-height: 21px;
+  font-size: 14px;
+  color: #000;
+}
+
+.phone_nav li a{
+  color:#000;
+}
+.user{
+  color:#000;
+}
+
+#Jin_header .header_inner{
+  height:82px;
+}
