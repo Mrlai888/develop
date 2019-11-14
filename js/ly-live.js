@@ -1,13 +1,13 @@
 // 头部鼠标移除隐藏
-$('.Jin_hide_content').mouseleave(function() {
+$('.Jin_hide_content').mouseleave(function () {
     $(this).css('display', 'none');
 });
 
-$('.Jin_hide_content_ding').mouseleave(function() {
+$('.Jin_hide_content_ding').mouseleave(function () {
     $(this).css('display', 'none')
 });
 
-$('.Jin_car_hide').mouseleave(function() {
+$('.Jin_car_hide').mouseleave(function () {
     $(this).css('display', 'none')
 });
 
@@ -18,7 +18,7 @@ ajax({ //推荐
     url: 'php/goods.php',
     data: 'module=life_rec',
     type: 'get',
-    succeed: function(data) {
+    succeed: function (data) {
 
         localStorage.setItem('ly_obj', data)
 
@@ -26,7 +26,7 @@ ajax({ //推荐
         var json = JSON.parse(data);
         // console.log(json);
         var ulCont = document.querySelector('.ul-con')
-            // console.log(ulCont)
+        // console.log(ulCont)
 
         for (var i = 0; i < 12; i++) {
             ulCont.innerHTML += `
@@ -44,7 +44,7 @@ ajax({ //推荐
         </li>
             `;
         }
-        $(".list ul ").on("click", 'li a', function() {
+        $(".list ul ").on("click", 'li a', function () {
             console.log(666)
             var title = $(this).find('h3').html()
 
@@ -53,7 +53,7 @@ ajax({ //推荐
         });
 
     },
-    faild: function(err) {
+    faild: function (err) {
         console.log(err);
     }
 
@@ -67,12 +67,12 @@ ajax({ //新品
     url: 'php/goods.php',
     data: 'module=life_new',
     type: 'get',
-    succeed: function(data) {
+    succeed: function (data) {
         // console.log(data);
         var json = JSON.parse(data);
         // console.log(json);
         var ulCont = document.querySelector('.ul-con1')
-            // console.log(ulCont)
+        // console.log(ulCont)
 
         for (var i = 0; i < 8; i++) {
             ulCont.innerHTML += `
@@ -94,10 +94,10 @@ ajax({ //新品
 
         var oA = document.querySelectorAll('#ly-main .cont .title .right a');
         var lists = document.querySelectorAll('#ly-main .cont .list')
-            // console.log(oA);
+        // console.log(oA);
         for (var i = 0; i < oA.length; i++) {
             oA[i].index = i;
-            oA[i].onclick = function() {
+            oA[i].onclick = function () {
                 for (var i = 0; i < lists.length; i++) {
                     // oA[i].classList.remove = 'show';
                     oA[i].style.color = '';
@@ -111,7 +111,7 @@ ajax({ //新品
         // console.log(lists[0])
 
     },
-    faild: function(err) {
+    faild: function (err) {
         console.log(err);
 
     }
@@ -124,12 +124,12 @@ ajax({
     url: 'php/goods.php',
     data: 'module=life_rec',
     type: 'get',
-    succeed: function(data) {
+    succeed: function (data) {
         // console.log(data);
         var json = JSON.parse(data);
         // console.log(json);
         var ulCont = document.querySelector('.seal')
-            // console.log(ulCont)
+        // console.log(ulCont)
 
         for (var i = 0; i < 12; i++) {
             ulCont.innerHTML += `
@@ -148,7 +148,7 @@ ajax({
             `;
         }
     },
-    faild: function(err) {
+    faild: function (err) {
         console.log(err);
     }
 });
@@ -159,12 +159,12 @@ ajax({ //三角形上
     url: 'php/goods.php',
     data: 'module=accessory_rec',
     type: 'get',
-    succeed: function(data) {
+    succeed: function (data) {
         // console.log(data);
         var json = JSON.parse(data);
         // console.log(json);
         var prev = document.querySelector('.prev')
-            // console.log(ulCont)
+        // console.log(ulCont)
 
         for (var i = 0; i < 8; i++) {
             prev.innerHTML += `
@@ -183,7 +183,7 @@ ajax({ //三角形上
         `;
         }
     },
-    faild: function(err) {
+    faild: function (err) {
         console.log(err);
 
     }
@@ -194,12 +194,12 @@ ajax({ //三角形下
     url: 'php/goods.php',
     data: 'module=life_rec',
     type: 'get',
-    succeed: function(data) {
+    succeed: function (data) {
         // console.log(data);
         var json = JSON.parse(data);
         // console.log(json);
         var next = document.querySelector('.next')
-            // console.log(ulCont)
+        // console.log(ulCont)
 
         for (var i = 0; i < 8; i++) {
             next.innerHTML += `
@@ -218,7 +218,7 @@ ajax({ //三角形下
         `;
         }
     },
-    faild: function(err) {
+    faild: function (err) {
         console.log(err);
 
     }
@@ -244,42 +244,27 @@ ajax({ //轮播
     url: 'php/goods.php',
     data: 'module=banner',
     type: 'get',
-    succeed: function(data) {
+    succeed: function (data) {
         // console.log(data);
         var json = JSON.parse(data);
         // console.log(json);
         var lis = document.querySelectorAll('.swiper-slide a')
-            // console.log(lis)
+        // console.log(lis)
 
         for (var i = 0; i < json.length; i++) {
             lis[i].innerHTML = `
+            <a href="ly-car.html">
                 <img src="${json[i].pic}" alt="">
                 <h3>${json[i].name}</h3>                  
                 <span>${json[i].price}</span>
+            </a>
                                                         
-                 `;
+           `;
         };
     },
-    faild: function(err) {
+    faild: function (err) {
         console.log(err);
 
     }
 });
 
-
-
-// 推荐新品切换
-
-// for (var i = 0; i < oA.length; i++) {
-//     var link = oA[i];
-//     link.index = i;
-//     link.onclick = function() {
-//         // console.log(this.index);
-//         if (this.index == 0) {
-//             lists[0].style.display = 'block';
-//         } else if (this.index == 1) {
-//             lists[0].style.display = 'none';
-//             lists[1].style.display = 'block';
-//         }
-//     }
-// }

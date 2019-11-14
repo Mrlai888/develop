@@ -130,27 +130,18 @@ $span0.click(function () {
     $shen0.show();
     $shen1.hide();
     $shen2.hide();
-<<<<<<< HEAD
-=======
-    $(this).css('border', '1px solid #000');
-    $(this).css('border-bottom', 'none');
->>>>>>> 530fb1f9720268cb75082dc5d13bfb491bd4da35
 
 });
 $span1.click(function () {
     $shen1.show();
     $shen0.hide();
     $shen2.hide();
-    // $(this).css('border', '1px solid #000');
-    // $(this).css('border-bottom', 'none');
 
 });
 $span2.click(function () {
     $shen2.show();
     $shen1.hide();
     $shen0.hide();
-    // $(this).css('border', '1px solid #000');
-    // $(this).css('border-bottom', 'none');
 });
 
 
@@ -214,8 +205,6 @@ var maxY = document.documentElement.clientHeight - kefu.offsetHeight;
 
 topp.onmousedown = function (e) {
     var ev = event || e;
-    // var startX = ev.offsetX;
-    // var startY = ev.offsetY;
     // 获取鼠标与方块的相对位置
     var startX = ev.x - kefu.offsetLeft;
     var startY = ev.y - kefu.offsetTop;
@@ -308,14 +297,15 @@ off.onclick = function () {
 var img = document.getElementById("photo");
 var arr = ["images/ly-img35.png", "images/ly-img36.jpg"]
 var tag = 0;
+console.log(arr)
 
 img.onclick = function(){
-    if(tag==0){
-        img.src = arr[1];
-        tag = 1;
-    }else{
+    if(tag==1){
         img.src = arr[0];
         tag = 0;
+    }else{
+        img.src = arr[1];
+        tag = 1;
     }
 }
 
@@ -326,34 +316,25 @@ send.onclick = function(){
         alert("请输入内容后发送");
     }else{
         var content = document.querySelector('.talk-cont');
-		content.innerHTML += "<span><img src='" + arr[tag] + "'/><b>" + txt + "</b></span>"
+		content.innerHTML += "<img src='" + arr[tag] + "'/><b>" + txt + "</b>"
 
     }
     var imgs = content.getElementsByTagName("photo");
     var span = content.getElementsByTagName("span");
+    imgs.style.width = '35px';
+    imgs.style.height = '35px';
     num++;
-    if(tag ==0){
-        // imgs[num].className = "img";
-        span[num].className = "aa1";
+    if(tag == 0){
+        // imgs[num].classList = "img";
+        span[num].className = "bb";
 
     }else{
         // imgs[num].className = "img";
-        span[num].className = "bb1";
+        span[num].className = "aa";
     }
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -379,8 +360,8 @@ for (var i = 0; i < msgCont.length; i++) {
 
 
 
-var att = JSON.parse(localStorage.getItem('ly_obj'))
 
+var att = JSON.parse(localStorage.getItem('ly_obj'))
 for (var i = 0; i < att.length; i++) {
     // console.log(aaa[i]);
 
@@ -400,6 +381,32 @@ for (var i = 0; i < att.length; i++) {
 
     }
 }
+
+
+// var ban = JSON.parse(localStorage.getItem('banner'));
+
+// for (var i = 0; i < ban.length; i++) {
+//     if (localStorage.getItem('dom') == ban[i].name) {
+//         $(".right .name h1").text(ban[i].name);
+//         $(".right .name p").text(ban[i].name);
+//         // $(".property-hd .mod-info").text(ban[i].slogan)
+//         $(" .price span").text(ban[i].price)
+
+//         $(".img .show").attr("src", ban[i].pic)
+
+//         $(".r .r-con em").text(ban[i].price);
+//         $(".r .r-con span").text(ban[i].name);
+
+//     }
+// }
+
+
+
+
+
+
+
+
 
 
 

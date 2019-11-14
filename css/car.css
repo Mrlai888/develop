@@ -349,7 +349,7 @@
   min-height: 30px;
   font-size: 16px;
 }
-#ly-kefu .cont .boot .left .talk .talk-cont .bb1 {
+#ly-kefu .cont .boot .left .talk .talk-cont .bb {
   text-align: center;
   position: absolute;
   right: 10px;
@@ -383,12 +383,18 @@
 #ly-kefu .cont .boot .left .bottom .photo {
   width: 35px;
   height: 35px;
+  border-radius: 17px;
   position: relative;
 }
 #ly-kefu .cont .boot .left .bottom .photo img {
   width: 35px;
   height: 35px;
   position: absolute;
+  border-radius: 17px;
+}
+#ly-kefu .cont .boot .left .bottom .photo .aa1 {
+  width: 35px;
+  height: 35px;
   border-radius: 17px;
 }
 #ly-kefu .cont .boot .left .bottom b {
@@ -425,7 +431,7 @@
 #ly-kefu .cont .boot .right .right-content .lp {
   width: 190px;
   height: 120px;
-  background: pink;
+  background: #fff;
 }
 #ly-kefu .cont .boot .right .right-content .link {
   width: 190px;
