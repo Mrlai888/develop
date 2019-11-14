@@ -32,6 +32,10 @@ $('.Jin_car_hide').mouseleave(function () {
     $(this).css('display', 'none')
 });
 
+$('.Jin_User_hide').mouseleave(function(){
+    $(this).css('display', 'none');
+
+});
 
 function Tab() {
     this.imgs = document.querySelectorAll('.img img');
