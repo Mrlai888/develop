@@ -192,7 +192,7 @@ phone()
 
 (function() { //查询部分
     var arr = {
-        "注册产品": "y_login.html",
+        "注册产品": "y_pay.html",
         "真伪查询": "y_taf.html",
         "自助服务": "y_selfServer.html",
         "支付查询": "y_pay.html",

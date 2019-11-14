@@ -12,3 +12,7 @@ $('.Jin_hide_content').mouseleave(function() {
 $('.Jin_hide_content_ding').mouseleave(function() {
     $(this).css('display', 'none')
 })
+
+$('.fix_from button').click(function() {
+    location.href = './servers.html'
+})
