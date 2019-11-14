@@ -32,6 +32,7 @@
 	$que2 = $_POST['question2'];
 	$asw1 = $_POST['answer1'];
 	$asw2 = $_POST['answer2'];
+	$photo = $_POST['photo'];
 
     //判断是注册还是登录操作
     switch($ope){
@@ -98,7 +99,7 @@
 
 		case "setqueasw":
 			$time = time();
-	        $sql = "insert into user values(null,'{$user}','{$pwd}',$time,'{$que1}','{$asw1}','{$que2}','{$asw2}')";
+	        $sql = "insert into user values(null,'{$user}','{$pwd}',$time,'{$que1}','{$asw1}','{$que2}','{$asw2}','{$photo}')";
 			$insert_id = my_error($sql);
 			echo 'haha';
 			break;
