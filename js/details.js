@@ -152,12 +152,18 @@ for (var i = 0; i < lit3.length; i++) {
     })(i)
 }
 
+//数量加减
+$('.mod-control .vm-minus').click(function(){
+     
+})
 
+
+
+
+
+//本地存储数据
 var atr = JSON.parse(localStorage.getItem('obj'))
-var ban = JSON.parse(localStorage.getItem('banner'))
-
 for (var i = 0; i < atr.length; i++) {
-
     if (localStorage.getItem('dom') === atr[i].name) {
         $(".content .name").text(atr[i].name);
         $(".property-hd h1").text(atr[i].name);
@@ -168,8 +174,9 @@ for (var i = 0; i < atr.length; i++) {
 
 }
 
+var ban = JSON.parse(localStorage.getItem('banner'))
 for (var i = 0; i < ban.length; i++) {
-    if (localStorage.getItem('mt-ban') === ban[i].name) {
+    if (localStorage.getItem('dom') === ban[i].name) {
         $(".content .name").text(ban[i].name);
         $(".property-hd h1").text(ban[i].name);
         $(".property-hd .mod-info").text(ban[i].slogan)

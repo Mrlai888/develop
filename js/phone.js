@@ -164,9 +164,7 @@ ajax({
     data: "module=banner",
     succeed: function(data) {
         localStorage.setItem('banner', data)
-
         var json = JSON.parse(data);
-    
         for (var i = 0, len = json.length; i < len; i++) {
             document.querySelector('.recommend-slider-wrap').innerHTML += `
                     <li class="rs-item" style="width: 310px; margin-right: 0px; float: left; display: block;">
@@ -186,7 +184,7 @@ ajax({
         }
         $(".rs-item").on("click", '.rs-item-wrap', function() {
             var title = $(this).find('h4').html()
-            localStorage.setItem('mt-ban', title)
+            localStorage.setItem('dom', title)
         })
     }
 })

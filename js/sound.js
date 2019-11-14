@@ -4,7 +4,7 @@ $.ajax({
     data: "module=adv",
     dataType: "json",
     success: function (data) {
-        console.log(data);
+        // console.log(data);
         for (var i = 0; i < data.length; i++) {
             $('.mt-image').css({
                 backgroundImage: 'url(' + data[1].url + ')'
@@ -25,7 +25,7 @@ ajax({
         for (var i = 0, len = json.length; i < len; i++) {
             document.querySelector('.good-list-wrap').innerHTML += `
                           <li class="gl-item">
-                        <a href="Details.html" class="gl-item-link" title="${json[i].name}">
+                        <a href="Details.html" class="gl-item-link" title="${json[i].name}" target="_blank">
                         <img src="${json[i].pic}" alt="${json[i].name}" class="item-pic">
                         <ul class="item-slide">
                             <li class="item-slide-dot active" title="湖光绿">
@@ -73,7 +73,7 @@ $('#rec').click(function () {
             for (var i = 0, len = json.length; i < len; i++) {
                 document.querySelector('.good-list-wrap').innerHTML += `
                           <li class="gl-item">
-                        <a href="javascript:;" class="gl-item-link" title="${json[i].name}">
+                        <a href="javascript:;" class="gl-item-link" title="${json[i].name}" target="_blank">
                         <img src="${json[i].pic}" alt="${json[i].name}" class="item-pic">
                         <ul class="item-slide">
                             <li class="item-slide-dot active" title="湖光绿">
@@ -114,7 +114,7 @@ $('#new').click(function () {
             for (var i = 0, len = json.length; i < len; i++) {
                 document.querySelector('.good-list-wrap').innerHTML += `
                           <li class="gl-item">
-                        <a href="javascript:;" class="gl-item-link" title="${json[i].name}">
+                        <a href="javascript:;" class="gl-item-link" title="${json[i].name}" target="_blank">
                         <img src="${json[i].pic}" alt="${json[i].name}" class="item-pic">
                         <ul class="item-slide">
                             <li class="item-slide-dot active" title="湖光绿">
@@ -172,7 +172,7 @@ ajax({
         }
         $(".rs-item").on("click", '.rs-item-wrap', function () {
             var title = $(this).find('h4').html()
-            localStorage.setItem('mt-ban', title)
+            localStorage.setItem('dom', title)
         })
     }
 
