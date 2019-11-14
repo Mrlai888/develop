@@ -153,7 +153,7 @@
             tip.style.visibility = 'hidden';
             localStorage.setItem("username", "login");//存一个登录状态
             // alert('登录成功');
-            window.location.assign('Jin-index.html');
+            window.location.assign('Jin_index.html');
         }
     }
 
@@ -242,7 +242,7 @@
                     if (index3 == 1) {
                         setCookie('user', [ipt, pwd], 7);
                     }
-                    window.location.assign('Jin-index.html');
+                    window.location.assign('Jin_index.html');
                 }
             },
             failed: function (code) {
