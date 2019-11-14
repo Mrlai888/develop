@@ -1,29 +1,48 @@
 (function () {
     //登录状态
     if(localStorage.getItem('username')){
-        console.log(1);
-        loginIindex = 1;
+        // console.log(1);
+        // loginIindex = 1;
         let userPhoto = localStorage.getItem('photo');
-        console.log(userPhoto);
-        
+        // console.log(userPhoto);
+        document.querySelector('#userPhoto').style.backgroundImage = 'url('+userPhoto+')';
         document.querySelector('.Jin_User_hide').innerHTML = `
-        <li><a href="##">退出登录</a></li>
+        <li><a href="##" class="exitLogin">退出登录</a></li>
         <li><a href="##">个人中心</a></li>
         <li><a href="##">我的订单</a></li>
         <li><a href="##">M码通道</a></li>
         `;
         localStorage.removeItem('photo'); //清除photo;
     }else{
-        console.log(0);
-        loginIindex = 0;
+        // console.log(0);
+        // loginIindex = 0;
+        document.querySelector('#userPhoto').style.backgroundImage = 'url(images/jy_icon-default-user.png)';
         document.querySelector('.Jin_User_hide').innerHTML = `
         <li><a href="jy_login.html">立即登录</a></li>
         <li><a href="jy_regis.html">立即注册</a></li>
         <li><a href="##">我的订单</a></li>
         <li><a href="##">M码通道</a></li>
         `;
-        // localStorage.removeItem('photo'); //清除photo;
+        localStorage.removeItem('photo'); //清除photo;
     }
+    
+    //退出登录
+    // 事件委托
+document.body.onclick = function (e){
+    var e = e || window.event;
+    var tg = e.target || e.srcElement;
+    // 创建元素
+    if (tg.className == 'exitLogin') {
+       localStorage.removeItem('username'); //清除登录标识;
+       document.querySelector('#userPhoto').style.backgroundImage = 'url(images/jy_icon-default-user.png)';
+        document.querySelector('.Jin_User_hide').innerHTML = `
+        <li><a href="jy_login.html">立即登录</a></li>
+        <li><a href="jy_regis.html">立即注册</a></li>
+        <li><a href="##">我的订单</a></li>
+        <li><a href="##">M码通道</a></li>
+        `;
+    }
+}
 
 
 

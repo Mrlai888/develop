@@ -353,11 +353,11 @@ for (var i = 0; i < msgCont.length; i++) {
 
 $('.jiagou').on('click', '.car', function () {
     console.log(555)
-    var tit = $(".cont .list ul li a h3").text();
+    var tit = $("#ly-show .content .content-con .right .name h1").html();
     console.log(tit)
 
-    if (localStorage.getItem('goodss')) {
-        var codeArr = JSON.parse(localStorage.getItem('goodss')).tit;
+    if (localStorage.getItem('goods')) {
+        var codeArr = JSON.parse(localStorage.getItem('goods')).tit;
 
 
     } else {
@@ -365,7 +365,7 @@ $('.jiagou').on('click', '.car', function () {
     }
     codeArr.push(tit)
     var json = JSON.stringify({ "tit": codeArr});
-    localStorage.setItem('goodss', json);
+    localStorage.setItem('goods', json);
     alert('成功加入购物车');
 })
 
