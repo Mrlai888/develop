@@ -4,13 +4,16 @@ $('.Jin_hide_content').mouseleave(function () {
 });
 
 $('.Jin_hide_content_ding').mouseleave(function () {
-    $(this).css('display', 'none')
+    $(this).css('display', 'none');
 });
 
 $('.Jin_car_hide').mouseleave(function () {
-    $(this).css('display', 'none')
+    $(this).css('display', 'none');
 });
+$('.Jin_User_hide').mouseleave(function(){
+    $(this).css('display', 'none');
 
+});
 
 
 ajax({ //推荐

@@ -282,23 +282,14 @@ off.onclick = function () {
 
 // }
 
-// 点击切换头像
-// $aa = $('.aa');
-// $bb = $('.bb');
-// $bb.click(function(){
-//     $(this).hide();
-//     $aa.show();
-// });
-// $aa.click(function(){
-//     $(this).hide();
-//     $bb.show();
-// });
+
 
 var img = document.getElementById("photo");
-var arr = ["images/ly-img35.png", "images/ly-img36.jpg"]
+var arr = ["images/ly-img35.png", "images/ly-img36.png"]
 var tag = 0;
 console.log(arr)
 
+// 点击切换头像
 img.onclick = function(){
     if(tag==1){
         img.src = arr[0];
@@ -319,21 +310,19 @@ send.onclick = function(){
 		content.innerHTML += "<img src='" + arr[tag] + "'/><b>" + txt + "</b>"
 
     }
-    var imgs = content.getElementsByTagName("photo");
-    var span = content.getElementsByTagName("span");
-    imgs.style.width = '35px';
-    imgs.style.height = '35px';
+    var imgs = content.getElementsByTagName("img");
+    var span = content.getElementsByTagName("b");
+ 
     num++;
     if(tag == 0){
-        // imgs[num].classList = "img";
-        span[num].className = "bb";
+        imgs[num].className = "imgleft";
+        span[num].className = "spanleft";
 
     }else{
-        // imgs[num].className = "img";
-        span[num].className = "aa";
+        imgs[num].className = "imgright";
+        span[num].className = "spanright";
     }
-
-
+   txt.value = '';
 }
 
 

@@ -206,3 +206,11 @@
 #fy .swiper-pagination-bullet {
   margin-left: 10px;
 }
+
+.phone_nav li a {
+  color: #000;
+}
+
+.user {
+  color: #000;
+}

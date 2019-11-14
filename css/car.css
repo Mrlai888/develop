@@ -355,6 +355,28 @@
   right: 10px;
   top: 20px;
 }
+#ly-kefu .cont .boot .left .talk .talk-cont .spanleft {
+  float: left;
+}
+#ly-kefu .cont .boot .left .talk .talk-cont .spanright {
+  float: right;
+}
+#ly-kefu .cont .boot .left .talk .talk-cont .imgleft {
+  float: left;
+  width: 35px;
+  height: 35px;
+}
+#ly-kefu .cont .boot .left .talk .talk-cont .imgright {
+  float: right;
+  width: 35px;
+  height: 35px;
+}
+#ly-kefu .cont .boot .left .talk .talk-cont b {
+  display: block;
+  min-height: 30px;
+  line-height: 30px;
+  min-width: 10px;
+}
 #ly-kefu .cont .boot .left .more {
   width: 408px;
   height: 28px;
@@ -389,7 +411,6 @@
 #ly-kefu .cont .boot .left .bottom .photo img {
   width: 35px;
   height: 35px;
-  position: absolute;
   border-radius: 17px;
 }
 #ly-kefu .cont .boot .left .bottom .photo .aa1 {

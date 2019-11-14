@@ -206,9 +206,23 @@
   margin-left: 10px;
 }
 
-/*底部*/
-#footer {
-  width: 100%;
-  height: 300px;
-  background: pink;
+
+
+.phone_nav li a {
+  display: block;
+  padding: 31px 20px 30px;
+  line-height: 21px;
+  font-size: 14px;
+  color: #000;
+}
+
+.phone_nav li a{
+  color:#000;
+}
+.user{
+  color: #000;
+}
+
+#Jin_header .header_inner{
+  height:82px;
 }
