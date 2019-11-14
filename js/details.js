@@ -153,8 +153,8 @@ for (var i = 0; i < lit3.length; i++) {
 }
 
 //数量加减
-$('.mod-control .vm-minus').click(function(){
-     
+$('.mod-control .vm-minus').click(function () {
+
 })
 
 
@@ -184,3 +184,23 @@ for (var i = 0; i < ban.length; i++) {
         $(".preview-booth a img").attr("src", ban[i].pic)
     }
 }
+
+
+
+//点击加入购物车
+
+$('.property-buy-action').on("click", ' .join', function () {
+    var title = $(".content .name").text();
+    if (localStorage.getItem('goods')) {
+        var str = JSON.parse(localStorage.getItem('goods')).title;
+    } else {
+        var str = [];
+    }
+    str.push(title)
+
+    var jsonStr = JSON.stringify({ "title": str });
+    localStorage.setItem('goods', jsonStr);
+
+
+    alert('成功加入购物车!')
+})
