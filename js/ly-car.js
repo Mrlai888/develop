@@ -287,45 +287,43 @@ off.onclick = function () {
 var img = document.getElementById("photo");
 var arr = ["images/ly-img35.png", "images/ly-img36.png"]
 var tag = 0;
-console.log(arr)
+// console.log(arr)
 
 // 点击切换头像
-img.onclick = function(){
-    if(tag==1){
+img.onclick = function () {
+    if (tag == 1) {
         img.src = arr[0];
         tag = 0;
-    }else{
+    } else {
         img.src = arr[1];
         tag = 1;
     }
 }
 
 var num = -1;
-send.onclick = function(){
+send.onclick = function () {
     var txt = document.querySelector('.txt').value;
-    if(!txt){
+    if (!txt) {
         alert("请输入内容后发送");
-    }else{
+    } else {
         var content = document.querySelector('.talk-cont');
-		content.innerHTML += "<img src='" + arr[tag] + "'/><b>" + txt + "</b>"
+        content.innerHTML += "<img src='" + arr[tag] + "'/><b>" + txt + "</b>"
 
     }
     var imgs = content.getElementsByTagName("img");
     var span = content.getElementsByTagName("b");
- 
+
     num++;
-    if(tag == 0){
+    if (tag == 0) {
         imgs[num].className = "imgleft";
         span[num].className = "spanleft";
 
-    }else{
+    } else {
         imgs[num].className = "imgright";
         span[num].className = "spanright";
     }
-   txt.value = '';
+    txt.value = '';
 }
-
-
 
 
 
@@ -350,13 +348,43 @@ for (var i = 0; i < msgCont.length; i++) {
 
 
 
+
+//点击加入购物车
+
+$('.jiagou').on('click', '.car', function () {
+    console.log(555)
+    var tit = $(".cont .list ul li a h3").text();
+    console.log(tit)
+
+    if (localStorage.getItem('goodss')) {
+        var codeArr = JSON.parse(localStorage.getItem('goodss')).tit;
+
+
+    } else {
+        var codeArr = [];
+    }
+    codeArr.push(tit)
+    var json = JSON.stringify({ "tit": codeArr});
+    localStorage.setItem('goodss', json);
+    alert('成功加入购物车');
+})
+
+
+
+
+
+
+
+
+
+
 var att = JSON.parse(localStorage.getItem('ly_obj'))
 for (var i = 0; i < att.length; i++) {
     // console.log(aaa[i]);
 
     if (localStorage.getItem('ly_phone') === att[i].name) {
-        console.log(att[i].price);
-        console.log(att[i].name);
+        // console.log(att[i].price);
+        // console.log(att[i].name);
 
         $(".right .name h1").text(att[i].name);
         $(".right .name p").text(att[i].slogan);
@@ -370,6 +398,7 @@ for (var i = 0; i < att.length; i++) {
 
     }
 }
+
 
 
 // var ban = JSON.parse(localStorage.getItem('banner'));
@@ -388,15 +417,6 @@ for (var i = 0; i < att.length; i++) {
 
 //     }
 // }
-
-
-
-
-
-
-
-
-
 
 
 
