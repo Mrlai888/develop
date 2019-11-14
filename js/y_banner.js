@@ -243,6 +243,7 @@ $('.Jin_hide_content_ding').mouseleave(function() {
 
 
 (function() {
+
     $('.user').mouseenter(function() {
         $('.Jin_User_hide').show()
         $('.user').mouseleave(function() {
