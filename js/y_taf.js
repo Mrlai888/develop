@@ -12,31 +12,40 @@ Insert();
 
 (function() {
     $('.y_taf_page .but').click(function() {
-
-
         var oSn = $('.y_taf_page .sn input').val()
-        console.log(oSn);
-
+            // console.log(oSn)
         var oMei = $(' .y_taf_page .mei input').val()
-        console.log(oMei);
+            // console.log(oMei);
         $.ajax({
             type: "get",
-            url: "http://localhost/project/text",
+            url: "./y_taf.json",
             data: "sn=" + oSn + "&IMEI=" + oMei + "",
-            // dataType: "dataType",
+            dataType: "json",
             success: function(response) {
-                // var json = JSON.parse(response)
-                // $('.y_taf_page .inner').html(json)
-                if (response) {
-                    $('.y_taf_page .inner').html(response)
-                } else {
-                    $('.y_taf_page .inner').html('所查 SN 无记录，请确认输入是否正确')
+                // console.log(response[0]);
+                var res = response[0]
+                for (var val in res) {
+                    // console.log(val, res[val]);
+                    if (oSn === val) {
+                        if (oMei === res[val]) {
+                            $('.y_taf_page .inner').html('卧槽这是真的')
+                            location.href = './servers.html'
+                        } else {
+                            console.log(777)
+                            $('.y_taf_page .inner').html('所查 SN 无记录，请确认输入是否正确')
+                        }
+
+                    }
                 }
             },
 
         });
     })
 })();
+
+
+
+
 $('.Jin_hide_content').mouseleave(function() {
     $(this).css('display', 'none')
 })

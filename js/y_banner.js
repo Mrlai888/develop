@@ -1,7 +1,7 @@
 function more() { //查询  标记
-    $('.y_main .wrap .icon li a  ').on('click', 'span', function() {
+    $('.y_main .wrap .icon li  ').on('click', 'a', function() {
         // console.log(666)
-        var elMore = $(this).html();
+        var elMore = $(this).find('span').html();
         localStorage.setItem('more', elMore) //动态添加
     })
 }
@@ -203,7 +203,7 @@ phone()
     $('.y_main .wrap ').on('click', '.icon li a ', function() { //查询
         var content = $(this).find('span').html()
             // console.log(content);
-        if (localStorage.getItem('username')) { //判断登录状态 
+        if (localStorage.getItem('username') === 'login') { //判断登录状态 
 
             for (var item in arr) { //遍历arr
                 // console.log(item, arr[item]);
@@ -211,7 +211,7 @@ phone()
                     $(this).attr('href', arr[item]) //如果已是登录转态 直接跳过登录
             }
         } else {
-            $(this).attr('href', "y_self.html") //未登录就进入登录验证
+            $(this).attr('href', "jy_login.html") //未登录就进入登录验证
         }
     })
 
@@ -226,7 +226,7 @@ phone()
                     $(this).attr('href', arr[item])
             }
         } else {
-            $(this).attr('href', "y_self.html")
+            $(this).attr('href', "jy_login.html")
         }
     })
 })();

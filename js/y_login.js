@@ -10,9 +10,18 @@ Insert();
 
 (function() {
     $(' .y_login_page .but').click(function() {
-        window.open("y_pay.html", "_blank")
+        if (localStorage.getItem('username') === 'login') {
+            location.href = './y_pay.html'
+        } else {
+            window.open("jy_login.html", "_blank")
+        }
+
     })
 })();
+
+
+
+
 $('.Jin_hide_content').mouseleave(function() {
     $(this).css('display', 'none')
 })
