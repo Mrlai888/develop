@@ -440,7 +440,7 @@ body {
   margin-right: 30px;
   float: left;
 }
-.mt-wrapperCar .container .property .property-buy-quantity .mod-control input {
+.mt-wrapperCar .container .property .property-buy-quantity .mod-control .num {
   position: absolute;
   top: 0;
   right: 30px;
