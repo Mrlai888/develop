@@ -1,0 +1,266 @@
+
+
+#Jin_header .header_inner {
+  position: relative !important;
+}
+
+.header_inner p {
+  line-height: 80px;
+  margin-left: 50px;
+  float: left;
+  color: #ccc;
+}
+.header_inner p span {
+  color: #000;
+}
+.car_box li .Jin_a2 p{
+  width: 200px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.JinDingdan {
+  float: right;
+  line-height: 80px;
+}
+.JinDingdan a {
+  margin-right: 20px;
+  transition: 0.5s linear;
+}
+.JinDingdan a:hover {
+  color: blue;
+}
+
+#Jin_main {
+  background: #F4F6FA;
+}
+
+.Jin_car_top {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-collapse: collapse;
+  background: #fff;
+  position: relative;
+  top: 20px;
+}
+.Jin_car_top tr {
+  color: rgba(51, 51, 51, 0.4);
+  text-align: center;
+}
+.Jin_car_top tr td:nth-child(1) {
+  width: 537px;
+}
+.Jin_car_top tr td:nth-child(2) {
+  width: 220px;
+}
+.Jin_car_top tr td:nth-child(3) {
+  width: 200px;
+}
+.Jin_car_top tr td:nth-child(4) {
+  width: 160px;
+}
+.Jin_car_top tr td:nth-child(5) {
+  width: 110px;
+}
+.Jin_car_top tr .checkboxAll {
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border: 1px solid #BDBDBD;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  float: left;
+  margin-top: 15px;
+  margin-right: 5px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.Car_b {
+  color: #00c3f5;
+  cursor: pointer;
+}
+
+.car_box {
+  margin-top: 30px;
+}
+
+.car_box li {
+  height: 150px;
+  background: #fff;
+  text-align: center;
+}
+.car_box li .checkbox {
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border: 1px solid #BDBDBD;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  float: left;
+  margin-top: 55px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+.car_box li a {
+  width: 100px;
+  height: 100px;
+  display: block;
+  float: left;
+  margin-top: 17px;
+  margin-left: 10px;
+}
+.car_box li a img {
+  width: 100px;
+  height: 100px;
+}
+.car_box li .Jin_a2 {
+  width: 200px;
+  margin-top: 50px;
+  margin-left: 10px;
+  float: left;
+}
+.car_box li .Jin_a2 p:nth-child(1) {
+  font-size: 16px;
+  line-height: 24px;
+}
+.car_box li .Jin_a2 p:nth-child(2) {
+  font-size: 14px;
+  line-height: 24px;
+  color: #ccc;
+}
+.car_box li td:nth-child(1) {
+  width: 537px;
+}
+.car_box li td:nth-child(2) {
+  width: 220px;
+}
+.car_box li td:nth-child(3) {
+  width: 200px;
+}
+.car_box li td:nth-child(4) {
+  width: 160px;
+  color: red;
+}
+.car_box li td:nth-child(5) {
+  width: 110px;
+}
+
+.Jin_add {
+  margin-left: 60px;
+}
+.Jin_add button:nth-child(1) {
+  width: 24px;
+  height: 24px;
+  color: #595959;
+  border: 0;
+  outline: none;
+  background: transparent;
+  float: left;
+  cursor: no-drop;
+  border: 1px solid #EFEFEF;
+}
+.Jin_add .plus {
+  width: 24px;
+  height: 24px;
+  color: #595959;
+  border: 0;
+  outline: none;
+  background: transparent;
+  float: left;
+  cursor: pointer;
+  border: 1px solid #EFEFEF;
+}
+.Jin_add .text {
+  width: 37px;
+  height: 22px;
+  line-height: 22px;
+  float: left;
+  border-top: 1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.remove {
+  cursor: pointer;
+}
+
+.Jin_hide_car {
+  /*position: fixed;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
+  height: 70px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 15px 9px 13px -1px;
+  line-height: 70px;
+}
+
+.f_left {
+  float: left;
+}
+.f_left .checkboxAll {
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border: 1px solid #BDBDBD;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  float: left;
+  margin-top: 26px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+.f_left .all {
+  margin-right: 5px;
+}
+.f_left .Jin_remove {
+  margin-right: 10px;
+  color: #ccc;
+}
+.f_left .textAll {
+  color: #ccc;
+}
+.f_left .textAll i {
+  color: blue;
+  margin-right: 2px;
+}
+
+.f_right {
+  float: right;
+  margin-right: 9px;
+}
+.f_right p {
+  float: left;
+}
+.f_right p .Jin_sum_All {
+  color: red;
+  font-size: 18px;
+}
+
+.Jin_fina {
+  width: 100px;
+  height: 34px;
+  float: right;
+  text-align: center;
+  line-height: 34px;
+  background-color: #DBDBDB;
+  margin-top: 17px;
+  cursor: no-drop;
+  transition: 0.5s linear;
+}
+
+.Jin_remove:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Jin_car.css.map */

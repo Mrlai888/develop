@@ -6,7 +6,7 @@
 #Jin_header {
   width: 100%;
 }
-#Jin_header .header_inner { 
+#Jin_header .header_inner {
   position: absolute;
   z-index: 1000;
   width: 100%;
@@ -185,9 +185,6 @@
   width: 100%;
   height: 100%;
 }
-.Jin_hide_content .Jin_hide_inner ul li a span{
-  white-space:nowrap;
-}
 
 .Jin_hide_content_ding {
   width: 100%;
@@ -299,13 +296,6 @@
 #Jin_phone_nav .phone_nav_inner li a img {
   height: 140px;
 }
-#Jin_phone_nav .phone_nav_inner li a strong{
-  width: 100px;
-  display: inline-block;
-  height: 20px;
-overflow: hidden;
-margin-top: 10px;
-}
 
 #Jin_main_content {
   background: #eee;
@@ -333,13 +323,12 @@ margin-top: 10px;
   position: relative;
 }
 .main_nav_phone a img {
-width: auto;
-height: auto;
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .phone_nav_ten ul li {
