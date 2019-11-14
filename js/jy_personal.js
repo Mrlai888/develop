@@ -75,7 +75,7 @@
             url: 'php/logRes.php',
             type: 'post',
             succeed: function (data) {
-                // console.log(data);
+                console.log(data);
                 localStorage.setItem("username", "login");//存一个登录状态
                 localStorage.removeItem('key1'); //清除key1;
                 localStorage.removeItem('key2'); //清除key1;

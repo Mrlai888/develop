@@ -101,8 +101,8 @@
 		case "setqueasw"://设置密保
 			//判断数据库中是否已存在该用户名
 			$time = time();
-	        $sql = "update user set time = '{$time}', question1 = '{$que1}', asw1 = '{$asw1}', question2 = '{$que2}', asw2 = '{$asw2}', photo = '{$photo}' where username = {$user}";
-			$insert_id = my_error($sql);
+	        $sql = "update user set time = '{$time}', question1 = '{$que1}', answer1 = '{$asw1}', question2 = '{$que2}', answer2 = '{$asw2}', photo = '{$photo}' where username = {$user}";
+			my_error($sql);
 			echo 'haha';
 			break;
 
