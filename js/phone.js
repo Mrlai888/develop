@@ -191,12 +191,6 @@ ajax({
 
 
 
-
-
-
-
-
-
 $('.filter-order a').click(function() {
     $(this).toggleClass('active').siblings().removeClass('active');
 })
