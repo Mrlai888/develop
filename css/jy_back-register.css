@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(152, 203, 255);
+}
+
+div{
+    width: 850px;
+    background-color: #fff;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left: -425px;
+    margin-top: -203px;
+}
+
+li {
+    font-size: 20px;
+    text-align: right;
+}
+
+li input {
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    font-size: 20px;
+    width: 360px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+li span {
+    display: inline-block;
+    width: 260px;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.submit {
+    width: 270px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: lighter;
+    color: #fff;
+    border: 1px #3083ff solid;
+    border-radius: 4px;
+    background-color: #3487ff;
+    box-shadow: 5px 5px 8px rgba(24, 95, 255, .1);
+    cursor: pointer;
+    margin: 40px 0 40px 170px;
+}
+
+a{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: lighter;
+    color:#3083ff;
+    border: 1px #dde7f1 solid;
+    border-radius: 4px;
+    background-color: #fbfcfd;
+    box-shadow: 5px 5px 8px rgba(24, 95, 255, .1);
+    margin-left:30px;
+}

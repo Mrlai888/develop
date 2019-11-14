@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+    <link rel="stylesheet" href="css/jy_back-login.css">
+</head>
+
+<body>
+    <div>
+        <!-- <form action="" method="POST" onsubmit="return chkAll();"> -->
+            <ul>
+                <li>邮箱：<input id="email" onblur="chkEmail();" type="text" name="email"><span id="emailPrompt"></li>
+                <li>密码：<input id="password1" onblur="chkPassword1();" type="password" placeholder="英文、数字长度为6-16个字符"
+                        name="password1"><span id="password1Prompt"></span></li>
+            </ul>
+            <input class="submit" type="button" value="登录">
+            <a href="jy_back-register.html">注册</a>
+        <!-- </form> -->
+    </div>
+
+    <script src="js/ajax.js"></script>
+    <script src="js/jy_back-login.js"></script>
+</body>
+
+</html>
