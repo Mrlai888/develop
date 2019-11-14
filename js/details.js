@@ -153,10 +153,28 @@ for (var i = 0; i < lit3.length; i++) {
 }
 
 //数量加减
+var num = 1;
+$('.mod-control .num').text(num)
 $('.mod-control .vm-minus').click(function () {
-    
+    if (num >= 10) {
+        num = 10;
+        return;
+    }
+    num++;
+    $('.mod-control .num').text(num)
+
 
 })
+$('.mod-control .vm-plus').click(function () {
+    if (num <= 1) {
+        num = 1;
+        return;
+    }
+    num--;
+    $('.mod-control .num').text(num)
+
+})
+
 
 
 
