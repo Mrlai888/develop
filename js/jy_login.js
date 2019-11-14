@@ -86,6 +86,7 @@
                             regCode.style.display = "block";
                         }, 500);
                         getRegCode1();
+                        localStorage.setItem('photo', json.data[8]); //设置 photo
                     }
                 },
                 failed: function (code) {
@@ -151,7 +152,7 @@
             document.querySelector('.box-phone-login .reg-api').style.border = '1px solid #ccc';
         } else {
             tip.style.visibility = 'hidden';
-            localStorage.setItem("username", "login");//存一个登录状态
+            localStorage.setItem("username", "login"); //存一个登录状态
             // alert('登录成功');
             window.location.assign('Jin_index.html');
         }
@@ -223,7 +224,7 @@
             url: 'php/logRes.php',
             type: 'post',
             succeed: function (data) {
-                // console.log(data);
+                console.log(data);
                 let json = JSON.parse(data);
                 if (json.err == "1") {
                     tip.style.visibility = 'visible';
@@ -234,14 +235,15 @@
                     <span class="logo"></span>
                 `;
                     document.querySelector('.box-computer-login .reg-api').style.border = '1px solid #ccc';
-                    rindex2=0;
+                    rindex2 = 0;
                 } else {
                     tip.style.visibility = 'hidden';
                     // alert(json.msg);  
-                    localStorage.setItem("username", "login");//存一个登录状态
+                    localStorage.setItem("username", "login"); //存一个登录状态
                     if (index3 == 1) {
                         setCookie('user', [ipt, pwd], 7);
                     }
+                    localStorage.setItem('photo', json.data[8]); //设置 photo
                     window.location.assign('Jin_index.html');
                 }
             },

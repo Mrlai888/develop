@@ -68,9 +68,10 @@
 			$sql2 = "select * from user where username = '{$user}' and password='{$pwd}'";
 			$res2 = my_error($sql2);
 			$row2 = mysql_fetch_row($res2);
+			$data = json_encode($row2);
 			// echo $row;
 			if((int)$row2[0]>0){
-				echo '{"err":"0","msg":"登录成功！"}';
+				echo '{"err":"0","msg":"登录成功！","data":'.$data.'}';
 			}else{
                 echo '{"err":"1","msg":"用户名与密码不匹配！"}';
             }
@@ -97,9 +98,10 @@
 			echo '{"err":"0","data":'.$data.'}';
 			break;
 
-		case "setqueasw":
+		case "setqueasw"://设置密保
+			//判断数据库中是否已存在该用户名
 			$time = time();
-	        $sql = "insert into user values(null,'{$user}','{$pwd}',$time,'{$que1}','{$asw1}','{$que2}','{$asw2}','{$photo}')";
+	        $sql = "update user set time = '{$time}', question1 = '{$que1}', asw1 = '{$asw1}', question2 = '{$que2}', asw2 = '{$asw2}', photo = '{$photo}' where username = {$user}";
 			$insert_id = my_error($sql);
 			echo 'haha';
 			break;
@@ -110,10 +112,11 @@
 			$res = my_error($sql);
 			$row = mysql_fetch_row($res);
 			// echo $row;
+			$data = json_encode($row);
 			if(!(int)$row[0]>0){
 				echo '{"err":"1","msg":"此用户名还未注册！"}';
 			}else{
-				echo '{"err":"0","msg":"此用户名已注册！"}';
+				echo '{"err":"0","msg":"此用户名已注册！","data":'.$data.'}';
 			}
 	}
 	

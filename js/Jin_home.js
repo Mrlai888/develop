@@ -1,4 +1,32 @@
 (function () {
+    //登录状态
+    if(localStorage.getItem('username')){
+        console.log(1);
+        loginIindex = 1;
+        let userPhoto = localStorage.getItem('photo');
+        console.log(userPhoto);
+        
+        document.querySelector('.Jin_User_hide').innerHTML = `
+        <li><a href="##">退出登录</a></li>
+        <li><a href="##">个人中心</a></li>
+        <li><a href="##">我的订单</a></li>
+        <li><a href="##">M码通道</a></li>
+        `;
+        localStorage.removeItem('photo'); //清除photo;
+    }else{
+        console.log(0);
+        loginIindex = 0;
+        document.querySelector('.Jin_User_hide').innerHTML = `
+        <li><a href="jy_login.html">立即登录</a></li>
+        <li><a href="jy_regis.html">立即注册</a></li>
+        <li><a href="##">我的订单</a></li>
+        <li><a href="##">M码通道</a></li>
+        `;
+        // localStorage.removeItem('photo'); //清除photo;
+    }
+
+
+
     //获取头部元素
     var header_inner = document.querySelector('.header_inner');
     // 获取隐藏的元素

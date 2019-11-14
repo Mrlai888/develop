@@ -20,7 +20,7 @@
         reader.readAsDataURL(file); //把文件转成url
         reader.onload = function () {
             console.log(this.result);//读取到的图片路径 base64
-            localStorage.setItem('photo', this.result); //设置 
+            localStorage.setItem('photo', this.result); //设置photo
             let img = new Image();
             img.src = this.result;
             img.onload = function () {
@@ -50,7 +50,7 @@
         // console.log(que2);
         
         if (read == null) {
-            alert('请上传分辨率小于100px*100px的头像');
+            alert('请上传分辨率小于 100px*100px 的头像');
             return;
         }
         if (asw1 == '') {
