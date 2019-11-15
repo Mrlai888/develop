@@ -168,6 +168,7 @@
         var text = document.querySelectorAll('.text');
         // text.setAttribute('num',1);
         for (let i = 0; i < text.length; i++) {
+            text[i].Jincar = 1;
             text[i].pSum = 1;
             plus[i].index = i;
             jian[i].index = i;
@@ -176,6 +177,8 @@
             var that = this;
             plus[i].onclick = function () {
                 (text[this.index].pSum)++;
+                text[this.index].Jincar++;
+                q_All++;
                 jian[this.index].style.cursor = 'pointer';
                 if (text[this.index].pSum >= 10) {
                     plus[this.index].style.cursor = 'no-drop';
@@ -187,7 +190,7 @@
                 that.Jin_sum_price[this.index].innerText = Jinsrc.substr(1) * 1 * text[this.index].pSum + '.00';
                 let y = 0;
                   y = that.Jin_sum_All.innerText * 1;
-                  if(text[this.index].pSum < 10) {
+                  if(text[this.index].Jincar < 11) {
                 if(that.checkbox[this.index].innerText) {
                     that.Jin_sum_All.innerText = y + that.Jin_price[this.index].innerText.substr(1) * 1 + '.00'
                     //  console.log(that.Jin_price[this.index].innerText.substr(1) * 1)
@@ -195,6 +198,7 @@
             }}
             jian[i].onclick = function () {
                 (text[this.index].pSum)--;
+                text[this.index].Jincar--
                 plus[this.index].style.cursor = 'pointer';
                 var Jin_All = 0;
                 if (text[this.index].pSum <= 1) {
@@ -224,17 +228,54 @@
         var Jin_sum = document.querySelector('.Jin_sum');
         var that = this;
         let Jsum = 0;
+        var code = [];
         Jin_remove.onclick = function () {
             // console.log(that.checkbox)
             for (let i = 0; i < that.checkbox.length; i++) {
                 if (that.checkbox[i].innerText) {
-                    (that.checkbox[i]).parentNode.parentNode.parentNode.parentNode.parentNode.remove()
+                    //
                     Jsum++;
+                     code.push(that.checkbox[i].parentNode.children[2].children[0].innerText);
+
+                    // console.log(code);
+                    // $(this).parent().remove();//删除页面对应的节点
+                 (that.checkbox[i]).parentNode.parentNode.parentNode.parentNode.parentNode.remove()
+
                 }
             }
             that.sum = 0;
+            
+
+                $.each(codeArr,function(indx,val){
+                    $.each(code,function(index,item){
+                        if(item == val){
+                            codeArr.splice(index,1);
+                        }
+                    })
+                })
+                console.log(code);
+
+                // 同步本地存储中的数据
+                var jsonStr = JSON.stringify({"title":codeArr});
+
+                // 存到本地
+                localStorage.setItem('goods',jsonStr);
+
+                // splice(index,1);
+                
+                alert('成功移除商品!');
             console.log(Jin_sum.innerText = that.sum);
+            that.Jin_sum_All.innerText = '0.00'
         }
+
+        // console.log(codeArr);
+         // // 删除购物车商品
+              
+
+
+
+
+
 
     }
 
