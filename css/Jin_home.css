@@ -29,6 +29,9 @@
   width: 100%;
   height: 100%;
 }
+.Jin_hide_content .Jin_hide_inner ul li a span{
+  white-space:nowrap;
+}
 
 #car {
   width: 29px;

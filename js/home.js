@@ -5,6 +5,7 @@
         // 本地存储中的商品编码数组
         var codeArr = JSON.parse(localStorage.getItem('goods')).title;
         // console.log(codeArr);   
+        $('.gong').html(codeArr.length).css('color','red');
         if (codeArr.length > 0) {//有数据
             // 展示购物车商品
             $.ajax({
@@ -228,14 +229,12 @@
         var Jin_sum = document.querySelector('.Jin_sum');
         var that = this;
         let Jsum = 0;
-        var code = [];
         Jin_remove.onclick = function () {
-            // console.log(that.checkbox)
-            for (let i = 0; i < that.checkbox.length; i++) {
+           for (let i = 0; i < that.checkbox.length; i++) {
                 if (that.checkbox[i].innerText) {
                     //
                     Jsum++;
-                     code.push(that.checkbox[i].parentNode.children[2].children[0].innerText);
+                     var code = (that.checkbox[i].parentNode.children[2].children[0].innerText);
 
                     // console.log(code);
                     // $(this).parent().remove();//删除页面对应的节点
@@ -246,23 +245,18 @@
             that.sum = 0;
             
 
-                $.each(codeArr,function(indx,val){
-                    $.each(code,function(index,item){
-                        if(item == val){
-                            codeArr.splice(index,1);
-                        }
-                    })
-                })
-                console.log(code);
+              
 
+                $.each(codeArr,function (index,val){
+                    if (code == val) {
+                        codeArr.splice(index,1);//删除本地数据
+                    }
+                })
                 // 同步本地存储中的数据
                 var jsonStr = JSON.stringify({"title":codeArr});
-
                 // 存到本地
                 localStorage.setItem('goods',jsonStr);
-
                 // splice(index,1);
-                
                 alert('成功移除商品!');
             console.log(Jin_sum.innerText = that.sum);
             that.Jin_sum_All.innerText = '0.00'
@@ -270,7 +264,6 @@
 
         // console.log(codeArr);
          // // 删除购物车商品
-              
 
 
 
