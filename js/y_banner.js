@@ -246,9 +246,9 @@ $('.Jin_hide_content_ding').mouseleave(function() {
 
     $('.user').mouseenter(function() {
         $('.Jin_User_hide').show()
-        $('.user').mouseleave(function() {
-            $('.Jin_User_hide').hide()
-        })
+            // $('.user').mouseleave(function() {
+            //     $('.Jin_User_hide').hide()
+            // })
     })
 
 })();
