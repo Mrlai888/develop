@@ -33,7 +33,7 @@ Insert();
                                 // $('.y_taf_page .inner').html('卧槽这是真的')
                             setTimeout(() => {
                                 location.href = './servers.html'
-                            }, 1000);
+                            }, 300);
                             break
 
                         } else {
