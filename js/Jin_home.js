@@ -216,9 +216,9 @@
         $('.Jin_User_hide').css('display', 'none');
     });
 
- var codeArr = JSON.parse(localStorage.getItem('goods')).title;
- $('#Jin_car_sum').html(codeArr.length);
- console.log(codeArr.length);
+ // var codeArr = JSON.parse(localStorage.getItem('goods')).title;
+ // $('#Jin_car_sum').html(codeArr.length);
+ // console.log(codeArr.length);
 
 
     // 请求数据
