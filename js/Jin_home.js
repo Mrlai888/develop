@@ -11,7 +11,7 @@
             <li><a href="##" class="exitLogin">退出登录</a></li>
             <li><a href="##">个人中心</a></li>
             <li><a href="##">我的订单</a></li>
-             <li><a href="jy_back-index.html">我是管理员</a></li>
+             <li><a href="jy_back-login.html">我是管理员</a></li>
             `;
         // localStorage.removeItem('photo'); //清除photo;
     } else {
@@ -22,7 +22,7 @@
             <li><a href="jy_login.html">立即登录</a></li>
             <li><a href="jy_regis.html">立即注册</a></li>
             <li><a href="##">我的订单</a></li>
-             <li><a href="jy_back-index.html">我是管理员</a></li>
+             <li><a href="jy_back-login.html">我是管理员</a></li>
             `;
         localStorage.removeItem('photo'); //清除photo;
     }
@@ -42,7 +42,7 @@
         <li><a href="jy_login.html">立即登录</a></li>
         <li><a href="jy_regis.html">立即注册</a></li>
         <li><a href="##">我的订单</a></li>
-        <li><a href="##">M码通道</a></li>
+       <li><a href="jy_back-login.html">我是管理员</a></li>
         `;
         }
     }
