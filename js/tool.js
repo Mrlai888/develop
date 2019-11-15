@@ -245,9 +245,7 @@ function promiseAjax(option) {
 
     $('.user').mouseenter(function() {
         $('.Jin_User_hide').show()
-        $('.user').mouseleave(function() {
-            $('.Jin_User_hide').hide()
-        })
+
     })
 
 })();
