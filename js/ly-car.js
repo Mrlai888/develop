@@ -311,7 +311,7 @@ send.onclick = function () {
         alert("请输入内容后发送");
     } else {
         var content = document.querySelector('.talk-cont');
-        content.innerHTML += "<img src='" + arr[tag] + "'/><b>" + txt + "</b>"
+        content.innerHTML += "<img src='" + arr[tag] + "'/><div><b>" + txt + "</b></div>"
 
     }
     var imgs = content.getElementsByTagName("img");
