@@ -65,7 +65,9 @@
         $(this).siblings().children().css('color', '#000');
     });
     $('.phone_nav li').mouseleave(function () {
-        $('#userPhoto').css('background-image','url(images/jy_icon-default-user.png)');
+    	if(!(localStorage.getItem('username'))){
+     	   $('#userPhoto').css('background-image','url(images/jy_icon-default-user.png)');
+    	}
     });
     $('.cla').mouseover(function () {
         $('.header_inner').css('backgroundColor', 'white');
