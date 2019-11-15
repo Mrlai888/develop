@@ -339,7 +339,7 @@
 #ly-kefu .cont .boot .left .talk .talk-cont {
   width: 408px;
   height: 334px;
-  background: #eee;
+  background: #fff;
   overflow-y: scroll;
   position: relative;
 }
@@ -356,19 +356,18 @@
   top: 20px;
 }
 #ly-kefu .cont .boot .left .talk .talk-cont .spanleft {
-  float: left;
   position: relative;
   left: 47px;
-  top: 25px;
+  top: 14px;
 }
 #ly-kefu .cont .boot .left .talk .talk-cont .spanright {
+  padding-left: 30px;
   float: right;
   position: relative;
   right: 47px;
   top: 25px;
 }
 #ly-kefu .cont .boot .left .talk .talk-cont .imgleft {
-  float: left;
   width: 35px;
   height: 35px;
   position: relative;
@@ -376,7 +375,7 @@
   top: 14px;
 }
 #ly-kefu .cont .boot .left .talk .talk-cont .imgright {
-  float: right;
+  margin-left: 347px;
   width: 35px;
   height: 35px;
   position: relative;
@@ -550,13 +549,14 @@
   color: #000;
 }
 
-.phone_nav li a{
-  color:#000;
-}
-.user{
-  color:#000;
+.phone_nav li a {
+  color: #000;
 }
 
-#Jin_header .header_inner{
-  height:82px;
+.user {
+  color: #000;
+}
+
+#Jin_header .header_inner {
+  height: 82px;
 }
