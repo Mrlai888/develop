@@ -58,11 +58,14 @@
 
     var Jin_hide_inner = document.querySelector('.Jin_hide_inner');
 
-    $('.phone_nav li').mouseover(function () {
+    $('.phone_nav li').mouseenter(function () {
         $('#car').css('color', '#000');
-        $('.user').css('color', '#000');
+        $('#userPhoto').css('background-image','url(images/jy_icon-default-user-black.png)');
         $(this).children().css('color', '#00c3f5');
         $(this).siblings().children().css('color', '#000');
+    });
+    $('.phone_nav li').mouseleave(function () {
+        $('#userPhoto').css('background-image','url(images/jy_icon-default-user.png)');
     });
     $('.cla').mouseover(function () {
         $('.header_inner').css('backgroundColor', 'white');
