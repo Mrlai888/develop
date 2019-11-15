@@ -1,3 +1,8 @@
+window.onload = function(){
+    alert('还未登录');
+    window.location.assign('jy_back-login.html');//去登录
+}
+
 //layui初始化
 (function () {
     layui.use('element', function () {
