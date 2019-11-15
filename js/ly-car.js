@@ -357,18 +357,18 @@ for (var i = 0; i < msgCont.length; i++) {
 
 $('.jiagou').on('click', '.car', function () {
     console.log(555)
-    var tit = $("#ly-show .content .content-con .right .name h1").html();
-    console.log(tit)
+    var title = $("#ly-show .content .content-con .right .name h1").html();
+    console.log(title)
 
     if (localStorage.getItem('goods')) {
-        var codeArr = JSON.parse(localStorage.getItem('goods')).tit;
+        var codeArr = JSON.parse(localStorage.getItem('goods')).title;
 
 
     } else {
         var codeArr = [];
     }
-    codeArr.push(tit)
-    var json = JSON.stringify({ "tit": codeArr});
+    codeArr.push(title)
+    var json = JSON.stringify({ "title": codeArr});
     localStorage.setItem('goods', json);
     alert('成功加入购物车');
 })
