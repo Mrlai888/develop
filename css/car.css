@@ -337,7 +337,7 @@
   background: #fff;
 }
 #ly-kefu .cont .boot .left .talk .talk-cont {
-  width: 408px;
+  width: 400px;
   height: 334px;
   background: #fff;
   overflow-y: scroll;
@@ -357,7 +357,6 @@
 }
 #ly-kefu .cont .boot .left .talk .talk-cont .spanleft {
   position: relative;
-  left: 47px;
   top: 14px;
 }
 #ly-kefu .cont .boot .left .talk .talk-cont .spanright {

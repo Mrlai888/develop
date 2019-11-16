@@ -311,7 +311,7 @@ send.onclick = function () {
         alert("请输入内容后发送");
     } else {
         var content = document.querySelector('.talk-cont');
-        content.innerHTML += "<img src='" + arr[tag] + "'/><div><b>" + txt + "</b></div>"
+        content.innerHTML += "<img src='" + arr[tag] + "'/><b>" + txt + "</b>"
 
     }
     var imgs = content.getElementsByTagName("img");
@@ -327,6 +327,7 @@ send.onclick = function () {
         span[num].className = "spanright";
     }
     txt.value = '';
+   
 }
 
 
